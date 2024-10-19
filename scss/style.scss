@@ -1,0 +1,75 @@
+@import "reset";
+@import "vars";
+@import "fonts";
+
+// Задаём базовые стили текста и фона для всего сайта
+body {
+  font-family: $font-family-base;
+  font-weight: 400;
+  font-size: 20px;
+  color: $text-brown;
+  background-color: $bg-white;
+}
+// Задаём максимальный размер контейнера и центрируем его
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+// Задаём стили для ссылок и кнопок
+a,
+button {
+  color: $text-brown;
+  text-decoration: none;
+  cursor: pointer;
+  transition-duration: 0.2s;
+}
+// Центрируем текст в кнопке, устанавливаем горизонтальные паддинги, оформление
+.button {
+  display: inline-flex;
+  align-items: center;
+  padding-inline: 30px;
+  font-family: $font-family-base;
+  font-size: 20px;
+  line-height: 1.2;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: $green;
+  border: none;
+  border-radius: 20px;
+}
+
+// Изменение цвета при наведении на обычные ссылки
+a:hover {
+  color: $pink;
+}
+
+// Задаём респонсивную картинку, остающуюся в границах родительского элемента
+img {
+  max-width: 100%;
+}
+
+// Типографика заголовков
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-family: $font-family-accent;
+  font-weight: 700;
+  color: $text-brown;
+}
+
+// Адаптивные размеры заголовков через viewports единицы
+// Крупный заголовок для баннера
+.title-big {
+  font-size: clamp(48px, 5vw, 96px);
+  line-height: 1.1;
+}
+// Средние заголовки для разделов сайта
+.title-meduim {
+  font-size: clamp(24px, 2.5vw, 48px);
+  line-height: 1.2;
+}
