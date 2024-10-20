@@ -24,20 +24,6 @@ button {
   cursor: pointer;
   transition-duration: 0.2s;
 }
-// Центрируем текст в кнопке, устанавливаем горизонтальные паддинги, оформление
-.button {
-  display: inline-flex;
-  align-items: center;
-  padding-inline: 30px;
-  font-family: $font-family-base;
-  font-size: 20px;
-  line-height: 1.2;
-  text-decoration: none;
-  white-space: nowrap;
-  background-color: $green;
-  border: none;
-  border-radius: 20px;
-}
 
 // Изменение цвета при наведении на обычные ссылки
 a:hover {
@@ -72,4 +58,249 @@ h6 {
 .title-meduim {
   font-size: clamp(24px, 2.5vw, 48px);
   line-height: 1.2;
+}
+
+// HEADER
+.header {
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+}
+
+.header__wrapper {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo {
+  display: flex;
+  flex-shrink: 0;
+}
+
+.header__menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__menu-list {
+  display: flex;
+  flex-wrap: wrap;
+  -moz-column-gap: 30px;
+  column-gap: 30px;
+}
+
+// Оформляем якорные ссылки как кнопки
+.link {
+  display: inline-block;
+  padding-inline: 30px;
+  text-align: center;
+  font-family: $font-family-base;
+  line-height: 1.2;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: $green;
+  border: none;
+  border-radius: 20px;
+}
+
+.header-link {
+  height: 47px;
+  font-size: 20px;
+  padding-top: 11px;
+  padding-bottom: 11px;
+}
+
+.banner-link {
+  height: 67px;
+  width: 245px;
+  padding-top: 19px;
+  padding-bottom: 19px;
+}
+
+.banner__body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 154px;
+}
+
+.banner__body-title {
+  margin-bottom: 21px;
+}
+
+.banner__body-description {
+  margin-bottom: 48px;
+}
+
+.burger-menu {
+  display: none;
+}
+
+#menu__toggle {
+  opacity: 0;
+}
+
+#menu__toggle:checked ~ .menu__btn > span {
+  transform: rotate(45deg);
+}
+
+#menu__toggle:checked ~ .menu__btn > span::before {
+  top: 0;
+  transform: rotate(0);
+}
+
+#menu__toggle:checked ~ .menu__btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+
+#menu__toggle:checked ~ .menu__box {
+  visibility: visible;
+  right: 0;
+}
+
+.menu__btn {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 30px;
+
+  width: 30px;
+  height: 30px;
+
+  cursor: pointer;
+  z-index: 1;
+}
+
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  display: block;
+  position: absolute;
+
+  width: 100%;
+  height: 2px;
+
+  background-color: $text-brown;
+
+  transition-duration: 0.2s;
+}
+
+.menu__btn > span::before {
+  content: "";
+  top: -8px;
+}
+
+.menu__btn > span::after {
+  content: "";
+  top: 8px;
+}
+
+.menu__box {
+  display: block;
+  position: fixed;
+  visibility: hidden;
+  top: 0;
+  right: 0;
+
+  width: 300px;
+  height: 100%;
+
+  margin: 0;
+  padding: 80px 0;
+
+  list-style: none;
+
+  background-color: $pink;
+  box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
+
+  transition-duration: 0.2s;
+}
+
+.menu__item {
+  display: block;
+  padding: 12px 24px;
+
+  color: $text-brown;
+
+  font-family: $font-family-base;
+  font-size: 20px;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition-duration: 0.2s;
+}
+
+.menu__item:hover {
+  background-color: $green;
+}
+
+@media (max-width: 992px) {
+  .header__wrapper {
+    column-gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .header__menu {
+    order: 1;
+    flex-basis: 100%;
+    justify-content: center;
+  }
+
+  .banner__body {
+    padding-top: 130px;
+  }
+}
+
+@media (max-width: 768px) {
+  // .burger-menu {
+  //   display: block;
+  // }
+
+  // .header__menu {
+  //   display: none;
+  // }
+}
+
+@media (max-width: 576px) {
+  // .burger-menu {
+  //   display: block;
+  // }
+
+  // .header__menu {
+  //   display: none;
+  // }
+  .header__wrapper {
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 350px) {
+  .header__wrapper {
+    flex-direction: column;
+    align-items: center;
+    height: 150px;
+  }
+  .burger-menu {
+    display: block;
+  }
+
+  .header__menu {
+    display: none;
+  }
+  .burger-menu {
+    order: -1;
+  }
+  .menu__btn {
+    top: 5px;
+  }
+  .menu__box {
+    width: 100vw;
+    height: fit-content;
+    padding: 40px 20px;
+  }
 }
