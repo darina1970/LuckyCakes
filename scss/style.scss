@@ -45,9 +45,9 @@ a:hover {
 }
 
 // Задаём респонсивную картинку, остающуюся в границах родительского элемента
-img {
-  max-width: 100%;
-}
+//img {
+//max-width: 100%; - свойство странно влияет на иконки, может не надо его всем img?
+//}
 
 // Типографика заголовков
 h1,
@@ -72,4 +72,71 @@ h6 {
 .title-meduim {
   font-size: clamp(24px, 2.5vw, 48px);
   line-height: 1.2;
+}
+
+// Секция преимущества
+.advantages {
+  margin-bottom: 200px;
+  &__title {
+    font-size: 48px;
+    margin-left: 112px;
+    margin-bottom: 60px;
+  }
+  &__item {
+    border-radius: 20px;
+    border: 2px solid $pink;
+    display: flex;
+    align-items: center;
+    padding: 25px;
+    width: auto;
+    min-height: 137px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-family: $font-family-base;
+  }
+  &__icon {
+    padding-right: 17px;
+  }
+}
+
+// Медиазапросы: от большего к меньшему, базовый вариант 1400-1920px, далее в соответствии с сеткой bootstrap //
+
+// xl
+@media screen and (max-width: 1399px) {
+}
+
+// l
+@media screen and (max-width: 1199px) {
+  .advantages {
+    &__item {
+      padding: 20px;
+      min-height: 160px;
+      margin-bottom: 20px;
+      font-size: 16px;
+    }
+    &__icon {
+      padding-right: 14px;
+    }
+  }
+}
+
+// m
+@media screen and (max-width: 991px) {
+}
+
+// sm
+@media screen and (max-width: 767px) {
+  .advantages {
+    margin-bottom: 100px;
+    &__title {
+      margin-bottom: 40px;
+    }
+    &__item {
+      min-height: 137px;
+    }
+  }
+}
+
+// до 320px
+@media screen and (max-width: 575px) {
 }
