@@ -22,6 +22,11 @@
       rel="stylesheet"
       href="./css/owl.carousel.min.css"
     />
+    <!-- Подключение fancybox-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+    />
     <!-- Подключение нашего листа со стилями -->
     <link rel="stylesheet" href="./css/style.css" />
   </head>
@@ -140,8 +145,91 @@
       </div>
     </section>
 
-    <!--<section class="gallery">Галерея</section>
-      <section class="reviews">Отзывы</section>
+    <!--<section class="gallery">Галерея</section>-->
+
+    <section class="gallery">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h2 class="gallery__title">Галерея</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="gallery__wrapper">
+              <a
+                class="img-1"
+                href="/assets/images/gallery-1.jpg"
+                data-fancybox
+                data-caption="Single image"
+              >
+                <img
+                  class="gallery__image img-1"
+                  src="/assets/images/gallery-1.jpg"
+                  alt="candies"
+              /></a>
+              <a
+                class="img-2"
+                href="/assets/images/gallery-2.jpg"
+                data-fancybox
+                data-caption="Single image"
+              >
+                <img
+                  class="gallery__image img-2"
+                  src="/assets/images/gallery-2.jpg"
+                  alt="cake number 13"
+              /></a>
+              <a
+                class="img-3"
+                href="/assets/images/gallery-3.jpg"
+                data-fancybox
+                data-caption="Single image"
+              >
+                <img
+                  class="gallery__image img-3"
+                  src="/assets/images/gallery-3.jpg"
+                  alt="happy birthday cake"
+              /></a>
+              <a
+                class="img-4"
+                href="/assets/images/gallery-4.jpg"
+                data-fancybox
+                data-caption="Single image"
+              >
+                <img
+                  class="gallery__image img-4"
+                  src="/assets/images/gallery-4.jpg"
+                  alt="moty"
+              /></a>
+              <a
+                class="img-5"
+                href="/assets/images/gallery-5.jpg"
+                data-fancybox
+                data-caption="Single image"
+              >
+                <img
+                  class="gallery__image img-5"
+                  src="/assets/images/gallery-5.jpg"
+                  alt="capcakes"
+              /></a>
+              <a
+                class="img-6"
+                href="/assets/images/gallery-6.jpg"
+                data-fancybox
+                data-caption="Single image"
+              >
+                <img
+                  class="gallery__image img-6"
+                  src="/assets/images/gallery-6.jpg"
+                  alt="ball cake"
+              /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--<section class="reviews">Отзывы</section>
       <section class="delivery">Доставка</section>
     </main> -->
     <!-- <footer class="footer">      
@@ -151,5 +239,6 @@
     <script src="./js/jquery-3.7.1.min.js"></script>
     <script src="./js/owl.carousel.min.js"></script>
     <script src="./js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
   </body>
 </html>
