@@ -38,7 +38,7 @@
       </section>
       <section class="about-me">
         Информация о кондитере и слайдер с сертификатами
-      </section>
+      </section>data-fancybox="gallery"data-fancybox="gallery"
       <section class="catalogue">Карусель каталога</section>-->
 
     <section class="advantages">
@@ -159,9 +159,9 @@
             <div class="gallery__wrapper">
               <a
                 class="img-1"
-                href="/assets/images/gallery-1.jpg"
-                data-fancybox
-                data-caption="Single image"
+                data-src="/assets/images/candies_full-screen.jpg"
+                data-fancybox="gallery"
+                data-caption="Трюфель"
               >
                 <img
                   class="gallery__image img-1"
@@ -170,9 +170,9 @@
               /></a>
               <a
                 class="img-2"
-                href="/assets/images/gallery-2.jpg"
-                data-fancybox
-                data-caption="Single image"
+                data-src="/assets/images/13_full-screen.jpg"
+                data-fancybox="gallery"
+                data-caption="Торт-цифра"
               >
                 <img
                   class="gallery__image img-2"
@@ -181,9 +181,9 @@
               /></a>
               <a
                 class="img-3"
-                href="/assets/images/gallery-3.jpg"
-                data-fancybox
-                data-caption="Single image"
+                data-src="/assets/images/hb_full-screen.jpg"
+                data-fancybox="gallery"
+                data-caption="Бенто-торт"
               >
                 <img
                   class="gallery__image img-3"
@@ -192,9 +192,9 @@
               /></a>
               <a
                 class="img-4"
-                href="/assets/images/gallery-4.jpg"
-                data-fancybox
-                data-caption="Single image"
+                data-src="/assets/images/moty_full-screen.jpg"
+                data-fancybox="gallery"
+                data-caption="Моти"
               >
                 <img
                   class="gallery__image img-4"
@@ -203,9 +203,9 @@
               /></a>
               <a
                 class="img-5"
-                href="/assets/images/gallery-5.jpg"
-                data-fancybox
-                data-caption="Single image"
+                data-src="/assets/images/capcakes_full-screen.jpg"
+                data-fancybox="gallery"
+                data-caption="Капкейки ванильные"
               >
                 <img
                   class="gallery__image img-5"
@@ -214,9 +214,9 @@
               /></a>
               <a
                 class="img-6"
-                href="/assets/images/gallery-6.jpg"
-                data-fancybox
-                data-caption="Single image"
+                data-src="/assets/images/ball_full-screen.jpg"
+                data-fancybox="gallery"
+                data-caption="Торт-бомба"
               >
                 <img
                   class="gallery__image img-6"
@@ -240,5 +240,8 @@
     <script src="./js/owl.carousel.min.js"></script>
     <script src="./js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <script>
+      Fancybox.bind('[data-fancybox="gallery"]', {});
+    </script>
   </body>
 </html>
