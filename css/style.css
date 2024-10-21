@@ -91,25 +91,21 @@ h6 {
   display: flex;
   align-items: center;
 }
-
 .header__wrapper {
   height: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
 .header__logo {
   display: flex;
   flex-shrink: 0;
 }
-
 .header__menu {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-
 .header__menu-list {
   display: flex;
   flex-wrap: wrap;
@@ -150,11 +146,9 @@ h6 {
   flex-direction: column;
   padding-top: 154px;
 }
-
 .banner__body-title {
   margin-bottom: 21px;
 }
-
 .banner__body-description {
   margin-bottom: 48px;
 }
