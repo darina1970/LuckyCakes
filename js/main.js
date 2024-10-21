@@ -1,6 +1,6 @@
 $(".owl-carousel").owlCarousel({
   loop: false,
-  margin: 20,
+  margin: 10,
   nav: true,
   navText: [
     `<svg width="35" height="31" viewBox="0 0 35 31" fill="none" xmlns="http://www.w3.org/2000/svg">
