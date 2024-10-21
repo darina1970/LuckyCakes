@@ -31,9 +31,9 @@ a:hover {
 }
 
 // Задаём респонсивную картинку, остающуюся в границах родительского элемента
-img {
-  max-width: 100%;
-}
+//img {
+//max-width: 100%; - свойство странно влияет на иконки, может не надо его всем img?
+//}
 
 // Типографика заголовков
 h1,
@@ -101,14 +101,12 @@ h6 {
   border: none;
   border-radius: 20px;
 }
-
 .header-link {
   height: 47px;
   font-size: 20px;
   padding-top: 11px;
   padding-bottom: 11px;
 }
-
 .banner-link {
   height: 67px;
   width: 245px;
@@ -129,7 +127,6 @@ h6 {
     margin-bottom: 48px;
   }
 }
-
 .banner-extraimg {
   display: none;
 }
@@ -139,30 +136,24 @@ h6 {
   display: none;
   position: relative;
 }
-
 #menu__toggle {
   opacity: 0;
 }
-
 #menu__toggle:checked ~ .menu__btn > span {
   transform: rotate(45deg);
 }
-
 #menu__toggle:checked ~ .menu__btn > span::before {
   top: 0;
   transform: rotate(0);
 }
-
 #menu__toggle:checked ~ .menu__btn > span::after {
   top: 0;
   transform: rotate(90deg);
 }
-
 #menu__toggle:checked ~ .menu__box {
   visibility: visible;
   right: 0;
 }
-
 .menu__btn {
   display: flex;
   align-items: center;
@@ -173,7 +164,6 @@ h6 {
   cursor: pointer;
   z-index: 1;
 }
-
 .menu__btn > span,
 .menu__btn > span::before,
 .menu__btn > span::after {
@@ -183,17 +173,14 @@ h6 {
   height: 2px;
   background-color: $text-brown;
 }
-
 .menu__btn > span::before {
   content: "";
   top: -8px;
 }
-
 .menu__btn > span::after {
   content: "";
   top: 8px;
 }
-
 .menu__box {
   display: block;
   position: fixed;
@@ -208,7 +195,6 @@ h6 {
   background-color: $pink;
   box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
 }
-
 .menu__item {
   display: block;
   padding: 12px 24px;
@@ -218,30 +204,78 @@ h6 {
   font-weight: 600;
   text-decoration: none;
 }
-
 .menu__item:hover {
   background-color: $green;
 }
 
+// Секция преимущества
+.advantages {
+  margin-bottom: 200px;
+  &__title {
+    font-size: 48px;
+    margin-left: 112px;
+    margin-bottom: 60px;
+  }
+  &__item {
+    border-radius: 20px;
+    border: 2px solid $pink;
+    display: flex;
+    align-items: center;
+    padding: 25px;
+    width: auto;
+    min-height: 137px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-family: $font-family-base;
+  }
+  &__icon {
+    padding-right: 17px;
+  }
+}
+
+
+
+
+// Медиазапросы: от большего к меньшему, базовый вариант 1400-1920px, далее в соответствии с сеткой bootstrap //
+
+// xxl
+@media (max-width: 1399px) {
+}
+
+// xl
+@media (max-width: 1199px) {
+  .advantages {
+    &__item {
+      padding: 20px;
+      min-height: 160px;
+      margin-bottom: 20px;
+      font-size: 16px;
+    }
+    &__icon {
+      padding-right: 14px;
+    }
+  }
+}
+
+// lg
 @media (max-width: 991px) {
   .header__wrapper {
     column-gap: 20px;
     row-gap: 15px;
     flex-wrap: wrap;
   }
-
   .header__menu {
     order: 1;
     flex-basis: 100%;
     justify-content: center;
   }
-
   .banner__body {
     justify-content: center;
     padding-top: 0;
   }
 }
 
+// md
 @media (max-width: 767px) {
   .header {
     margin-bottom: 15px;
@@ -253,24 +287,31 @@ h6 {
     display: flex;
     align-items: center;
   }
-}
+  .advantages {
+    margin-bottom: 100px;
+    &__title {
+      margin-bottom: 40px;
+    }
+    &__item {
+      min-height: 137px;
+    }
+  }
 
+
+// sm
 @media (max-width: 575px) {
   .burger-menu {
     display: block;
   }
-
   .header__menu {
     display: none;
   }
   .header__wrapper {
     justify-content: space-between;
   }
-
   .menu__box {
     right: -100%;
   }
-
   .banner__wrapper {
     order: -1;
   }
@@ -293,4 +334,9 @@ h6 {
     display: block;
     border-radius: 20px;
   }
+}
+
+// до 320px
+@media (max-width: 575px) {
+
 }
