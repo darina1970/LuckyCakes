@@ -9,6 +9,7 @@ body {
   font-size: 20px;
   color: $text-brown;
   background-color: $bg-white;
+  min-width: 320px;
 }
 // Задаём максимальный размер контейнера и центрируем его
 .container {
@@ -74,6 +75,139 @@ h6 {
   line-height: 1.2;
 }
 
+// Секция Карусель каталога
+.catalogue {
+  margin-bottom: 200px;
+}
+
+.catalogue__title {
+  font-size: 48px;
+  margin-left: 112px;
+  margin-bottom: 60px;
+}
+
+.catalogue__tabs {
+  position: relative;
+  min-height: 602px;
+}
+
+.catalogue__tab,
+.catalogue__tab-title {
+  display: inline-block;
+}
+
+.catalogue__tab input[type="radio"] {
+  display: none;
+}
+
+.catalogue__tab-title {
+  width: 180px;
+  text-align: center;
+  background: #e0f0d4;
+  padding: 12px;
+  border-radius: 20px;
+  border: none;
+  margin-bottom: 60px;
+  margin-right: 16px;
+  font-family: $font-family-base;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.catalogue__tab-content {
+  position: absolute;
+  border: none;
+  left: 0;
+  // display: none;
+}
+
+.catalogue__tab:checked + .catalogue__tab-title {
+  position: relative;
+  background: #f0d3d3;
+  z-index: 1;
+}
+
+.catalogue__tab:checked ~ .catalogue__tab-content {
+  display: block;
+}
+
+.catalogue__catalogue-slider,
+.owl-item {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.owl-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  display: flex !important;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  color: #000000;
+  font-size: 50px;
+  font-weight: 100;
+
+  button {
+    outline: none;
+  }
+
+  .owl-prev {
+    margin-left: -90px;
+  }
+
+  .owl-next {
+    margin-right: -90px;
+  }
+}
+
+.catalogue__slider-card {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 330px;
+  background-color: #f0d3d3;
+  border-radius: 20px;
+  justify-content: left;
+  align-content: flex-start;
+  padding: 18px 20px;
+  margin: 0px;
+}
+
+.catalogue__slider-picture {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  margin-bottom: 22px;
+}
+
+.catalogue__product-title,
+.catalogue__product-description,
+.catalogue__product-price {
+  display: block;
+  width: 266px;
+  font-size: 20px;
+  font-weight: 600;
+  font-family: $font-family-base;
+  margin-bottom: 12px;
+}
+
+.catalogue__product-description {
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 22px;
+}
+
+.catalogue__product-price {
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 9px;
+}
+
 // Секция преимущества
 .advantages {
   margin-bottom: 200px;
@@ -103,6 +237,16 @@ h6 {
 
 // xl
 @media screen and (max-width: 1399px) {
+  //Карусель каталога//
+  .owl-nav {
+    .owl-prev {
+      margin-left: -30px;
+    }
+
+    .owl-next {
+      margin-right: -30px;
+    }
+  }
 }
 
 // l
@@ -133,6 +277,17 @@ h6 {
     }
     &__item {
       min-height: 137px;
+    }
+  }
+
+  //Карусель каталога//
+  .owl-nav {
+    .owl-prev {
+      margin-left: -10px;
+    }
+
+    .owl-next {
+      margin-right: -10px;
     }
   }
 }
