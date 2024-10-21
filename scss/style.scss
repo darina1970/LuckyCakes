@@ -51,7 +51,7 @@ h6 {
 // Адаптивные размеры заголовков через viewports единицы
 // Крупный заголовок для баннера
 .title-big {
-  font-size: clamp(48px, 5vw, 96px);
+  font-size: clamp(40px, 5vw, 96px);
   line-height: 1.1;
 }
 // Средние заголовки для разделов сайта
@@ -120,6 +120,7 @@ h6 {
   padding-bottom: 19px;
 }
 
+// Баннер
 .banner__body {
   height: 100%;
   display: flex;
@@ -135,6 +136,7 @@ h6 {
   margin-bottom: 48px;
 }
 
+// Бургер-меню
 .burger-menu {
   display: none;
 }
@@ -252,18 +254,18 @@ h6 {
   }
 
   .banner__body {
-    padding-top: 130px;
+    justify-content: center;
+    padding-top: 0;
   }
 }
 
 @media (max-width: 767px) {
-  // .burger-menu {
-  //   display: block;
-  // }
-
-  // .header__menu {
-  //   display: none;
-  // }
+  .header {
+    margin-bottom: 15px;
+  }
+  .banner__body-description {
+    margin-bottom: 30px;
+  }
 }
 
 @media (max-width: 575px) {
@@ -291,29 +293,3 @@ h6 {
     width: 100%;
   }
 }
-
-// @media (max-width: 350px) {
-//   .header__wrapper {
-//     flex-direction: column;
-//     align-items: center;
-//     height: 150px;
-//   }
-//   .burger-menu {
-//     display: block;
-//   }
-
-//   .header__menu {
-//     display: none;
-//   }
-//   .burger-menu {
-//     order: -1;
-//   }
-//   .menu__btn {
-//     top: 5px;
-//   }
-//   .menu__box {
-//     width: 100vw;
-//     height: fit-content;
-//     padding: 40px 20px;
-//   }
-// }
