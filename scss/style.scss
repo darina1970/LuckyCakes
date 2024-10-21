@@ -22,7 +22,7 @@ button {
   color: $text-brown;
   text-decoration: none;
   cursor: pointer;
-  transition-duration: 0.2s;
+  transition: 0.2s;
 }
 
 // Изменение цвета при наведении на обычные ссылки
@@ -51,7 +51,7 @@ h6 {
 // Адаптивные размеры заголовков через viewports единицы
 // Крупный заголовок для баннера
 .title-big {
-  font-size: clamp(40px, 5vw, 96px);
+  font-size: clamp(35px, 5vw, 96px);
   line-height: 1.1;
 }
 // Средние заголовки для разделов сайта
@@ -136,9 +136,14 @@ h6 {
   margin-bottom: 48px;
 }
 
+.banner-extraimg {
+  display: none;
+}
+
 // Бургер-меню
 .burger-menu {
   display: none;
+  position: relative;
 }
 
 #menu__toggle {
@@ -167,8 +172,8 @@ h6 {
 .menu__btn {
   display: flex;
   align-items: center;
-  position: fixed;
-  top: 30px;
+  position: absolute;
+  top: 0;
 
   width: 30px;
   height: 30px;
@@ -182,13 +187,9 @@ h6 {
 .menu__btn > span::after {
   display: block;
   position: absolute;
-
   width: 100%;
   height: 2px;
-
   background-color: $text-brown;
-
-  transition-duration: 0.2s;
 }
 
 .menu__btn > span::before {
@@ -207,34 +208,23 @@ h6 {
   visibility: hidden;
   top: 0;
   right: 0;
-
   width: 300px;
   height: 100%;
-
   margin: 0;
   padding: 80px 0;
-
   list-style: none;
-
   background-color: $pink;
   box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
-
-  transition-duration: 0.2s;
 }
 
 .menu__item {
   display: block;
   padding: 12px 24px;
-
   color: $text-brown;
-
   font-family: $font-family-base;
   font-size: 20px;
   font-weight: 600;
-
   text-decoration: none;
-
-  transition-duration: 0.2s;
 }
 
 .menu__item:hover {
@@ -244,6 +234,7 @@ h6 {
 @media (max-width: 991px) {
   .header__wrapper {
     column-gap: 20px;
+    row-gap: 15px;
     flex-wrap: wrap;
   }
 
@@ -283,9 +274,13 @@ h6 {
   .header__wrapper {
     justify-content: space-between;
   }
-  // Костыль
-  .body__wrapper {
-    background-color: $pink;
+
+  .menu__box {
+    right: -100%;
+  }
+
+  .banner__wrapper {
+    order: -1;
   }
   .banner__body {
     align-items: center;
@@ -299,17 +294,11 @@ h6 {
   .banner-link {
     margin-bottom: 10px;
   }
-}
-
-@media (max-width: 320px) {
-  .header__wrapper {
-    flex-wrap: nowrap;
-    column-gap: 5px;
+  .banner-img {
+    display: none;
   }
-  .header-link {
-    padding-inline: 20px;
-  }
-  .menu__box {
-    width: 100%;
+  .banner-extraimg {
+    display: block;
+    border-radius: 20px;
   }
 }
