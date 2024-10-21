@@ -16,40 +16,21 @@ p {
 
 @font-face {
   font-family: "Lato";
-  src: url("../assets/fonts/Lato-Regular.eot")
-      format("embedded-opentype"),
-    url("../assets/fonts/Lato-Regular.woff2")
-      format("woff2"),
-    url("../assets/fonts/Lato-Regular.woff") format("woff"),
-    url("../assets/fonts/Lato-Regular.ttf")
-      format("truetype");
+  src: url("../assets/fonts/Lato-Regular.eot") format("embedded-opentype"), url("../assets/fonts/Lato-Regular.woff2") format("woff2"), url("../assets/fonts/Lato-Regular.woff") format("woff"), url("../assets/fonts/Lato-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Lato";
-  src: url("../assets/fonts/Lato-Semibold.eot")
-      format("embedded-opentype"),
-    url("../assets/fonts/Lato-SemiBold.woff2")
-      format("woff2"),
-    url("../assets/fonts/Lato-Semibold.woff") format("woff"),
-    url("../assets/fonts/Lato-Semibold.ttf")
-      format("truetype");
+  src: url("../assets/fonts/Lato-Semibold.eot") format("embedded-opentype"), url("../assets/fonts/Lato-SemiBold.woff2") format("woff2"), url("../assets/fonts/Lato-Semibold.woff") format("woff"), url("../assets/fonts/Lato-Semibold.ttf") format("truetype");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Cormorant Garamond";
-  src: url("../assets/fonts/CormorantGaramond-Bold.eot")
-      format("embedded-opentype"),
-    url("../assets/fonts/Cormorant-Garamond-Bold.woff2")
-      format("woff2"),
-    url("../assets/fonts/CormorantGaramond-Bold.woff")
-      format("woff"),
-    url("../assets/fonts/CormorantGaramond-Bold.ttf")
-      format("truetype");
+  src: url("../assets/fonts/CormorantGaramond-Bold.eot") format("embedded-opentype"), url("../assets/fonts/Cormorant-Garamond-Bold.woff2") format("woff2"), url("../assets/fonts/CormorantGaramond-Bold.woff") format("woff"), url("../assets/fonts/CormorantGaramond-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -60,6 +41,7 @@ body {
   font-size: 20px;
   color: #443939;
   background-color: rgb(255, 255, 255);
+  min-width: 320px;
 }
 
 .container {
@@ -115,6 +97,134 @@ h6 {
   line-height: 1.2;
 }
 
+.catalogue {
+  margin-bottom: 200px;
+}
+
+.catalogue__title {
+  font-size: 48px;
+  margin-left: 112px;
+  margin-bottom: 60px;
+}
+
+.catalogue__tabs {
+  position: relative;
+  min-height: 602px;
+}
+
+.catalogue__tab,
+.catalogue__tab-title {
+  display: inline-block;
+}
+
+.catalogue__tab input[type=radio] {
+  display: none;
+}
+
+.catalogue__tab-title {
+  width: 180px;
+  text-align: center;
+  background: #e0f0d4;
+  padding: 12px;
+  border-radius: 20px;
+  border: none;
+  margin-bottom: 60px;
+  margin-right: 16px;
+  font-family: "Lato", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.catalogue__tab-content {
+  position: absolute;
+  border: none;
+  left: 0;
+}
+
+.catalogue__tab:checked + .catalogue__tab-title {
+  position: relative;
+  background: #f0d3d3;
+  z-index: 1;
+}
+
+.catalogue__tab:checked ~ .catalogue__tab-content {
+  display: block;
+}
+
+.catalogue__catalogue-slider,
+.owl-item {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.owl-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  display: flex !important;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  color: #000000;
+  font-size: 50px;
+  font-weight: 100;
+}
+.owl-nav button {
+  outline: none;
+}
+.owl-nav .owl-prev {
+  margin-left: -90px;
+}
+.owl-nav .owl-next {
+  margin-right: -90px;
+}
+
+.catalogue__slider-card {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 330px;
+  background-color: #f0d3d3;
+  border-radius: 20px;
+  justify-content: left;
+  align-content: flex-start;
+  padding: 18px 20px;
+  margin: 0px;
+}
+
+.catalogue__slider-picture {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  margin-bottom: 22px;
+}
+
+.catalogue__product-title,
+.catalogue__product-description,
+.catalogue__product-price {
+  display: block;
+  width: 266px;
+  font-size: 20px;
+  font-weight: 600;
+  font-family: "Lato", sans-serif;
+  margin-bottom: 12px;
+}
+
+.catalogue__product-description {
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 22px;
+}
+
+.catalogue__product-price {
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 9px;
+}
+
 .advantages {
   margin-bottom: 200px;
 }
@@ -139,6 +249,14 @@ h6 {
   padding-right: 17px;
 }
 
+@media screen and (max-width: 1399px) {
+  .owl-nav .owl-prev {
+    margin-left: -30px;
+  }
+  .owl-nav .owl-next {
+    margin-right: -30px;
+  }
+}
 @media screen and (max-width: 1199px) {
   .advantages__item {
     padding: 20px;
@@ -159,5 +277,11 @@ h6 {
   }
   .advantages__item {
     min-height: 137px;
+  }
+  .owl-nav .owl-prev {
+    margin-left: -10px;
+  }
+  .owl-nav .owl-next {
+    margin-right: -10px;
   }
 }
