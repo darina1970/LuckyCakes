@@ -266,6 +266,10 @@ h6 {
   .banner__body-description {
     margin-bottom: 30px;
   }
+  .image__wrapper {
+    display: flex;
+    align-items: center;
+  }
 }
 
 @media (max-width: 575px) {
@@ -278,6 +282,22 @@ h6 {
   }
   .header__wrapper {
     justify-content: space-between;
+  }
+  // Костыль
+  .body__wrapper {
+    background-color: $pink;
+  }
+  .banner__body {
+    align-items: center;
+  }
+  .banner__body-title {
+    text-align: center;
+  }
+  .banner__body-description {
+    text-align: center;
+  }
+  .banner-link {
+    margin-bottom: 10px;
   }
 }
 
