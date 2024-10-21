@@ -16,40 +16,21 @@ p {
 
 @font-face {
   font-family: "Lato";
-  src: url("../assets/fonts/Lato-Regular.eot")
-      format("embedded-opentype"),
-    url("../assets/fonts/Lato-Regular.woff2")
-      format("woff2"),
-    url("../assets/fonts/Lato-Regular.woff") format("woff"),
-    url("../assets/fonts/Lato-Regular.ttf")
-      format("truetype");
+  src: url("../assets/fonts/Lato-Regular.eot") format("embedded-opentype"), url("../assets/fonts/Lato-Regular.woff2") format("woff2"), url("../assets/fonts/Lato-Regular.woff") format("woff"), url("../assets/fonts/Lato-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Lato";
-  src: url("../assets/fonts/Lato-Semibold.eot")
-      format("embedded-opentype"),
-    url("../assets/fonts/Lato-SemiBold.woff2")
-      format("woff2"),
-    url("../assets/fonts/Lato-Semibold.woff") format("woff"),
-    url("../assets/fonts/Lato-Semibold.ttf")
-      format("truetype");
+  src: url("../assets/fonts/Lato-Semibold.eot") format("embedded-opentype"), url("../assets/fonts/Lato-SemiBold.woff2") format("woff2"), url("../assets/fonts/Lato-Semibold.woff") format("woff"), url("../assets/fonts/Lato-Semibold.ttf") format("truetype");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Cormorant Garamond";
-  src: url("../assets/fonts/CormorantGaramond-Bold.eot")
-      format("embedded-opentype"),
-    url("../assets/fonts/Cormorant-Garamond-Bold.woff2")
-      format("woff2"),
-    url("../assets/fonts/CormorantGaramond-Bold.woff")
-      format("woff"),
-    url("../assets/fonts/CormorantGaramond-Bold.ttf")
-      format("truetype");
+  src: url("../assets/fonts/CormorantGaramond-Bold.eot") format("embedded-opentype"), url("../assets/fonts/Cormorant-Garamond-Bold.woff2") format("woff2"), url("../assets/fonts/CormorantGaramond-Bold.woff") format("woff"), url("../assets/fonts/CormorantGaramond-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -99,7 +80,9 @@ h6 {
   font-size: clamp(24px, 2.5vw, 48px);
   line-height: 1.2;
 }
-
+h2 {
+  font-size: 48px;
+  
 .header {
   min-height: 100px;
   display: flex;
@@ -248,9 +231,9 @@ h6 {
   margin-bottom: 200px;
 }
 .advantages__title {
-  font-size: 48px;
   margin-left: 112px;
   margin-bottom: 60px;
+  font-size: 48px;
 }
 .advantages__item {
   border-radius: 20px;
@@ -268,9 +251,57 @@ h6 {
   padding-right: 17px;
 }
 
+.gallery {
+  margin-bottom: 200px;
+}
+.gallery__title {
+  margin-left: 112px;
+  margin-bottom: 60px;
+  font-size: 48px;
+}
+.gallery__wrapper {
+  display: grid;
+  grid-template-areas: "img_1 img_2 img_4 img_5" "img_1 img_3 img_4 img_6";
+  grid-template-columns: repeat(2, 2fr 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1.25rem;
+  border-radius: 50px;
+  overflow: hidden;
+}
+.gallery__image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
 
+.img-1 {
+  grid-area: img_1;
+}
 
-@media (max-width: 1199px) {
+.img-2 {
+  grid-area: img_2;
+}
+
+.img-3 {
+  grid-area: img_3;
+}
+
+.img-4 {
+  grid-area: img_4;
+}
+
+.img-5 {
+  grid-area: img_5;
+}
+
+.img-6 {
+  grid-area: img_6;
+}
+
+@media screen and (max-width: 1199px) {
   .advantages__item {
     padding: 20px;
     min-height: 160px;
@@ -281,7 +312,22 @@ h6 {
     padding-right: 14px;
   }
 }
-@media (max-width: 991px) {
+
+@media screen and (max-width: 991px) {
+  .gallery__wrapper {
+    grid-template-areas: "img_1 img_1" "img_2 img_3" "img_4 img_4" "img_5 img_6";
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 1rem;
+  }
+  .gallery__image {
+    width: 100%;
+    max-height: 560px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center;
+       object-position: center;
+  }
   .header__wrapper {
     -moz-column-gap: 20px;
          column-gap: 20px;
@@ -298,7 +344,7 @@ h6 {
     padding-top: 0;
   }
 }
-@media (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .header {
     margin-bottom: 15px;
   }
@@ -318,8 +364,30 @@ h6 {
   .advantages__item {
     min-height: 137px;
   }
+  .gallery {
+    margin-bottom: 100px;
+  }
+  .gallery__title {
+    margin-bottom: 40px;
+  }
 }
-@media (max-width: 575px) {
+
+@media screen and (max-width: 575px) {
+  .advantages__title {
+    margin-left: 60px;
+  }
+  .gallery__title {
+    margin-left: 60px;
+  }
+  .gallery__wrapper {
+    grid-template-areas: "img_1" "img_2" "img_3" "img_4" "img_5" "img_6";
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    gap: 1rem;
+  }
+  .gallery__image {
+    max-height: 460px;
+  }
   .burger-menu {
     display: block;
   }
@@ -355,6 +423,4 @@ h6 {
     border-radius: 20px;
   }
 }
-
-
 
