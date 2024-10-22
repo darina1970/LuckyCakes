@@ -85,9 +85,7 @@ h6 {
   font-size: clamp(24px, 2.5vw, 48px);
   line-height: 1.2;
 }
-h2 {
-  font-size: 48px;
-}  
+
 .header {
   min-height: 100px;
   display: flex;
@@ -336,7 +334,7 @@ h2 {
     padding-right: 14px;
   }
 }
-@media (max-width: 991px) {
+@media screen and (max-width: 991px) {
   .gallery__wrapper {
     grid-template-areas: "img_1 img_1" "img_2 img_3" "img_4 img_4" "img_5 img_6";
     grid-template-columns: repeat(2, 1fr);
@@ -394,7 +392,6 @@ h2 {
     margin-bottom: 40px;
   }
 }
-
 @media (max-width: 575px) {
   .burger-menu {
     display: block;
