@@ -60,6 +60,10 @@ a:hover {
   color: #f0d3d3;
 }
 
+img {
+  max-width: 100%;
+}
+
 h1,
 h2,
 h3,
@@ -76,13 +80,12 @@ h6 {
   font-size: clamp(35px, 5vw, 96px);
   line-height: 1.1;
 }
+
 .title-meduim {
   font-size: clamp(24px, 2.5vw, 48px);
   line-height: 1.2;
 }
-h2 {
-  font-size: 48px;
-  
+
 .header {
   min-height: 100px;
   display: flex;
@@ -122,12 +125,14 @@ h2 {
   border: none;
   border-radius: 20px;
 }
+
 .header-link {
   height: 47px;
   font-size: 20px;
   padding-top: 11px;
   padding-bottom: 11px;
 }
+
 .banner-link {
   height: 67px;
   width: 245px;
@@ -147,6 +152,7 @@ h2 {
 .banner__body-description {
   margin-bottom: 48px;
 }
+
 .banner-extraimg {
   display: none;
 }
@@ -155,24 +161,30 @@ h2 {
   display: none;
   position: relative;
 }
+
 #menu__toggle {
   opacity: 0;
 }
+
 #menu__toggle:checked ~ .menu__btn > span {
   transform: rotate(45deg);
 }
+
 #menu__toggle:checked ~ .menu__btn > span::before {
   top: 0;
   transform: rotate(0);
 }
+
 #menu__toggle:checked ~ .menu__btn > span::after {
   top: 0;
   transform: rotate(90deg);
 }
+
 #menu__toggle:checked ~ .menu__box {
   visibility: visible;
   right: 0;
 }
+
 .menu__btn {
   display: flex;
   align-items: center;
@@ -183,6 +195,7 @@ h2 {
   cursor: pointer;
   z-index: 1;
 }
+
 .menu__btn > span,
 .menu__btn > span::before,
 .menu__btn > span::after {
@@ -192,14 +205,17 @@ h2 {
   height: 2px;
   background-color: #443939;
 }
+
 .menu__btn > span::before {
   content: "";
   top: -8px;
 }
+
 .menu__btn > span::after {
   content: "";
   top: 8px;
 }
+
 .menu__box {
   display: block;
   position: fixed;
@@ -214,6 +230,7 @@ h2 {
   background-color: #f0d3d3;
   box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
 }
+
 .menu__item {
   display: block;
   padding: 12px 24px;
@@ -223,8 +240,13 @@ h2 {
   font-weight: 600;
   text-decoration: none;
 }
+
 .menu__item:hover {
   background-color: #e0f0d4;
+}
+
+h2 {
+  font-size: 48px;
 }
 
 .advantages {
@@ -301,7 +323,7 @@ h2 {
   grid-area: img_6;
 }
 
-@media screen and (max-width: 1199px) {
+@media (max-width: 1199px) {
   .advantages__item {
     padding: 20px;
     min-height: 160px;
@@ -312,7 +334,6 @@ h2 {
     padding-right: 14px;
   }
 }
-
 @media screen and (max-width: 991px) {
   .gallery__wrapper {
     grid-template-areas: "img_1 img_1" "img_2 img_3" "img_4 img_4" "img_5 img_6";
@@ -344,7 +365,7 @@ h2 {
     padding-top: 0;
   }
 }
-@media screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .header {
     margin-bottom: 15px;
   }
@@ -371,23 +392,7 @@ h2 {
     margin-bottom: 40px;
   }
 }
-
-@media screen and (max-width: 575px) {
-  .advantages__title {
-    margin-left: 60px;
-  }
-  .gallery__title {
-    margin-left: 60px;
-  }
-  .gallery__wrapper {
-    grid-template-areas: "img_1" "img_2" "img_3" "img_4" "img_5" "img_6";
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(6, 1fr);
-    gap: 1rem;
-  }
-  .gallery__image {
-    max-height: 460px;
-  }
+@media (max-width: 575px) {
   .burger-menu {
     display: block;
   }
@@ -423,4 +428,3 @@ h2 {
     border-radius: 20px;
   }
 }
-

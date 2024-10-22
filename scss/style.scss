@@ -30,8 +30,8 @@ a:hover {
   color: $pink;
 }
 
-Задаём респонсивную картинку,
-остающуюся в границах родительского элемента img {
+// Задаём респонсивную картинку, остающуюся в границах родительского элемента
+img {
   max-width: 100%;
 }
 
@@ -314,9 +314,15 @@ h2 {
       min-height: 137px;
     }
   }
+  .gallery {
+    margin-bottom: 100px;
+    &__title {
+      margin-bottom: 40px;
+    }
+  }
 }
 
-// sm
+// s до 320px
 @media (max-width: 575px) {
   .burger-menu {
     display: block;
