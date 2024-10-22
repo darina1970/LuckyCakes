@@ -31,9 +31,9 @@ a:hover {
 }
 
 // Задаём респонсивную картинку, остающуюся в границах родительского элемента
-//img {
-//max-width: 100%; - свойство странно влияет на иконки, может не надо его всем img?
-//}
+img {
+  max-width: 100%;
+}
 
 // Типографика заголовков
 h1,
@@ -365,8 +365,8 @@ h2 {
       margin-bottom: 40px;
     }
   }
-  }
-  
+}
+
 // s до 320px
 @media (max-width: 575px) {
   .burger-menu {
@@ -403,29 +403,8 @@ h2 {
     display: block;
     border-radius: 20px;
   }
-  .advantages {
-    &__title {
-      margin-left: 60px;
-    }
-  }
-  .gallery {
-    &__title {
-      margin-left: 60px;
-    }
-    &__wrapper {
-      grid-template-areas:
-        "img_1"
-        "img_2"
-        "img_3"
-        "img_4"
-        "img_5"
-        "img_6";
-      grid-template-columns: 1fr;
-      grid-template-rows: repeat(6, 1fr);
-      gap: 1rem;
-    }
-    &__image {
-      max-height: 460px;
-    }
-  }
+}
 
+// до 320px
+@media (max-width: 575px) {
+}
