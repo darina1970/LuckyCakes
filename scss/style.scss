@@ -233,9 +233,6 @@ h6 {
   }
 }
 
-
-
-
 // Медиазапросы: от большего к меньшему, базовый вариант 1400-1920px, далее в соответствии с сеткой bootstrap //
 
 // xxl
@@ -296,7 +293,7 @@ h6 {
       min-height: 137px;
     }
   }
-
+}
 
 // sm
 @media (max-width: 575px) {
@@ -334,9 +331,4 @@ h6 {
     display: block;
     border-radius: 20px;
   }
-}
-
-// до 320px
-@media (max-width: 575px) {
-
 }
