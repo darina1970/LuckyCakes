@@ -31,7 +31,7 @@ a:hover {
 }
 
 // Задаём респонсивную картинку, остающуюся в границах родительского элемента
-img {
+.image-fluid {
   max-width: 100%;
 }
 
@@ -127,6 +127,7 @@ h6 {
     margin-bottom: 48px;
   }
 }
+
 .banner-extraimg {
   display: none;
 }
@@ -283,11 +284,11 @@ h2 {
 
 // Медиазапросы: от большего к меньшему, базовый вариант 1400-1920px, далее в соответствии с сеткой bootstrap //
 
-// xl
+// xxl
 @media (max-width: 1399px) {
 }
 
-// l
+// xl
 @media (max-width: 1199px) {
   .advantages {
     &__item {
@@ -302,7 +303,7 @@ h2 {
   }
 }
 
-// m
+// lg
 @media screen and (max-width: 991px) {
   .gallery {
     &__wrapper {
@@ -338,7 +339,7 @@ h2 {
   }
 }
 
-// sm
+// md
 @media (max-width: 767px) {
   .header {
     margin-bottom: 15px;
@@ -367,7 +368,7 @@ h2 {
   }
 }
 
-// s до 320px
+// sm
 @media (max-width: 575px) {
   .burger-menu {
     display: block;
@@ -381,7 +382,7 @@ h2 {
   .menu__box {
     right: -100%;
   }
-  .banner__wrapper {
+  .banner-img-sm {
     order: -1;
   }
   .banner__body {
@@ -403,8 +404,4 @@ h2 {
     display: block;
     border-radius: 20px;
   }
-}
-
-// до 320px
-@media (max-width: 575px) {
 }

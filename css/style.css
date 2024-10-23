@@ -60,7 +60,7 @@ a:hover {
   color: #f0d3d3;
 }
 
-img {
+.image-fluid {
   max-width: 100%;
 }
 
@@ -405,7 +405,7 @@ h2 {
   .menu__box {
     right: -100%;
   }
-  .banner__wrapper {
+  .banner-img-sm {
     order: -1;
   }
   .banner__body {
