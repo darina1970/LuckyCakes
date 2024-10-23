@@ -157,6 +157,28 @@ h6 {
   display: none;
 }
 
+.about-me {
+  display: flex;
+  padding-bottom: 50px;
+  padding-top: 15px;
+}
+
+.about-me__body-facts {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  font-size: 20px;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+
+.about-me__body-facts-item {
+  display: flex;
+  flex-direction: row;
+  padding-top: 20px;
+  font-size: 20px;
+}
+
 .burger-menu {
   display: none;
   position: relative;
@@ -427,4 +449,8 @@ h2 {
     display: block;
     border-radius: 20px;
   }
-}
+  .about-me {
+    display: flex;
+    flex-direction: column;
+  }
+}/*# sourceMappingURL=style.css.map */

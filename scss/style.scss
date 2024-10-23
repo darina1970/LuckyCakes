@@ -130,6 +130,26 @@ h6 {
 .banner-extraimg {
   display: none;
 }
+// обо мне
+.about-me{
+  display: flex;
+  padding-bottom: 50px;
+  padding-top: 15px;
+
+}
+.about-me__body-facts{
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  font-size: 20px;
+  column-gap: 20px;
+}
+.about-me__body-facts-item{
+  display: flex;
+  flex-direction: row;
+  padding-top: 20px;
+  font-size: 20px;
+}
 
 // Бургер-меню
 .burger-menu {
@@ -403,8 +423,9 @@ h2 {
     display: block;
     border-radius: 20px;
   }
-}
+  
 
 // до 320px
 @media (max-width: 575px) {
+}
 }
