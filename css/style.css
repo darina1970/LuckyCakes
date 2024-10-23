@@ -77,12 +77,12 @@ h6 {
 }
 
 .title-big {
-  font-size: clamp(35px, 5vw, 96px);
+  font-size: clamp(35px, 6.8vw, 96px);
   line-height: 1.1;
 }
 
-.title-meduim {
-  font-size: clamp(24px, 2.5vw, 48px);
+.title-medium {
+  font-size: clamp(28px, 3.4vw, 48px);
   line-height: 1.2;
 }
 
@@ -138,6 +138,10 @@ h6 {
   width: 245px;
   padding-top: 19px;
   padding-bottom: 19px;
+}
+
+.banner {
+  margin-bottom: 80px;
 }
 
 .banner__body {
@@ -243,10 +247,6 @@ h6 {
 
 .menu__item:hover {
   background-color: #e0f0d4;
-}
-
-h2 {
-  font-size: 48px;
 }
 
 .advantages {

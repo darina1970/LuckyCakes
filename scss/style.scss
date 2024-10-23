@@ -51,12 +51,12 @@ h6 {
 // Адаптивные размеры заголовков через viewports единицы
 // Крупный заголовок для баннера
 .title-big {
-  font-size: clamp(35px, 5vw, 96px);
+  font-size: clamp(35px, 6.8vw, 96px);
   line-height: 1.1;
 }
 // Средние заголовки для разделов сайта
-.title-meduim {
-  font-size: clamp(24px, 2.5vw, 48px);
+.title-medium {
+  font-size: clamp(28px, 3.4vw, 48px);
   line-height: 1.2;
 }
 
@@ -115,6 +115,9 @@ h6 {
 }
 
 // Баннер
+.banner {
+  margin-bottom: 80px;
+}
 .banner__body {
   height: 100%;
   display: flex;
@@ -210,9 +213,6 @@ h6 {
 }
 
 // Секция преимущества
-h2 {
-  font-size: 48px;
-}
 .advantages {
   margin-bottom: 200px;
   &__title {
