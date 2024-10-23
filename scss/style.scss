@@ -218,7 +218,6 @@ h6 {
   &__title {
     margin-left: 112px;
     margin-bottom: 60px;
-    font-size: 48px;
   }
   &__item {
     border-radius: 20px;
@@ -243,7 +242,6 @@ h6 {
   &__title {
     margin-left: 112px;
     margin-bottom: 60px;
-    font-size: 48px;
   }
   &__wrapper {
     display: grid;
@@ -262,26 +260,33 @@ h6 {
     object-fit: cover;
     object-position: center;
   }
+  &__image:hover {
+    filter: brightness(90%);
+    transition: 0.3s ease-in;
+  }
+  &__link:hover {
+    filter: brightness(90%);
+    transition: 0.3s ease-in;
+  }
+  &__image-1 {
+    grid-area: img_1;
+  }
+  &__image-2 {
+    grid-area: img_2;
+  }
+  &__image-3 {
+    grid-area: img_3;
+  }
+  &__image-4 {
+    grid-area: img_4;
+  }
+  &__image-5 {
+    grid-area: img_5;
+  }
+  &__image-6 {
+    grid-area: img_6;
+  }
 }
-.img-1 {
-  grid-area: img_1;
-}
-.img-2 {
-  grid-area: img_2;
-}
-.img-3 {
-  grid-area: img_3;
-}
-.img-4 {
-  grid-area: img_4;
-}
-.img-5 {
-  grid-area: img_5;
-}
-.img-6 {
-  grid-area: img_6;
-}
-
 // Медиазапросы: от большего к меньшему, базовый вариант 1400-1920px, далее в соответствии с сеткой bootstrap //
 
 // xxl
@@ -317,10 +322,7 @@ h6 {
       gap: 1rem;
     }
     &__image {
-      width: 100%;
       max-height: 560px;
-      object-fit: cover;
-      object-position: center;
     }
   }
   .header__wrapper {
@@ -403,5 +405,30 @@ h6 {
   .banner-extraimg {
     display: block;
     border-radius: 20px;
+  }
+  .advantages {
+    &__title {
+      margin-left: 60px;
+    }
+  }
+  .gallery {
+    &__title {
+      margin-left: 60px;
+    }
+    &__wrapper {
+      grid-template-areas:
+        "img_1"
+        "img_2"
+        "img_3"
+        "img_4"
+        "img_5"
+        "img_6";
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(6, 1fr);
+      gap: 1rem;
+    }
+    &__image {
+      max-height: 460px;
+    }
   }
 }
