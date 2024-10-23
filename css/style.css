@@ -154,12 +154,16 @@ h6 {
   display: block;
 }
 
+#catalogue__tab-moti:checked ~ #catalogue__tab-content-moti,
 #catalogue__tab-cakes:checked ~ #catalogue__tab-content-cakes,
-#catalogue__tab-capcakes:checked ~ #catalogue__tab-content-capcakes {
+#catalogue__tab-cupcakes:checked ~ #catalogue__tab-content-cupcakes,
+#catalogue__tab-bento-cakes:checked ~ #catalogue__tab-content-bento-cakes,
+#catalogue__tab-pastry:checked ~ #catalogue__tab-content-pastry,
+#catalogue__tab-novelties:checked ~ #catalogue__tab-content-novelties {
   display: block;
 }
 
-.catalogue__catalogue-slider,
+.catalogue__catalogue-slider-wrapper,
 .owl-item {
   display: flex;
   flex-direction: column;
@@ -192,6 +196,7 @@ h6 {
   flex-direction: column;
   flex-wrap: wrap;
   max-width: 330px;
+  min-width: 300px;
   background-color: #f0d3d3;
   border-radius: 20px;
   justify-content: left;
@@ -200,11 +205,19 @@ h6 {
   margin: 0px 10px;
 }
 
-.catalogue__slider-picture {
+.catalogue__slider-picture-wrapper {
   width: 100%;
-  height: auto;
+  height: 282px;
   border-radius: 20px;
   margin-bottom: 22px;
+}
+
+.catalogue__slider-picture {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
 }
 
 .catalogue__product-title,
@@ -218,11 +231,15 @@ h6 {
   margin-bottom: 12px;
 }
 
+.catalogue__product-title {
+  min-height: 50px;
+}
+
 .catalogue__product-description {
   font-size: 16px;
   font-weight: 400;
   margin-bottom: 22px;
-  min-height: 72px;
+  min-height: 100px;
 }
 
 .catalogue__product-price {
@@ -293,7 +310,7 @@ h6 {
 }
 @media screen and (max-width: 575px) {
   .catalogue {
-    margin-bottom: 30px;
+    margin-bottom: 250px;
   }
   .catalogue__title {
     font-size: 30px;
@@ -302,11 +319,29 @@ h6 {
     margin-bottom: 30px;
   }
   .catalogue__tab-title {
-    width: 100px;
+    width: 130px;
     font-size: 16px;
     padding: 8px;
     margin-right: 8px;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
+  }
+  #catalogue__tab-content-cakes {
+    margin-top: 120px;
+  }
+  #catalogue__tab-content-moti {
+    margin-top: 120px;
+  }
+  #catalogue__tab-content-cupcakes {
+    margin-top: 70px;
+  }
+  #catalogue__tab-content-bento-cakes {
+    margin-top: 70px;
+  }
+  #catalogue__tab-content-pastry {
+    margin-top: 20px;
+  }
+  #catalogue__tab-content-novelties {
+    margin-top: 20px;
   }
   .catalogue__slider-card {
     max-width: 280px;
