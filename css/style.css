@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *,
 ::before,
 ::after {
@@ -16,40 +17,21 @@ p {
 
 @font-face {
   font-family: "Lato";
-  src: url("../assets/fonts/Lato-Regular.eot")
-      format("embedded-opentype"),
-    url("../assets/fonts/Lato-Regular.woff2")
-      format("woff2"),
-    url("../assets/fonts/Lato-Regular.woff") format("woff"),
-    url("../assets/fonts/Lato-Regular.ttf")
-      format("truetype");
+  src: url("../assets/fonts/Lato-Regular.eot") format("embedded-opentype"), url("../assets/fonts/Lato-Regular.woff2") format("woff2"), url("../assets/fonts/Lato-Regular.woff") format("woff"), url("../assets/fonts/Lato-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Lato";
-  src: url("../assets/fonts/Lato-Semibold.eot")
-      format("embedded-opentype"),
-    url("../assets/fonts/Lato-SemiBold.woff2")
-      format("woff2"),
-    url("../assets/fonts/Lato-Semibold.woff") format("woff"),
-    url("../assets/fonts/Lato-Semibold.ttf")
-      format("truetype");
+  src: url("../assets/fonts/Lato-Semibold.eot") format("embedded-opentype"), url("../assets/fonts/Lato-SemiBold.woff2") format("woff2"), url("../assets/fonts/Lato-Semibold.woff") format("woff"), url("../assets/fonts/Lato-Semibold.ttf") format("truetype");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Cormorant Garamond";
-  src: url("../assets/fonts/CormorantGaramond-Bold.eot")
-      format("embedded-opentype"),
-    url("../assets/fonts/Cormorant-Garamond-Bold.woff2")
-      format("woff2"),
-    url("../assets/fonts/CormorantGaramond-Bold.woff")
-      format("woff"),
-    url("../assets/fonts/CormorantGaramond-Bold.ttf")
-      format("truetype");
+  src: url("../assets/fonts/CormorantGaramond-Bold.eot") format("embedded-opentype"), url("../assets/fonts/Cormorant-Garamond-Bold.woff2") format("woff2"), url("../assets/fonts/CormorantGaramond-Bold.woff") format("woff"), url("../assets/fonts/CormorantGaramond-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -139,6 +121,38 @@ h6 {
   padding-right: 17px;
 }
 
+.delivery {
+  margin-bottom: 200px;
+  padding: 60px 0;
+}
+.delivery__title {
+  font-size: 48px;
+  margin-left: 112px;
+  margin-bottom: 60px;
+}
+.delivery__option {
+  border-radius: 20px;
+  border: 2px solid #f0d3d3;
+  display: flex;
+  align-items: flex-start;
+  padding: 25px;
+  width: 333px;
+  min-height: 137px;
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-family: "Lato", sans-serif;
+  margin-left: -250px;
+}
+.delivery img {
+  max-width: 100px;
+  margin-right: 20px;
+}
+.delivery p {
+  margin: 10px 0 0;
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
 @media screen and (max-width: 1199px) {
   .advantages__item {
     padding: 20px;
@@ -161,3 +175,58 @@ h6 {
     min-height: 137px;
   }
 }
+/*  delivery */
+@media screen and (max-width: 1199px) {
+  .delivery {
+    margin-bottom: 180px;
+    padding: 60px 0;
+  }
+  .delivery__title {
+    font-size: 42px;
+    margin-left: 80px;
+  }
+  .delivery__option {
+    padding: 20px;
+    font-size: 17px;
+  }
+  .delivery__option img {
+    max-width: 100px;
+  }
+}
+/* Экраны 768px - 991px (sm) */
+@media (max-width: 991px) {
+  .delivery {
+    margin-bottom: 150px;
+    padding: 50px 0;
+  }
+  .delivery__title {
+    font-size: 36px;
+    margin-left: 60px;
+  }
+  .delivery__option {
+    padding: 20px;
+    font-size: 16px;
+  }
+  .delivery__option img {
+    max-width: 90px;
+  }
+}
+/* (xs) */
+@media (max-width: 767px) {
+  .delivery {
+    margin-bottom: 100px;
+    padding: 40px 0;
+  }
+  .delivery__title {
+    font-size: 32px;
+    margin-left: 20px;
+    text-align: center;
+  }
+  .delivery__option {
+    padding: 15px;
+    font-size: 16px;
+  }
+  .delivery__option img {
+    max-width: 80px;
+  }
+}/*# sourceMappingURL=style.css.map */

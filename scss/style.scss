@@ -99,6 +99,44 @@ h6 {
   }
 }
 
+
+.delivery {
+  margin-bottom: 200px;
+  padding: 60px 0;
+
+  &__title {
+      font-size: 48px;
+      margin-left: 112px;
+      margin-bottom: 60px;
+  }
+
+  &__option {
+    border-radius: 20px;
+    border: 2px solid $pink;
+    display: flex;
+    align-items: flex-start;
+    padding: 25px;
+    width: 333px;
+    min-height: 137px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-family: $font-family-base;
+    margin-left: -250px;
+  }
+
+    img {
+      max-width: 100px;
+      margin-right: 20px; 
+    }
+
+    p {
+      margin: 10px 0 0;
+      font-size: 1.125rem;
+      font-weight: 500;
+    }
+  }
+
+
 // Медиазапросы: от большего к меньшему, базовый вариант 1400-1920px, далее в соответствии с сеткой bootstrap //
 
 // xl
@@ -139,4 +177,74 @@ h6 {
 
 // до 320px
 @media screen and (max-width: 575px) {
+}
+
+/*  delivery */
+
+// xl
+@media screen and (max-width: 1399px) {
+}
+
+// l
+@media screen and (max-width: 1199px) {
+  .delivery {
+  margin-bottom: 180px;
+  padding: 60px 0;
+
+  &__title {
+    font-size: 42px;
+    margin-left: 80px;
+  }
+
+  &__option {
+    padding: 20px;
+    font-size: 17px;
+    img {
+      max-width: 100px;
+    }
+  }
+}
+}
+
+/* Экраны 768px - 991px (sm) */
+@media (max-width: 991px) {
+  .delivery {
+  margin-bottom: 150px;
+  padding: 50px 0;
+
+  &__title {
+    font-size: 36px;
+    margin-left: 60px;
+  }
+
+  &__option {
+    padding: 20px;
+    font-size: 16px;
+    img {
+      max-width: 90px;
+    }
+  }
+}
+}
+
+/* (xs) */
+@media (max-width: 767px) {
+  .delivery {
+  margin-bottom: 100px;
+  padding: 40px 0;
+
+  &__title {
+    font-size: 32px;
+    margin-left: 20px;
+    text-align: center; // Центрируем заголовок на маленьких экранах
+  }
+
+  &__option {
+    padding: 15px;
+    font-size: 16px;
+    img {
+      max-width: 80px;
+    }
+  }
+}
 }
