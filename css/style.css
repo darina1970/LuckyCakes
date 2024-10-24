@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *,
 ::before,
 ::after {
@@ -323,6 +324,42 @@ h6 {
   grid-area: img_6;
 }
 
+.delivery {
+  margin-bottom: 200px;
+  padding: 60px 0;
+}
+.delivery__title {
+  font-size: 48px;
+  margin-left: 112px;
+  margin-bottom: 60px;
+}
+.delivery__option {
+  border-radius: 20px;
+  border: 2px solid #f0d3d3;
+  display: flex;
+  align-items: flex-start;
+  padding: 25px;
+  width: 333px;
+  min-height: 137px;
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-family: "Lato", sans-serif;
+}
+.delivery img {
+  max-width: 100px;
+  margin-right: 20px;
+}
+.delivery p {
+  margin: 10px 0 0;
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+.delivery__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
 @media (max-width: 1199px) {
   .advantages__item {
     padding: 20px;
@@ -436,5 +473,60 @@ h6 {
   }
   .gallery__image {
     max-height: 460px;
+  }
+}
+/* Экраны 768px - 991px (sm) */
+@media (max-width: 991px) {
+  .delivery {
+    margin-bottom: 150px;
+    padding: 50px 0;
+  }
+  .delivery__title {
+    font-size: 36px;
+    margin-left: 60px;
+  }
+  .delivery .col-md-12 {
+    width: 100%; /* На экранах меньше 991px колонки занимают всю ширину */
+  }
+  .delivery__wrapper {
+    display: flex;
+    flex-direction: column; /* Элементы будут располагаться друг под другом */
+    align-items: center; /* Центрируем элементы */
+  }
+  .delivery__option {
+    padding: 20px;
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  .delivery__option img {
+    max-width: 90px;
+  }
+}
+/* Экраны до 767px (xs) */
+@media (max-width: 767px) {
+  .delivery {
+    margin-bottom: 100px;
+    padding: 40px 0;
+  }
+  .delivery__title {
+    font-size: 32px;
+    margin-left: 20px;
+    text-align: center;
+  }
+  .delivery .col-md-12 {
+    width: 100%; /* Полная ширина на маленьких экранах */
+  }
+  .delivery__wrapper {
+    display: flex;
+    flex-direction: column; /* Элементы в колонку */
+    align-items: center;
+  }
+  .delivery__option {
+    padding: 15px;
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  .delivery__option img {
+    max-width: 80px;
   }
 }
