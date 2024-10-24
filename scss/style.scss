@@ -643,7 +643,28 @@ h6 {
   .banner__body-description {
     margin-bottom: 30px;
   }
-
+  .banner-img-sm {
+    order: -1;
+  }
+  .banner-img {
+    display: none;
+  }
+  .banner__body {
+    align-items: center;
+  }
+  .banner__body-title {
+    text-align: center;
+  }
+  .banner__body-description {
+    text-align: center;
+  }
+  .banner-link {
+    margin-bottom: 10px;
+  }
+  .banner-extraimg {
+    display: block;
+    border-radius: 20px;
+  }
   .about-me__image {
     display: flex;
     justify-content: center;
