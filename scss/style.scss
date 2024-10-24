@@ -61,7 +61,6 @@ h6 {
   line-height: 1.2;
 }
 
-<<<<<<< HEAD
 // Секция Карусель каталога
 .catalogue {
   margin-bottom: 200px;
@@ -213,7 +212,6 @@ h6 {
   font-size: 18px;
   font-weight: 400;
   margin-bottom: 9px;
-=======
 // HEADER
 .header {
   min-height: 100px;
@@ -364,7 +362,6 @@ h6 {
 }
 .menu__item:hover {
   background-color: $green;
->>>>>>> fb775b6e5a96f8a611e0f7cb2975497e0c9e9295
 }
 
 // Секция преимущества
@@ -444,7 +441,6 @@ h6 {
 }
 // Медиазапросы: от большего к меньшему, базовый вариант 1400-1920px, далее в соответствии с сеткой bootstrap //
 
-<<<<<<< HEAD
 @media screen and (max-width: 1440px) {
   //Карусель каталога//
   .owl-nav {
@@ -473,14 +469,12 @@ h6 {
     font-size: 18px;
   }
 
-=======
 // xxl
 @media (max-width: 1399px) {
 }
 
 // xl
 @media (max-width: 1199px) {
->>>>>>> fb775b6e5a96f8a611e0f7cb2975497e0c9e9295
   .advantages {
     &__item {
       padding: 20px;
@@ -496,7 +490,6 @@ h6 {
 
 // lg
 @media screen and (max-width: 991px) {
-<<<<<<< HEAD
   //Карусель каталога//
   .catalogue__tab-title {
     width: 140px;
@@ -550,7 +543,6 @@ h6 {
 
   #catalogue__tab-content-pastry {
     margin-top: 90px;
-=======
   .gallery {
     &__wrapper {
       grid-template-areas:
@@ -579,7 +571,6 @@ h6 {
   .banner__body {
     justify-content: center;
     padding-top: 0;
->>>>>>> fb775b6e5a96f8a611e0f7cb2975497e0c9e9295
   }
 }
 
@@ -604,7 +595,6 @@ h6 {
       min-height: 137px;
     }
   }
-<<<<<<< HEAD
 
   @media screen and (max-width: 722px) {
     //Карусель каталога//
@@ -756,7 +746,6 @@ h6 {
       .owl-next {
         margin-right: 10px;
       }
-=======
   .gallery {
     margin-bottom: 100px;
     &__title {
@@ -824,7 +813,7 @@ h6 {
     }
     &__image {
       max-height: 460px;
->>>>>>> fb775b6e5a96f8a611e0f7cb2975497e0c9e9295
     }
   }
+}
 }
