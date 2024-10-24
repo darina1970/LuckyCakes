@@ -17,13 +17,13 @@ $(document).ready(function () {
       0: {
         items: 1,
       },
-      600: {
+      700: {
         items: 2,
       },
-      1200: {
+      1000: {
         items: 3,
       },
-      1400: {
+      1500: {
         items: 4,
       },
     },

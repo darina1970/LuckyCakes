@@ -101,7 +101,7 @@ h6 {
 }
 
 .catalogue__tab-title {
-  width: 180px;
+  width: 160px;
   text-align: center;
   background: #e0f0d4;
   padding: 12px;
@@ -158,18 +158,18 @@ h6 {
   display: flex !important;
   align-items: center;
   justify-content: space-between;
-  padding: 0 2rem;
+  padding: 0px 2rem;
 
   button {
     outline: none;
   }
 
   .owl-prev {
-    margin-left: -90px;
+    margin-left: -60px;
   }
 
   .owl-next {
-    margin-right: -90px;
+    margin-right: -60px;
   }
 }
 
@@ -177,14 +177,13 @@ h6 {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  max-width: 330px;
-  min-width: 300px;
+  width: 300px;
   background-color: #f0d3d3;
   border-radius: 20px;
   justify-content: left;
   align-content: flex-start;
   padding: 18px 20px;
-  margin: 0px 10px;
+  margin: 0px 0px;
 }
 
 .catalogue__slider-picture-wrapper {
@@ -256,22 +255,34 @@ h6 {
 
 // Медиазапросы: от большего к меньшему, базовый вариант 1400-1920px, далее в соответствии с сеткой bootstrap //
 
-// xl
-@media screen and (max-width: 1399px) {
+@media screen and (max-width: 1440px) {
   //Карусель каталога//
   .owl-nav {
+    padding: 0px 1rem;
+
     .owl-prev {
-      margin-left: -30px;
+      margin-left: -20px;
     }
 
     .owl-next {
-      margin-right: -30px;
+      margin-right: -20px;
     }
   }
 }
 
+// xl
+@media screen and (max-width: 1399px) {
+}
+
 // l
 @media screen and (max-width: 1199px) {
+  .catalogue__tab-title {
+    width: 140px;
+    margin-bottom: 40px;
+    padding: 12px;
+    font-size: 18px;
+  }
+
   .advantages {
     &__item {
       padding: 20px;
@@ -287,6 +298,60 @@ h6 {
 
 // m
 @media screen and (max-width: 991px) {
+  //Карусель каталога//
+  .catalogue__tab-title {
+    width: 140px;
+    margin-bottom: 30px;
+    padding: 12px;
+    font-size: 18px;
+  }
+
+  .owl-nav {
+    padding: 0px 5px;
+
+    .owl-prev {
+      margin-left: -10px;
+    }
+
+    .owl-next {
+      margin-right: -10px;
+    }
+  }
+
+  #catalogue__tab-content-cakes {
+    margin-top: 20px;
+  }
+
+  #catalogue__tab-content-moti {
+    margin-top: 20px;
+  }
+
+  #catalogue__tab-content-cupcakes {
+    margin-top: 20px;
+  }
+
+  #catalogue__tab-content-bento-cakes {
+    margin-top: 20px;
+  }
+
+  #catalogue__tab-content-pastry {
+    margin-top: 20px;
+  }
+
+  #catalogue__tab-content-novelties {
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 820px) {
+  //Карусель каталога//
+  #catalogue__tab-content-bento-cakes {
+    margin-top: 90px;
+  }
+
+  #catalogue__tab-content-pastry {
+    margin-top: 90px;
+  }
 }
 
 // sm
@@ -301,84 +366,156 @@ h6 {
     }
   }
 
-  //Карусель каталога//
-  .owl-nav {
-    .owl-prev {
-      margin-left: -10px;
+  @media screen and (max-width: 722px) {
+    //Карусель каталога//
+    .owl-nav {
+      padding: 0px 0px;
+
+      .owl-prev {
+        margin-left: -12px;
+      }
+
+      .owl-next {
+        margin-right: -12px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 659px) {
+    //Карусель каталога//
+    #catalogue__tab-content-bento-cakes {
+      margin-top: 10px;
     }
 
-    .owl-next {
-      margin-right: -10px;
-    }
-  }
-}
-
-// до 320px
-@media screen and (max-width: 575px) {
-  //Карусель каталога//
-
-  .catalogue {
-    margin-bottom: 250px;
-  }
-
-  .catalogue__title {
-    font-size: 30px;
-    margin-left: 0px;
-    text-align: center;
-    margin-bottom: 30px;
-  }
-
-  .catalogue__tab-title {
-    width: 130px;
-    font-size: 16px;
-    padding: 8px;
-    margin-right: 8px;
-    margin-bottom: 10px;
-  }
-
-  #catalogue__tab-content-cakes {
-    margin-top: 120px;
-  }
-
-  #catalogue__tab-content-moti {
-    margin-top: 120px;
-  }
-
-  #catalogue__tab-content-cupcakes {
-    margin-top: 70px;
-  }
-
-  #catalogue__tab-content-bento-cakes {
-    margin-top: 70px;
-  }
-
-  #catalogue__tab-content-pastry {
-    margin-top: 20px;
-  }
-
-  #catalogue__tab-content-novelties {
-    margin-top: 20px;
-  }
-
-  .catalogue__slider-card {
-    max-width: 280px;
-  }
-
-  .owl-nav {
-    position: absolute;
-    top: 100%;
-    width: 100%;
-    display: flex !important;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 1rem;
-
-    .owl-prev {
-      margin-left: 10px;
+    #catalogue__tab-content-pastry {
+      margin-top: 10px;
     }
 
-    .owl-next {
-      margin-right: 10px;
+    .owl-nav {
+      padding: 0px 2rem;
+
+      .owl-prev {
+        margin-left: -12px;
+      }
+
+      .owl-next {
+        margin-right: -12px;
+      }
+    }
+  }
+
+  // до 320px
+  @media screen and (max-width: 575px) {
+  }
+
+  @media screen and (max-width: 501px) {
+    //Карусель каталога//
+    .catalogue__tabs {
+      min-height: 702px;
+    }
+
+    .catalogue {
+      margin-bottom: 100px;
+    }
+
+    .catalogue__title {
+      font-size: 20px;
+      margin-left: 0px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .catalogue__tab-title {
+      width: 130px;
+      font-size: 18px;
+      padding: 8px;
+      margin-right: 8px;
+      margin-bottom: 10px;
+    }
+
+    #catalogue__tab-content-cakes {
+      margin-top: 70px;
+    }
+
+    #catalogue__tab-content-moti {
+      margin-top: 70px;
+    }
+
+    #catalogue__tab-content-cupcakes {
+      margin-top: 70px;
+    }
+
+    #catalogue__tab-content-bento-cakes {
+      margin-top: 20px;
+    }
+
+    #catalogue__tab-content-pastry {
+      margin-top: 20px;
+    }
+
+    #catalogue__tab-content-novelties {
+      margin-top: 20px;
+    }
+
+    .catalogue__slider-card {
+      max-width: 300px;
+    }
+  }
+
+  @media screen and (max-width: 446px) {
+    //Карусель каталога//
+    .catalogue__tabs {
+      min-height: 802px;
+    }
+
+    .catalogue__title {
+      margin-bottom: 100px;
+    }
+
+    #catalogue__tab-content-cakes {
+      margin-top: 120px;
+    }
+
+    #catalogue__tab-content-moti {
+      margin-top: 120px;
+    }
+
+    #catalogue__tab-content-cupcakes {
+      margin-top: 70px;
+    }
+
+    #catalogue__tab-content-bento-cakes {
+      margin-top: 70px;
+    }
+
+    #catalogue__tab-content-pastry {
+      margin-top: 20px;
+    }
+
+    #catalogue__tab-content-novelties {
+      margin-top: 20px;
+    }
+
+    .catalogue__slider-card {
+      max-width: 280px;
+    }
+
+    .owl-nav {
+      position: absolute;
+      top: 100%;
+      width: 100%;
+      display: flex !important;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 1rem;
+
+      .owl-prev {
+        margin-left: 10px;
+      }
+
+      .owl-next {
+        margin-right: 10px;
+      }
     }
   }
 }
