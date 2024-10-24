@@ -478,9 +478,9 @@ h6 {
   padding: 60px 0;
 
   &__title {
-      font-size: 48px;
-      margin-left: 112px;
-      margin-bottom: 60px;
+    font-size: 48px;
+    margin-left: 112px;
+    margin-bottom: 60px;
   }
 
   &__option {
@@ -496,23 +496,101 @@ h6 {
     font-family: $font-family-base;
   }
 
-    img {
-      max-width: 100px;
-      margin-right: 20px; 
-    }
-
-    p {
-      margin: 10px 0 0;
-      font-size: 1.125rem;
-      font-weight: 500;
-    }
+  img {
+    max-width: 100px;
+    margin-right: 20px;
   }
 
-  .delivery__wrapper {
-    display: flex;
-    justify-content: space-between;
+  p {
+    margin: 10px 0 0;
+    font-size: 1.125rem;
+    font-weight: 500;
   }
+}
 
+.delivery__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+//Секция Контакты//
+.contacts {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 134px;
+}
+
+.contacts__map {
+  width: 50%;
+  margin: 0px;
+}
+
+.contacts__yandex-map {
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.contacts__phone-socmedia {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 50%;
+  padding-left: 138px;
+  margin: 0px;
+}
+
+.contacts__title-for-basic,
+.contacts__title-for-responsive {
+  font-family: $font-family-accent;
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 42px;
+}
+
+.contacts__title-for-responsive {
+  display: none;
+}
+
+.contacts__paragraph,
+.contacts__phone,
+.contacts__subtitle {
+  font-family: $font-family-base;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.contacts__phone-wrapper {
+  margin-bottom: 40px;
+}
+
+.contacts__icon-phone {
+  margin-right: 12px;
+}
+
+.contacts__phone {
+  display: inline-flex;
+}
+
+.contacts__wtsp-tg {
+  margin-bottom: 51px;
+}
+
+.contacts__icon-wtsp {
+  margin-right: 17px;
+}
+
+.contacts__vk-ok {
+  margin-bottom: 49px;
+}
+
+.contacts__icon-vk {
+  margin-right: 20px;
+}
+//Конец секции Контакты//
 
 // Медиазапросы: от большего к меньшему, базовый вариант 1400-1920px, далее в соответствии с сеткой bootstrap //
 @media screen and (max-width: 1440px) {
@@ -686,6 +764,45 @@ h6 {
   #catalogue__tab-content-novelties {
     margin-top: 20px;
   }
+
+  //Секция Контакты//
+  .contacts {
+    flex-direction: column;
+    margin-bottom: 100px;
+  }
+
+  .contacts__map {
+    width: 100%;
+    height: 400px;
+    margin-bottom: 30px;
+  }
+
+  .contacts__phone-socmedia {
+    flex-direction: column;
+    width: 100%;
+    padding: 0px 100px;
+    text-align: center;
+  }
+
+  .contacts__title-for-responsive {
+    font-size: 40px;
+    margin-bottom: 30px;
+    display: block;
+    text-align: center;
+  }
+
+  .contacts__title-for-basic {
+    display: none;
+  }
+
+  .contacts__phone-wrapper {
+    margin-bottom: 20px;
+  }
+
+  .contacts__phone {
+    font-size: 20px;
+  }
+  //Конец секции Контакты//
 }
 
 // md
@@ -968,9 +1085,21 @@ h6 {
       }
     }
   }
+
+  //Секция Контакты//
+  .contacts {
+    margin-bottom: 100px;
+  }
+
+  .contacts__map {
+    width: 100%;
+  }
+
+  .contacts__phone-socmedia {
+    padding: 0px 30px;
+  }
+  //Конец секции Контакты//
 }
-
-
 
 /* Экраны 768px - 991px (sm) */
 @media (max-width: 991px) {
@@ -1014,7 +1143,7 @@ h6 {
     &__title {
       font-size: 32px;
       margin-left: 20px;
-      text-align: center; 
+      text-align: center;
     }
 
     .col-md-12 {
