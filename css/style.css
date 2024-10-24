@@ -332,18 +332,13 @@ h2 {
   margin-bottom: 60px;
   font-size: 48px;
 }
-.reviews-section .reviews-slider {
-  width: 1408px;
-  height: 416px;
-  position: relative;
-  margin: 0 auto 256px;
-  padding: 30px 0;
+.reviews-section .reviews-slider .owl-item {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
 }
-.reviews-section__wrapper {
-  position: relative;
-  padding: 60px 0;
-}
-.reviews-section__wrapper .owl-nav {
+.reviews-section .reviews-slider .owl-nav {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -351,28 +346,16 @@ h2 {
   display: flex !important;
   align-items: center;
   justify-content: space-between;
-  padding: 0 2rem;
+  padding: 0px 2rem;
 }
-.reviews-section__wrapper .owl-item {
-  display: flex;
-  justify-content: center;
-  padding: 0 10px;
+.reviews-section .reviews-slider .owl-nav button {
+  outline: none;
 }
-.reviews-section__box {
-  text-align: center;
+.reviews-section .reviews-slider .owl-nav .owl-prev {
+  margin-left: -60px;
 }
-.reviews-section__box img {
-  max-width: 457px;
-  max-height: 302px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-radius: 20px;
-  margin-top: 50px;
-}
-
-.img-fluid {
-  width: 100%;
-  height: auto;
+.reviews-section .reviews-slider .owl-nav .owl-next {
+  margin-right: -60px;
 }
 
 @media (max-width: 1199px) {
