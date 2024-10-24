@@ -23,21 +23,7 @@ button {
   color: $text-brown;
   text-decoration: none;
   cursor: pointer;
-  transition-duration: 0.2s;
-}
-// Центрируем текст в кнопке, устанавливаем горизонтальные паддинги, оформление
-.button {
-  display: inline-flex;
-  align-items: center;
-  padding-inline: 30px;
-  font-family: $font-family-base;
-  font-size: 20px;
-  line-height: 1.2;
-  text-decoration: none;
-  white-space: nowrap;
-  background-color: $green;
-  border: none;
-  border-radius: 20px;
+  transition: 0.2s;
 }
 
 // Изменение цвета при наведении на обычные ссылки
@@ -46,9 +32,9 @@ a:hover {
 }
 
 // Задаём респонсивную картинку, остающуюся в границах родительского элемента
-//img {
-//max-width: 100%; - свойство странно влияет на иконки, может не надо его всем img?
-//}
+.image-fluid {
+  max-width: 100%;
+}
 
 // Типографика заголовков
 h1,
@@ -66,15 +52,16 @@ h6 {
 // Адаптивные размеры заголовков через viewports единицы
 // Крупный заголовок для баннера
 .title-big {
-  font-size: clamp(48px, 5vw, 96px);
+  font-size: clamp(35px, 6.8vw, 96px);
   line-height: 1.1;
 }
 // Средние заголовки для разделов сайта
-.title-meduim {
-  font-size: clamp(24px, 2.5vw, 48px);
+.title-medium {
+  font-size: clamp(28px, 3.4vw, 48px);
   line-height: 1.2;
 }
 
+<<<<<<< HEAD
 // Секция Карусель каталога
 .catalogue {
   margin-bottom: 200px;
@@ -226,13 +213,164 @@ h6 {
   font-size: 18px;
   font-weight: 400;
   margin-bottom: 9px;
+=======
+// HEADER
+.header {
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  &__wrapper {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__logo {
+    display: flex;
+    flex-shrink: 0;
+  }
+  &__menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &-list {
+      display: flex;
+      flex-wrap: wrap;
+      -moz-column-gap: 30px;
+      column-gap: 30px;
+    }
+  }
+}
+
+// Оформляем якорные ссылки как кнопки
+.link {
+  display: inline-block;
+  padding-inline: 30px;
+  text-align: center;
+  font-family: $font-family-base;
+  line-height: 1.2;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: $green;
+  border: none;
+  border-radius: 20px;
+}
+.header-link {
+  height: 47px;
+  font-size: 20px;
+  padding-top: 11px;
+  padding-bottom: 11px;
+}
+.banner-link {
+  height: 67px;
+  width: 245px;
+  padding-top: 19px;
+  padding-bottom: 19px;
+}
+
+// Баннер
+.banner {
+  margin-bottom: 80px;
+}
+.banner__body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 154px;
+  &-title {
+    margin-bottom: 21px;
+  }
+  &-description {
+    margin-bottom: 48px;
+  }
+}
+
+.banner-extraimg {
+  display: none;
+}
+
+// Бургер-меню
+.burger-menu {
+  display: none;
+  position: relative;
+}
+#menu__toggle {
+  opacity: 0;
+}
+#menu__toggle:checked ~ .menu__btn > span {
+  transform: rotate(45deg);
+}
+#menu__toggle:checked ~ .menu__btn > span::before {
+  top: 0;
+  transform: rotate(0);
+}
+#menu__toggle:checked ~ .menu__btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+#menu__toggle:checked ~ .menu__box {
+  visibility: visible;
+  right: 0;
+}
+.menu__btn {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  z-index: 1;
+}
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: $text-brown;
+}
+.menu__btn > span::before {
+  content: "";
+  top: -8px;
+}
+.menu__btn > span::after {
+  content: "";
+  top: 8px;
+}
+.menu__box {
+  display: block;
+  position: fixed;
+  visibility: hidden;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100%;
+  margin: 0;
+  padding: 80px 0;
+  list-style: none;
+  background-color: $pink;
+  box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
+}
+.menu__item {
+  display: block;
+  padding: 12px 24px;
+  color: $text-brown;
+  font-family: $font-family-base;
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.menu__item:hover {
+  background-color: $green;
+>>>>>>> fb775b6e5a96f8a611e0f7cb2975497e0c9e9295
 }
 
 // Секция преимущества
 .advantages {
   margin-bottom: 200px;
   &__title {
-    font-size: 48px;
     margin-left: 112px;
     margin-bottom: 60px;
   }
@@ -253,8 +391,60 @@ h6 {
   }
 }
 
+// Секция галерея
+.gallery {
+  margin-bottom: 200px;
+  &__title {
+    margin-left: 112px;
+    margin-bottom: 60px;
+  }
+  &__wrapper {
+    display: grid;
+    grid-template-areas:
+      "img_1 img_2 img_4 img_5"
+      "img_1 img_3 img_4 img_6";
+    grid-template-columns: repeat(2, 2fr 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1.25rem;
+    border-radius: 50px;
+    overflow: hidden;
+  }
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  &__image:hover {
+    filter: brightness(90%);
+    transition: 0.3s ease-in;
+  }
+  &__link:hover {
+    filter: brightness(90%);
+    transition: 0.3s ease-in;
+  }
+  &__image-1 {
+    grid-area: img_1;
+  }
+  &__image-2 {
+    grid-area: img_2;
+  }
+  &__image-3 {
+    grid-area: img_3;
+  }
+  &__image-4 {
+    grid-area: img_4;
+  }
+  &__image-5 {
+    grid-area: img_5;
+  }
+  &__image-6 {
+    grid-area: img_6;
+  }
+}
 // Медиазапросы: от большего к меньшему, базовый вариант 1400-1920px, далее в соответствии с сеткой bootstrap //
 
+<<<<<<< HEAD
 @media screen and (max-width: 1440px) {
   //Карусель каталога//
   .owl-nav {
@@ -283,6 +473,14 @@ h6 {
     font-size: 18px;
   }
 
+=======
+// xxl
+@media (max-width: 1399px) {
+}
+
+// xl
+@media (max-width: 1199px) {
+>>>>>>> fb775b6e5a96f8a611e0f7cb2975497e0c9e9295
   .advantages {
     &__item {
       padding: 20px;
@@ -296,8 +494,9 @@ h6 {
   }
 }
 
-// m
+// lg
 @media screen and (max-width: 991px) {
+<<<<<<< HEAD
   //Карусель каталога//
   .catalogue__tab-title {
     width: 140px;
@@ -351,11 +550,51 @@ h6 {
 
   #catalogue__tab-content-pastry {
     margin-top: 90px;
+=======
+  .gallery {
+    &__wrapper {
+      grid-template-areas:
+        "img_1 img_1"
+        "img_2 img_3"
+        "img_4 img_4"
+        "img_5 img_6";
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(4, 1fr);
+      gap: 1rem;
+    }
+    &__image {
+      max-height: 560px;
+    }
+  }
+  .header__wrapper {
+    column-gap: 20px;
+    row-gap: 15px;
+    flex-wrap: wrap;
+  }
+  .header__menu {
+    order: 1;
+    flex-basis: 100%;
+    justify-content: center;
+  }
+  .banner__body {
+    justify-content: center;
+    padding-top: 0;
+>>>>>>> fb775b6e5a96f8a611e0f7cb2975497e0c9e9295
   }
 }
 
-// sm
-@media screen and (max-width: 767px) {
+// md
+@media (max-width: 767px) {
+  .header {
+    margin-bottom: 15px;
+  }
+  .banner__body-description {
+    margin-bottom: 30px;
+  }
+  .image__wrapper {
+    display: flex;
+    align-items: center;
+  }
   .advantages {
     margin-bottom: 100px;
     &__title {
@@ -365,6 +604,7 @@ h6 {
       min-height: 137px;
     }
   }
+<<<<<<< HEAD
 
   @media screen and (max-width: 722px) {
     //Карусель каталога//
@@ -516,6 +756,75 @@ h6 {
       .owl-next {
         margin-right: 10px;
       }
+=======
+  .gallery {
+    margin-bottom: 100px;
+    &__title {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+// sm
+@media (max-width: 575px) {
+  .burger-menu {
+    display: block;
+  }
+  .header__menu {
+    display: none;
+  }
+  .header__wrapper {
+    justify-content: space-between;
+  }
+  .menu__box {
+    right: -100%;
+  }
+  .banner-img-sm {
+    order: -1;
+  }
+  .banner__body {
+    align-items: center;
+  }
+  .banner__body-title {
+    text-align: center;
+  }
+  .banner__body-description {
+    text-align: center;
+  }
+  .banner-link {
+    margin-bottom: 10px;
+  }
+  .banner-img {
+    display: none;
+  }
+  .banner-extraimg {
+    display: block;
+    border-radius: 20px;
+  }
+  .advantages {
+    &__title {
+      margin-left: 60px;
+    }
+  }
+  .gallery {
+    &__title {
+      margin-left: 60px;
+    }
+    &__wrapper {
+      grid-template-areas:
+        "img_1"
+        "img_2"
+        "img_3"
+        "img_4"
+        "img_5"
+        "img_6";
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(6, 1fr);
+      gap: 1rem;
+    }
+    &__image {
+      max-height: 460px;
+>>>>>>> fb775b6e5a96f8a611e0f7cb2975497e0c9e9295
     }
   }
 }
