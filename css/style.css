@@ -819,7 +819,8 @@ h6 {
   }
   .owl-nav {
     position: absolute;
-    top: 100%;
+    top: auto;
+    bottom: -45px;
     width: 100%;
     display: flex !important;
     align-items: center;
