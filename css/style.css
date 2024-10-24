@@ -84,7 +84,7 @@ h6 {
 }
 
 .title-medium {
-  font-size: clamp(28px, 3.4vw, 48px);
+  font-size: clamp(20px, 3.4vw, 48px);
   line-height: 1.2;
 }
 
@@ -170,6 +170,14 @@ h6 {
   margin-bottom: 200px;
 }
 
+.about-me__body-title {
+  margin-bottom: 64px;
+}
+
+.about-me__body-text {
+  margin-bottom: 51px;
+}
+
 .about-me__body-facts {
   display: flex;
   flex-direction: column;
@@ -218,6 +226,7 @@ h6 {
   align-items: center;
   position: absolute;
   top: 0;
+  right: 12px;
   width: 30px;
   height: 30px;
   cursor: pointer;
@@ -543,72 +552,7 @@ h6 {
 .delivery__wrapper {
   display: flex;
   justify-content: space-between;
-}
-
-
-@media screen and (max-width: 1440px) {
-  .owl-nav {
-    padding: 0px 20px;
-  }
-  .owl-nav .owl-prev {
-    margin-left: -40px;
-  }
-  .owl-nav .owl-next {
-    margin-right: -40px;
-  }
-}
-@media (max-width: 1399px) {
-  .catalogue__tab-title {
-    width: 140px;
-    margin-bottom: 40px;
-    padding: 12px;
-    font-size: 18px;
-  }
-  .owl-nav {
-    padding: 0px 30px;
-  }
-  .owl-nav .owl-prev {
-    margin-left: -40px;
-  }
-  .owl-nav .owl-next {
-    margin-right: -40px;
-  }
-}
-
-.delivery {
-  margin-bottom: 200px;
-  padding: 60px 0;
-}
-.delivery__title {
-  font-size: 48px;
-  margin-left: 112px;
-  margin-bottom: 60px;
-}
-.delivery__option {
-  border-radius: 20px;
-  border: 2px solid #f0d3d3;
-  display: flex;
-  align-items: flex-start;
-  padding: 25px;
-  width: 333px;
-  min-height: 137px;
-  margin-bottom: 20px;
-  font-size: 18px;
-  font-family: "Lato", sans-serif;
-}
-.delivery img {
-  max-width: 100px;
-  margin-right: 20px;
-}
-.delivery p {
-  margin: 10px 0 0;
-  font-size: 1.125rem;
-  font-weight: 500;
-}
-
-.delivery__wrapper {
-  display: flex;
-  justify-content: space-between;
+  gap: 30px;
 }
 
 @media screen and (max-width: 1440px) {
@@ -649,15 +593,6 @@ h6 {
   .advantages__icon {
     padding-right: 14px;
   }
-  .advantages__item {
-    padding: 20px;
-    min-height: 160px;
-    margin-bottom: 20px;
-    font-size: 16px;
-  }
-  .advantages__icon {
-    padding-right: 14px;
-  }
 }
 @media screen and (max-width: 991px) {
   .gallery__wrapper {
@@ -687,6 +622,12 @@ h6 {
   .banner__body {
     justify-content: center;
     padding-top: 0;
+  }
+  .about-me__body-title {
+    margin-bottom: 32px;
+  }
+  .about-me__body-text {
+    margin-bottom: 20px;
   }
   .catalogue__tab-title {
     width: 140px;
@@ -729,9 +670,6 @@ h6 {
     font-size: 36px;
     margin-left: 60px;
   }
-  .delivery .col-md-12 {
-    width: 100%; /* На экранах меньше 991px колонки занимают всю ширину */
-  }
   .delivery__wrapper {
     display: flex;
     flex-direction: column; /* Элементы будут располагаться друг под другом */
@@ -767,6 +705,9 @@ h6 {
   }
 }
 @media (max-width: 767px) {
+  body {
+    font-size: 18px;
+  }
   .header {
     margin-bottom: 15px;
   }
@@ -884,6 +825,9 @@ h6 {
   }
 }
 @media (max-width: 575px) {
+  body {
+    font-size: 16px;
+  }
   .header__wrapper {
     justify-content: space-between;
   }
@@ -928,7 +872,6 @@ h6 {
     max-height: 460px;
   }
 }
-
 @media screen and (max-width: 575px) and (max-width: 501px) {
   .catalogue__tabs {
     min-height: 702px;
