@@ -312,6 +312,28 @@ h6 {
   display: none;
 }
 
+.about-me {
+  display: flex;
+  padding-bottom: 50px;
+  padding-top: 15px;
+}
+
+.about-me__body-facts {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  font-size: 20px;
+}
+
+.about-me__body-facts-item {
+  display: flex;
+  flex-direction: row;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  padding-top: 20px;
+  font-size: 20px;
+}
+
 .burger-menu {
   display: none;
   position: relative;
