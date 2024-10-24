@@ -166,22 +166,22 @@ h6 {
   display: flex;
   padding-bottom: 50px;
   padding-top: 15px;
+  margin-bottom: 200px;
 }
 
 .about-me__body-facts {
   display: flex;
   flex-direction: column;
   padding-top: 20px;
-  font-size: 20px;
 }
 
 .about-me__body-facts-item {
   display: flex;
   flex-direction: row;
+  align-items: center;
   -moz-column-gap: 10px;
        column-gap: 10px;
   padding-top: 20px;
-  font-size: 20px;
 }
 
 .burger-menu {
@@ -572,10 +572,14 @@ h6 {
     row-gap: 15px;
     flex-wrap: wrap;
   }
+  .burger-menu {
+    display: block;
+  }
   .header__menu {
-    order: 1;
-    flex-basis: 100%;
-    justify-content: center;
+    display: none;
+  }
+  .menu__box {
+    right: -100%;
   }
   .banner__body {
     justify-content: center;
@@ -642,9 +646,31 @@ h6 {
   .banner__body-description {
     margin-bottom: 30px;
   }
-  .image__wrapper {
-    display: flex;
+  .banner-img-sm {
+    order: -1;
+  }
+  .banner-img {
+    display: none;
+  }
+  .banner__body {
     align-items: center;
+  }
+  .banner__body-title {
+    text-align: center;
+  }
+  .banner__body-description {
+    text-align: center;
+  }
+  .banner-link {
+    margin-bottom: 10px;
+  }
+  .banner-extraimg {
+    display: block;
+    border-radius: 20px;
+  }
+  .about-me__image {
+    display: flex;
+    justify-content: center;
   }
   .advantages {
     margin-bottom: 100px;
@@ -709,12 +735,6 @@ h6 {
   }
 }
 @media (max-width: 575px) {
-  .burger-menu {
-    display: block;
-  }
-  .header__menu {
-    display: none;
-  }
   .header__wrapper {
     justify-content: space-between;
   }
