@@ -172,13 +172,13 @@ h6 {
   flex-direction: column;
   padding-top: 20px;
   font-size: 20px;
-  -moz-column-gap: 20px;
-       column-gap: 20px;
 }
 
 .about-me__body-facts-item {
   display: flex;
   flex-direction: row;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
   padding-top: 20px;
   font-size: 20px;
 }
@@ -460,4 +460,3 @@ h6 {
     max-height: 460px;
   }
 }
-
