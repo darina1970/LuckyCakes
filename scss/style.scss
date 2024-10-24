@@ -385,6 +385,18 @@ h6 {
   margin-bottom: 9px;
 }
 
+.icon-arrow-top {
+  position: fixed;
+  z-index: 2;
+  cursor: pointer;
+  top: auto;
+  bottom: 1rem;
+  right: 0.5rem;
+  left: auto;
+  scroll-behavior: smooth;
+  display: none;
+}
+
 // Секция преимущества
 .advantages {
   margin-bottom: 200px;

@@ -48,3 +48,13 @@ $(document).ready(function () {
     items: 1,
   });
 });
+
+$(window).scroll(function (event) {
+  var top = $(window).scrollTop();
+  var height = $(document).height();
+  if (top >= height * 0.4) {
+    $(".icon-arrow-top").css("display", "block");
+  } else {
+    $(".icon-arrow-top").css("display", "none");
+  }
+});
