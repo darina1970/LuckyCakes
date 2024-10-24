@@ -300,7 +300,7 @@ h2 {
   margin: 0 auto 256px; 
   padding: 30px 0;
   }
-
+  
   &__wrapper {
     position: relative;
     padding: 60px 0;
@@ -312,6 +312,7 @@ h2 {
       display: flex !important;
       align-items: center;
       justify-content: space-between;
+      padding: 0 2rem;
     }
 
     .owl-item {

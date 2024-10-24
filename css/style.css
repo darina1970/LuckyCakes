@@ -351,6 +351,7 @@ h2 {
   display: flex !important;
   align-items: center;
   justify-content: space-between;
+  padding: 0 2rem;
 }
 .reviews-section__wrapper .owl-item {
   display: flex;
@@ -478,4 +479,4 @@ h2 {
     display: block;
     border-radius: 20px;
   }
-}/*# sourceMappingURL=style.css.map */
+}
