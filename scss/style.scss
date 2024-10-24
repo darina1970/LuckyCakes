@@ -139,6 +139,7 @@ h6 {
   display: flex;
   padding-bottom: 50px;
   padding-top: 15px;
+  margin-bottom: 200px;
 }
 .about-me__body-facts {
   display: flex;
@@ -149,6 +150,7 @@ h6 {
 .about-me__body-facts-item {
   display: flex;
   flex-direction: row;
+  align-items: center;
   column-gap: 10px;
   padding-top: 20px;
   font-size: 20px;
@@ -369,9 +371,13 @@ h6 {
   .banner__body-description {
     margin-bottom: 30px;
   }
-  .image__wrapper {
+  // .image__wrapper {
+  //   display: flex;
+  //   align-items: center;
+  // }
+  .about-me__image {
     display: flex;
-    align-items: center;
+    justify-content: center;
   }
   .advantages {
     margin-bottom: 100px;

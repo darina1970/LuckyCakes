@@ -165,6 +165,7 @@ h6 {
   display: flex;
   padding-bottom: 50px;
   padding-top: 15px;
+  margin-bottom: 200px;
 }
 
 .about-me__body-facts {
@@ -177,6 +178,7 @@ h6 {
 .about-me__body-facts-item {
   display: flex;
   flex-direction: row;
+  align-items: center;
   -moz-column-gap: 10px;
        column-gap: 10px;
   padding-top: 20px;
@@ -390,9 +392,9 @@ h6 {
   .banner__body-description {
     margin-bottom: 30px;
   }
-  .image__wrapper {
+  .about-me__image {
     display: flex;
-    align-items: center;
+    justify-content: center;
   }
   .advantages {
     margin-bottom: 100px;
