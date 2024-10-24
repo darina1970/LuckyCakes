@@ -135,22 +135,21 @@ h6 {
   display: none;
 }
 // обо мне
-.about-me{
+.about-me {
   display: flex;
   padding-bottom: 50px;
   padding-top: 15px;
-
 }
-.about-me__body-facts{
+.about-me__body-facts {
   display: flex;
   flex-direction: column;
   padding-top: 20px;
   font-size: 20px;
 }
-.about-me__body-facts-item{
+.about-me__body-facts-item {
   display: flex;
   flex-direction: row;
- column-gap: 10px;
+  column-gap: 10px;
   padding-top: 20px;
   font-size: 20px;
 }
@@ -451,3 +450,4 @@ h6 {
       max-height: 460px;
     }
   }
+}
