@@ -31,7 +31,7 @@ a:hover {
 }
 
 // Задаём респонсивную картинку, остающуюся в границах родительского элемента
-img {
+.image-fluid {
   max-width: 100%;
 }
 
@@ -51,12 +51,12 @@ h6 {
 // Адаптивные размеры заголовков через viewports единицы
 // Крупный заголовок для баннера
 .title-big {
-  font-size: clamp(35px, 5vw, 96px);
+  font-size: clamp(35px, 6.8vw, 96px);
   line-height: 1.1;
 }
 // Средние заголовки для разделов сайта
-.title-meduim {
-  font-size: clamp(24px, 2.5vw, 48px);
+.title-medium {
+  font-size: clamp(28px, 3.4vw, 48px);
   line-height: 1.2;
 }
 
@@ -115,6 +115,9 @@ h6 {
 }
 
 // Баннер
+.banner {
+  margin-bottom: 80px;
+}
 .banner__body {
   height: 100%;
   display: flex;
@@ -127,6 +130,7 @@ h6 {
     margin-bottom: 48px;
   }
 }
+
 .banner-extraimg {
   display: none;
 }
@@ -229,15 +233,11 @@ h6 {
 }
 
 // Секция преимущества
-h2 {
-  font-size: 48px;
-}
 .advantages {
   margin-bottom: 200px;
   &__title {
     margin-left: 112px;
     margin-bottom: 60px;
-    font-size: 48px;
   }
   &__item {
     border-radius: 20px;
@@ -262,7 +262,6 @@ h2 {
   &__title {
     margin-left: 112px;
     margin-bottom: 60px;
-    font-size: 48px;
   }
   &__wrapper {
     display: grid;
@@ -281,33 +280,40 @@ h2 {
     object-fit: cover;
     object-position: center;
   }
+  &__image:hover {
+    filter: brightness(90%);
+    transition: 0.3s ease-in;
+  }
+  &__link:hover {
+    filter: brightness(90%);
+    transition: 0.3s ease-in;
+  }
+  &__image-1 {
+    grid-area: img_1;
+  }
+  &__image-2 {
+    grid-area: img_2;
+  }
+  &__image-3 {
+    grid-area: img_3;
+  }
+  &__image-4 {
+    grid-area: img_4;
+  }
+  &__image-5 {
+    grid-area: img_5;
+  }
+  &__image-6 {
+    grid-area: img_6;
+  }
 }
-.img-1 {
-  grid-area: img_1;
-}
-.img-2 {
-  grid-area: img_2;
-}
-.img-3 {
-  grid-area: img_3;
-}
-.img-4 {
-  grid-area: img_4;
-}
-.img-5 {
-  grid-area: img_5;
-}
-.img-6 {
-  grid-area: img_6;
-}
-
 // Медиазапросы: от большего к меньшему, базовый вариант 1400-1920px, далее в соответствии с сеткой bootstrap //
 
-// xl
+// xxl
 @media (max-width: 1399px) {
 }
 
-// l
+// xl
 @media (max-width: 1199px) {
   .advantages {
     &__item {
@@ -322,7 +328,7 @@ h2 {
   }
 }
 
-// m
+// lg
 @media screen and (max-width: 991px) {
   .gallery {
     &__wrapper {
@@ -336,10 +342,7 @@ h2 {
       gap: 1rem;
     }
     &__image {
-      width: 100%;
       max-height: 560px;
-      object-fit: cover;
-      object-position: center;
     }
   }
   .header__wrapper {
@@ -358,7 +361,7 @@ h2 {
   }
 }
 
-// sm
+// md
 @media (max-width: 767px) {
   .header {
     margin-bottom: 15px;
@@ -387,7 +390,7 @@ h2 {
   }
 }
 
-// s до 320px
+// sm
 @media (max-width: 575px) {
   .burger-menu {
     display: block;
@@ -401,7 +404,7 @@ h2 {
   .menu__box {
     right: -100%;
   }
-  .banner__wrapper {
+  .banner-img-sm {
     order: -1;
   }
   .banner__body {
@@ -423,9 +426,28 @@ h2 {
     display: block;
     border-radius: 20px;
   }
-  
-
-// до 320px
-@media (max-width: 575px) {
-}
-}
+  .advantages {
+    &__title {
+      margin-left: 60px;
+    }
+  }
+  .gallery {
+    &__title {
+      margin-left: 60px;
+    }
+    &__wrapper {
+      grid-template-areas:
+        "img_1"
+        "img_2"
+        "img_3"
+        "img_4"
+        "img_5"
+        "img_6";
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(6, 1fr);
+      gap: 1rem;
+    }
+    &__image {
+      max-height: 460px;
+    }
+  }
