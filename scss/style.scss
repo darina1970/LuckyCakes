@@ -141,13 +141,9 @@ h6 {
   }
 
 
-// Медиазапросы: от большего к меньшему, базовый вариант 1400-1920px, далее в соответствии с сеткой bootstrap //
+/* Медиазапросы: от большего к меньшему, базовый вариант 1400-1920px, далее в соответствии с сеткой bootstrap */
 
-// xl
-@media screen and (max-width: 1399px) {
-}
-
-// l
+// l (1199px - 1400px)
 @media screen and (max-width: 1199px) {
   .advantages {
     &__item {
@@ -162,93 +158,69 @@ h6 {
   }
 }
 
-// m
-@media screen and (max-width: 991px) {
-}
-
-// sm
-@media screen and (max-width: 767px) {
-  .advantages {
-    margin-bottom: 100px;
-    &__title {
-      margin-bottom: 40px;
-    }
-    &__item {
-      min-height: 137px;
-    }
-  }
-}
-
-// до 320px
-@media screen and (max-width: 575px) {
-}
-
-/*  delivery */
-
-// xl
-@media screen and (max-width: 1399px) {
-}
-
-// l
-@media screen and (max-width: 1199px) {
-  .delivery {
-  margin-bottom: 180px;
-  padding: 60px 0;
-
-  &__title {
-    font-size: 42px;
-    margin-left: 80px;
-  }
-
-  &__option {
-    padding: 20px;
-    font-size: 17px;
-    img {
-      max-width: 100px;
-    }
-  }
-}
-}
-
 /* Экраны 768px - 991px (sm) */
 @media (max-width: 991px) {
   .delivery {
-  margin-bottom: 150px;
-  padding: 50px 0;
+    margin-bottom: 150px;
+    padding: 50px 0;
 
-  &__title {
-    font-size: 36px;
-    margin-left: 60px;
-  }
+    &__title {
+      font-size: 36px;
+      margin-left: 60px;
+    }
 
-  &__option {
-    padding: 20px;
-    font-size: 16px;
-    img {
-      max-width: 90px;
+    .col-md-12 {
+      width: 100%; /* На экранах меньше 991px колонки занимают всю ширину */
+    }
+
+    &__wrapper {
+      display: flex;
+      flex-direction: column; /* Элементы будут располагаться друг под другом */
+      align-items: center; /* Центрируем элементы */
+    }
+
+    &__option {
+      padding: 20px;
+      font-size: 16px;
+      margin-bottom: 20px;
+
+      img {
+        max-width: 90px;
+      }
     }
   }
 }
-}
 
-/* (xs) */
+/* Экраны до 767px (xs) */
 @media (max-width: 767px) {
   .delivery {
-  margin-bottom: 100px;
-  padding: 40px 0;
+    margin-bottom: 100px;
+    padding: 40px 0;
 
-  &__title {
-    font-size: 32px;
-    margin-left: 20px;
-    text-align: center; // Центрируем заголовок на маленьких экранах
-  }
+    &__title {
+      font-size: 32px;
+      margin-left: 20px;
+      text-align: center; 
+    }
 
-  &__option {
-    padding: 15px;
-    font-size: 16px;
-    img {
-      max-width: 80px;
+    .col-md-12 {
+      width: 100%; /* Полная ширина на маленьких экранах */
+    }
+
+    &__wrapper {
+      display: flex;
+      flex-direction: column; /* Элементы в колонку */
+      align-items: center;
+    }
+
+    &__option {
+      padding: 15px;
+      font-size: 16px;
+      margin-bottom: 20px;
+
+      img {
+        max-width: 80px;
+      }
     }
   }
-}
 }
