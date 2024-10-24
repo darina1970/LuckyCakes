@@ -568,6 +568,9 @@ h6 {
   .header__menu {
     display: none;
   }
+  .menu__box {
+    right: -100%;
+  }
   .banner__body {
     justify-content: center;
     padding-top: 0;
