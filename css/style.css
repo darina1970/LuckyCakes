@@ -173,7 +173,6 @@ h6 {
   display: flex;
   flex-direction: column;
   padding-top: 20px;
-  font-size: 20px;
 }
 
 .about-me__body-facts-item {
@@ -183,7 +182,6 @@ h6 {
   -moz-column-gap: 10px;
        column-gap: 10px;
   padding-top: 20px;
-  font-size: 20px;
 }
 
 .burger-menu {
