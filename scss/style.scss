@@ -473,6 +473,63 @@ h6 {
   }
 }
 
+
+// секция Reviews
+.reviews-section {
+  width: 100%;
+  margin-bottom: 60px;
+
+  .reviews-title {
+    margin-left: 112px;
+    margin-bottom: 60px;
+    font-size: 48px;
+  }
+
+  .reviews-slider {
+    width: 1408px;
+    margin: 0 auto;
+
+      .owl-item {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+      }
+
+      .owl-nav {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+        display: flex !important;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0px 0;
+
+        button {
+          outline: none;
+        }
+
+        .owl-prev, .owl-next {
+          display: block;
+          z-index: 100;
+          width: 35px;
+          height: 35px;
+        }
+
+        .owl-prev {
+          margin-left: -60px;
+        }
+
+        .owl-next {
+          margin-right: -60px;
+        }
+    }
+  }
+}
+
+
+// секция Delivery
 .delivery {
   margin-bottom: 200px;
   padding: 60px 0;
@@ -514,50 +571,6 @@ h6 {
   }
 
 
-
-// секция Reviews
-.reviews-section {
-  width: 100%;
-  margin-bottom: 60px;
-
-  .reviews-title {
-    margin-left: 112px;
-    margin-bottom: 60px;
-    font-size: 48px
-  }
-
-.reviews-slider {
-  .owl-item {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
-  }
-  
-  .owl-nav {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 100%;
-    display: flex !important;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0px 2rem;
-  
-    button {
-      outline: none;
-    }
-  
-    .owl-prev {
-      margin-left: -60px;
-    }
-  
-    .owl-next {
-      margin-right: -60px;
-    }
-  }
-}
-}
 
 
 
@@ -1019,6 +1032,9 @@ h6 {
 
 
 
+
+
+
 /* Экраны 768px - 991px (sm) */
 @media (max-width: 991px) {
   .delivery {
@@ -1037,7 +1053,7 @@ h6 {
     &__wrapper {
       display: flex;
       flex-direction: column; /* Элементы будут располагаться друг под другом */
-      align-items: center; /* Центрируем элементы */
+      align-items: center;
     }
 
     &__option {
