@@ -161,18 +161,20 @@ h6 {
   padding-top: 20px;
 }
 // сертификаты 
-.certificates-slider-container{
-  display: flex;
-  flex-direction: row;
-  padding-top: 20px;
+.certificates {
+  padding: 0 30px;
 }
-.certificates-slider__box{
-  display: flex;
-  flex-direction: column;
+.container-fluid {
+  max-width: 1400px;
+  margin: 0 auto;
 }
-.image-certificate{
-  width: 100%;
-  height:auto;
+.certificates__title {
+  margin-bottom: 60px;
+  margin-left: 112px;
+}
+.certificates-slider__item {
+  margin-left: 30px;
+  margin-right: 30px;
 }
 // Бургер-меню
 .burger-menu {
