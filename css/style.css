@@ -224,13 +224,13 @@ h6 {
 .menu__btn {
   display: flex;
   align-items: center;
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 12px;
   width: 30px;
   height: 30px;
   cursor: pointer;
-  z-index: 1;
+  z-index: 3;
 }
 
 .menu__btn > span,
@@ -257,6 +257,7 @@ h6 {
   display: block;
   position: fixed;
   visibility: hidden;
+  z-index: 2;
   top: 0;
   right: 0;
   width: 300px;
@@ -652,24 +653,24 @@ h6 {
   margin-right: 20px;
 }
 
-.footer {
+.footer-bottom {
   min-height: 100px;
   display: flex;
   align-items: center;
   background-color: #f0d3d3;
   border-radius: 20px 20px 0px 0px;
 }
-.footer__wrapper {
+.footer-bottom__wrapper {
   width: 100%;
   display: flex;
   justify-content: space-between;
   font-family: "Lato", sans-serif;
   font-weight: 600;
 }
-.footer__copyright {
+.footer-bottom__copyright {
   font-size: 20px;
 }
-.footer__text {
+.footer-bottom__text {
   font-size: 18px;
 }
 
@@ -983,6 +984,9 @@ h6 {
   .reviews-slider .owl-next {
     margin-right: -40px;
   }
+  .footer-bottom__wrapper {
+    flex-wrap: wrap;
+  }
 }
 @media (max-width: 575px) {
   body {
@@ -1030,9 +1034,6 @@ h6 {
   }
   .gallery__image {
     max-height: 460px;
-  }
-  .footer__wrapper {
-    flex-wrap: wrap;
   }
 }
 @media screen and (max-width: 501px) {
