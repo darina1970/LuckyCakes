@@ -57,7 +57,7 @@ h6 {
 }
 // Средние заголовки для разделов сайта
 .title-medium {
-  font-size: clamp(28px, 3.4vw, 48px);
+  font-size: clamp(25px, 3.4vw, 48px);
   line-height: 1.2;
 }
 
@@ -142,6 +142,12 @@ h6 {
   padding-top: 15px;
   margin-bottom: 200px;
 }
+.about-me__body-title {
+  margin-bottom: 64px;
+}
+.about-me__body-text {
+  margin-bottom: 51px;
+}
 .about-me__body-facts {
   display: flex;
   flex-direction: column;
@@ -183,6 +189,7 @@ h6 {
   align-items: center;
   position: absolute;
   top: 0;
+  right: 12px;
   width: 30px;
   height: 30px;
   cursor: pointer;
@@ -511,6 +518,7 @@ h6 {
 .delivery__wrapper {
   display: flex;
   justify-content: space-between;
+  gap: 30px;
 }
 
 //Секция Контакты//
@@ -644,18 +652,6 @@ h6 {
       padding-right: 14px;
     }
   }
-
-  .advantages {
-    &__item {
-      padding: 20px;
-      min-height: 160px;
-      margin-bottom: 20px;
-      font-size: 16px;
-    }
-    &__icon {
-      padding-right: 14px;
-    }
-  }
 }
 
 // lg
@@ -692,6 +688,12 @@ h6 {
   .banner__body {
     justify-content: center;
     padding-top: 0;
+  }
+  .about-me__body-title {
+    margin-bottom: 32px;
+  }
+  .about-me__body-text {
+    margin-bottom: 20px;
   }
 
   //Каталог//
@@ -736,6 +738,31 @@ h6 {
 
   #catalogue__tab-content-novelties {
     margin-top: 20px;
+  }
+  .delivery {
+    margin-bottom: 150px;
+    padding: 50px 0;
+
+    &__title {
+      font-size: 36px;
+      margin-left: 60px;
+    }
+
+    &__wrapper {
+      display: flex;
+      flex-direction: column; /* Элементы будут располагаться друг под другом */
+      align-items: center; /* Центрируем элементы */
+    }
+
+    &__option {
+      padding: 20px;
+      font-size: 16px;
+      margin-bottom: 20px;
+
+      img {
+        max-width: 90px;
+      }
+    }
   }
 }
 
@@ -807,6 +834,9 @@ h6 {
 
 // md
 @media (max-width: 767px) {
+  body {
+    font-size: 18px;
+  }
   .header {
     margin-bottom: 15px;
   }
@@ -879,6 +909,33 @@ h6 {
   #catalogue__tab-content-bento-cakes {
     margin-top: 90px;
   }
+
+  .delivery {
+    margin-bottom: 100px;
+    padding: 40px 0;
+
+    &__title {
+      font-size: 32px;
+      margin-left: 20px;
+      text-align: center;
+    }
+
+    &__wrapper {
+      display: flex;
+      flex-direction: column; /* Элементы в колонку */
+      align-items: center;
+    }
+
+    &__option {
+      padding: 15px;
+      font-size: 16px;
+      margin-bottom: 20px;
+
+      img {
+        max-width: 80px;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 722px) {
@@ -921,6 +978,9 @@ h6 {
 
 // sm
 @media (max-width: 575px) {
+  body {
+    font-size: 16px;
+  }
   .header__wrapper {
     justify-content: space-between;
   }
