@@ -600,6 +600,31 @@ h6 {
 }
 //Конец секции Контакты//
 
+// Footer
+.footer {
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  background-color: $pink;
+  border-radius: 20px 20px 0px 0px;
+
+  &__wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-family: $font-family-base;
+    font-weight: 600;
+  }
+
+  &__copyright {
+    font-size: 20px;
+  }
+
+  &__text {
+    font-size: 18px;
+  }
+}
+
 // Медиазапросы: от большего к меньшему, базовый вариант 1400-1920px, далее в соответствии с сеткой bootstrap //
 @media screen and (max-width: 1440px) {
   //Каталог//
@@ -1034,115 +1059,120 @@ h6 {
       max-height: 460px;
     }
   }
-  @media screen and (max-width: 501px) {
-    //Каталог//
-    .catalogue__tabs {
-      min-height: 702px;
-    }
 
-    .catalogue {
-      margin-bottom: 100px;
-    }
+  .footer__wrapper {
+    flex-wrap: wrap;
+  }
+}
 
-    .catalogue__title {
-      font-size: 30px;
-      margin-left: 0px;
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-    .catalogue__tab-title {
-      width: 130px;
-      font-size: 18px;
-      padding: 8px;
-      margin-right: 8px;
-      margin-bottom: 10px;
-    }
-
-    #catalogue__tab-content-cakes {
-      margin-top: 70px;
-    }
-
-    #catalogue__tab-content-moti {
-      margin-top: 70px;
-    }
-
-    #catalogue__tab-content-cupcakes {
-      margin-top: 70px;
-    }
-
-    #catalogue__tab-content-bento-cakes {
-      margin-top: 20px;
-    }
-
-    #catalogue__tab-content-pastry {
-      margin-top: 20px;
-    }
-
-    #catalogue__tab-content-novelties {
-      margin-top: 20px;
-    }
-
-    .catalogue__slider-card {
-      max-width: 300px;
-    }
+@media screen and (max-width: 501px) {
+  //Каталог//
+  .catalogue__tabs {
+    min-height: 702px;
   }
 
-  @media screen and (max-width: 446px) {
-    //Каталог//
-    .catalogue__tabs {
-      min-height: 802px;
+  .catalogue {
+    margin-bottom: 100px;
+  }
+
+  .catalogue__title {
+    font-size: 30px;
+    margin-left: 0px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .catalogue__tab-title {
+    width: 130px;
+    font-size: 18px;
+    padding: 8px;
+    margin-right: 8px;
+    margin-bottom: 10px;
+  }
+
+  #catalogue__tab-content-cakes {
+    margin-top: 70px;
+  }
+
+  #catalogue__tab-content-moti {
+    margin-top: 70px;
+  }
+
+  #catalogue__tab-content-cupcakes {
+    margin-top: 70px;
+  }
+
+  #catalogue__tab-content-bento-cakes {
+    margin-top: 20px;
+  }
+
+  #catalogue__tab-content-pastry {
+    margin-top: 20px;
+  }
+
+  #catalogue__tab-content-novelties {
+    margin-top: 20px;
+  }
+
+  .catalogue__slider-card {
+    max-width: 300px;
+  }
+}
+
+@media screen and (max-width: 446px) {
+  //Каталог//
+  .catalogue__tabs {
+    min-height: 802px;
+  }
+
+  .catalogue__title {
+    margin-bottom: 40px;
+  }
+
+  #catalogue__tab-content-cakes {
+    margin-top: 120px;
+  }
+
+  #catalogue__tab-content-moti {
+    margin-top: 120px;
+  }
+
+  #catalogue__tab-content-cupcakes {
+    margin-top: 70px;
+  }
+
+  #catalogue__tab-content-bento-cakes {
+    margin-top: 70px;
+  }
+
+  #catalogue__tab-content-pastry {
+    margin-top: 20px;
+  }
+
+  #catalogue__tab-content-novelties {
+    margin-top: 20px;
+  }
+
+  .catalogue__slider-card {
+    max-width: 280px;
+  }
+
+  .owl-nav {
+    position: absolute;
+    top: auto;
+    bottom: -45px;
+    width: 100%;
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+
+    .owl-prev {
+      margin-left: 10px;
     }
 
-    .catalogue__title {
-      margin-bottom: 40px;
-    }
-
-    #catalogue__tab-content-cakes {
-      margin-top: 120px;
-    }
-
-    #catalogue__tab-content-moti {
-      margin-top: 120px;
-    }
-
-    #catalogue__tab-content-cupcakes {
-      margin-top: 70px;
-    }
-
-    #catalogue__tab-content-bento-cakes {
-      margin-top: 70px;
-    }
-
-    #catalogue__tab-content-pastry {
-      margin-top: 20px;
-    }
-
-    #catalogue__tab-content-novelties {
-      margin-top: 20px;
-    }
-
-    .catalogue__slider-card {
-      max-width: 280px;
-    }
-
-    .owl-nav {
-      position: absolute;
-      top: auto;
-      bottom: -45px;
-      width: 100%;
-      display: flex !important;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 1rem;
-
-      .owl-prev {
-        margin-left: 10px;
-      }
-
-      .owl-next {
-        margin-right: 10px;
-      }
+    .owl-next {
+      margin-right: 10px;
     }
   }
 
