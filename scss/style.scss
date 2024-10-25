@@ -492,6 +492,22 @@ h6 {
     grid-area: img_6;
   }
 }
+// Секция отзывы
+.reviews {
+  padding: 0 30px;
+}
+.container-fluid {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.reviews__title {
+  margin-bottom: 60px;
+  margin-left: 112px;
+}
+.reviews-slider__item {
+  margin-left: 30px;
+  margin-right: 30px;
+}
 
 .delivery {
   margin-bottom: 200px;
@@ -640,7 +656,7 @@ h6 {
 
 // Медиазапросы: от большего к меньшему, базовый вариант 1400-1920px, далее в соответствии с сеткой bootstrap //
 @media screen and (max-width: 1440px) {
-  //Каталог//
+  Каталог//
   .owl-nav {
     padding: 0px 20px;
 
@@ -1001,15 +1017,35 @@ h6 {
     margin-top: 10px;
   }
 
-  .owl-nav {
-    padding: 0px 2rem;
+  .catalogue__slider {
+    .owl-nav {
+      padding: 0px 2rem;
 
-    .owl-prev {
-      margin-left: -12px;
+      .owl-prev {
+        margin-left: -12px;
+      }
+
+      .owl-next {
+        margin-right: -12px;
+      }
     }
+  }
 
+  .reviews-slider {
+    .owl-prev {
+      margin-left: -40px;
+      margin-right: -40px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .reviews-slider {
+    .owl-prev {
+      margin-left: -40px;
+    }
     .owl-next {
-      margin-right: -12px;
+      margin-right: -40px;
     }
   }
 }
@@ -1170,25 +1206,24 @@ h6 {
     max-width: 280px;
   }
 
-  .owl-nav {
-    position: absolute;
-    top: auto;
-    bottom: -45px;
-    width: 100%;
-    display: flex !important;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 1rem;
-
-    .owl-prev {
-      margin-left: 10px;
-    }
-
-    .owl-next {
-      margin-right: 10px;
+  .catalogue__slider {
+    .owl-nav {
+      position: absolute;
+      top: auto;
+      bottom: -45px;
+      width: 100%;
+      display: flex !important;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 1rem;
+      .owl-prev {
+        margin-left: 10px;
+      }
+      .owl-next {
+        margin-right: 10px;
+      }
     }
   }
-
   //Секция Контакты//
   .contacts {
     margin-bottom: 100px;
