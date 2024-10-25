@@ -193,6 +193,22 @@ h6 {
   padding-top: 20px;
 }
 
+.certificates-slider-container {
+  display: flex;
+  flex-direction: row;
+  padding-top: 20px;
+}
+
+.certificates-slider__box {
+  display: flex;
+  flex-direction: column;
+}
+
+.image-certificate {
+  width: 100%;
+  height: auto;
+}
+
 .burger-menu {
   display: none;
   position: relative;

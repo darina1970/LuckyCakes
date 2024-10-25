@@ -160,7 +160,20 @@ h6 {
   column-gap: 10px;
   padding-top: 20px;
 }
-
+// сертификаты 
+.certificates-slider-container{
+  display: flex;
+  flex-direction: row;
+  padding-top: 20px;
+}
+.certificates-slider__box{
+  display: flex;
+  flex-direction: column;
+}
+.image-certificate{
+  width: 100%;
+  height:auto;
+}
 // Бургер-меню
 .burger-menu {
   display: none;
