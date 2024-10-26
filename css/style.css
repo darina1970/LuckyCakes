@@ -84,7 +84,7 @@ h6 {
 }
 
 .title-medium {
-  font-size: clamp(25px, 3.4vw, 48px);
+  font-size: clamp(30px, 3.4vw, 48px);
   line-height: 1.2;
 }
 
@@ -194,12 +194,7 @@ h6 {
 }
 
 .certificates {
-  padding: 0 30px;
-}
-
-.container-fluid {
-  max-width: 1400px;
-  margin: 0 auto;
+  margin-bottom: 200px;
 }
 
 .certificates__title {
@@ -307,7 +302,6 @@ h6 {
 }
 
 .catalogue__title {
-  font-size: 48px;
   margin-left: 112px;
   margin-bottom: 60px;
 }
@@ -539,12 +533,7 @@ h6 {
 }
 
 .reviews {
-  padding: 0 30px;
-}
-
-.container-fluid {
-  max-width: 1400px;
-  margin: 0 auto;
+  margin-bottom: 100px;
 }
 
 .reviews__title {
@@ -559,7 +548,6 @@ h6 {
 
 .delivery {
   margin-bottom: 200px;
-  padding: 60px 0;
 }
 .delivery__title {
   font-size: 48px;
@@ -626,7 +614,6 @@ h6 {
 .contacts__title-for-basic,
 .contacts__title-for-responsive {
   font-family: "Cormorant Garamond", serif;
-  font-size: 48px;
   font-weight: 700;
   margin-bottom: 42px;
 }
@@ -802,15 +789,13 @@ h6 {
   }
   .delivery {
     margin-bottom: 150px;
-    padding: 50px 0;
   }
   .delivery__title {
-    font-size: 36px;
-    margin-left: 60px;
+    margin-left: 112px;
   }
   .delivery__wrapper {
     display: flex;
-    flex-direction: column; /* Элементы будут располагаться друг под другом */
+    justify-content: start;
     align-items: center; /* Центрируем элементы */
   }
   .delivery__option {
@@ -857,7 +842,6 @@ h6 {
     text-align: center;
   }
   .contacts__title-for-responsive {
-    font-size: 40px;
     margin-bottom: 30px;
     display: block;
     text-align: center;
@@ -878,6 +862,9 @@ h6 {
   }
   .header {
     margin-bottom: 15px;
+  }
+  .banner {
+    margin-bottom: 100px;
   }
   .banner__body-description {
     margin-bottom: 30px;
@@ -904,15 +891,32 @@ h6 {
     display: block;
     border-radius: 20px;
   }
+  .about-me {
+    margin-bottom: 100px;
+  }
   .about-me__image {
     display: flex;
     justify-content: center;
+    margin-bottom: 20px;
+  }
+  .about-me__body-title {
+    text-align: center;
+  }
+  .certificates__title {
+    margin-left: 0px;
+    text-align: center;
+  }
+  .catalogue__title {
+    margin-left: 0px;
+    text-align: center;
   }
   .advantages {
     margin-bottom: 100px;
   }
   .advantages__title {
     margin-bottom: 40px;
+    margin-left: 0;
+    text-align: center;
   }
   .advantages__item {
     min-height: 137px;
@@ -922,6 +926,8 @@ h6 {
   }
   .gallery__title {
     margin-bottom: 40px;
+    margin-left: 0;
+    text-align: center;
   }
   #catalogue__tab-content-bento-cakes {
     margin-top: 10px;
@@ -941,13 +947,15 @@ h6 {
   #catalogue__tab-content-bento-cakes {
     margin-top: 90px;
   }
+  .reviews__title {
+    margin-left: 0;
+    text-align: center;
+  }
   .delivery {
     margin-bottom: 100px;
-    padding: 40px 0;
   }
   .delivery__title {
-    font-size: 32px;
-    margin-left: 20px;
+    margin-left: 0px;
     text-align: center;
   }
   .delivery__wrapper {
@@ -991,18 +999,8 @@ h6 {
   .catalogue__slider .owl-nav .owl-next {
     margin-right: -12px;
   }
-  .reviews-slider .owl-prev {
-    margin-left: -40px;
-    margin-right: -40px;
-  }
 }
 @media (max-width: 600px) {
-  .reviews-slider .owl-prev {
-    margin-left: -40px;
-  }
-  .reviews-slider .owl-next {
-    margin-right: -40px;
-  }
   .footer-bottom__wrapper {
     flex-wrap: wrap;
   }
@@ -1038,12 +1036,6 @@ h6 {
   .banner-extraimg {
     display: block;
     border-radius: 20px;
-  }
-  .advantages__title {
-    margin-left: 60px;
-  }
-  .gallery__title {
-    margin-left: 60px;
   }
   .gallery__wrapper {
     grid-template-areas: "img_1" "img_2" "img_3" "img_4" "img_5" "img_6";
@@ -1149,60 +1141,5 @@ h6 {
   }
   .contacts__phone-socmedia {
     padding: 0px 30px;
-  }
-}
-/* Экраны 768px - 991px (sm) */
-@media (max-width: 991px) {
-  .delivery {
-    margin-bottom: 150px;
-    padding: 50px 0;
-  }
-  .delivery__title {
-    font-size: 36px;
-    margin-left: 60px;
-  }
-  .delivery .col-md-12 {
-    width: 100%; /* На экранах меньше 991px колонки занимают всю ширину */
-  }
-  .delivery__wrapper {
-    display: flex;
-    flex-direction: column; /* Элементы будут располагаться друг под другом */
-    align-items: center; /* Центрируем элементы */
-  }
-  .delivery__option {
-    padding: 20px;
-    font-size: 16px;
-    margin-bottom: 20px;
-  }
-  .delivery__option img {
-    max-width: 90px;
-  }
-}
-/* Экраны до 767px (xs) */
-@media (max-width: 767px) {
-  .delivery {
-    margin-bottom: 100px;
-    padding: 40px 0;
-  }
-  .delivery__title {
-    font-size: 32px;
-    margin-left: 20px;
-    text-align: center;
-  }
-  .delivery .col-md-12 {
-    width: 100%; /* Полная ширина на маленьких экранах */
-  }
-  .delivery__wrapper {
-    display: flex;
-    flex-direction: column; /* Элементы в колонку */
-    align-items: center;
-  }
-  .delivery__option {
-    padding: 15px;
-    font-size: 16px;
-    margin-bottom: 20px;
-  }
-  .delivery__option img {
-    max-width: 80px;
   }
 }

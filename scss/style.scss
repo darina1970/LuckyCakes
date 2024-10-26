@@ -57,7 +57,7 @@ h6 {
 }
 // Средние заголовки для разделов сайта
 .title-medium {
-  font-size: clamp(25px, 3.4vw, 48px);
+  font-size: clamp(30px, 3.4vw, 48px);
   line-height: 1.2;
 }
 
@@ -160,14 +160,11 @@ h6 {
   column-gap: 10px;
   padding-top: 20px;
 }
-// сертификаты 
+// сертификаты
 .certificates {
-  padding: 0 30px;
+  margin-bottom: 200px;
 }
-.container-fluid {
-  max-width: 1400px;
-  margin: 0 auto;
-}
+
 .certificates__title {
   margin-bottom: 60px;
   margin-left: 112px;
@@ -261,7 +258,6 @@ h6 {
 }
 
 .catalogue__title {
-  font-size: 48px;
   margin-left: 112px;
   margin-bottom: 60px;
 }
@@ -497,11 +493,7 @@ h6 {
 }
 // Секция отзывы
 .reviews {
-  padding: 0 30px;
-}
-.container-fluid {
-  max-width: 1400px;
-  margin: 0 auto;
+  margin-bottom: 100px;
 }
 .reviews__title {
   margin-bottom: 60px;
@@ -514,7 +506,6 @@ h6 {
 
 .delivery {
   margin-bottom: 200px;
-  padding: 60px 0;
 
   &__title {
     font-size: 48px;
@@ -585,7 +576,6 @@ h6 {
 .contacts__title-for-basic,
 .contacts__title-for-responsive {
   font-family: $font-family-accent;
-  font-size: 48px;
   font-weight: 700;
   margin-bottom: 42px;
 }
@@ -796,18 +786,17 @@ h6 {
   #catalogue__tab-content-novelties {
     margin-top: 20px;
   }
+
   .delivery {
     margin-bottom: 150px;
-    padding: 50px 0;
 
     &__title {
-      font-size: 36px;
-      margin-left: 60px;
+      margin-left: 112px;
     }
 
     &__wrapper {
       display: flex;
-      flex-direction: column; /* Элементы будут располагаться друг под другом */
+      justify-content: start;
       align-items: center; /* Центрируем элементы */
     }
 
@@ -869,7 +858,6 @@ h6 {
   }
 
   .contacts__title-for-responsive {
-    font-size: 40px;
     margin-bottom: 30px;
     display: block;
     text-align: center;
@@ -897,6 +885,9 @@ h6 {
   .header {
     margin-bottom: 15px;
   }
+  .banner {
+    margin-bottom: 100px;
+  }
   .banner__body-description {
     margin-bottom: 30px;
   }
@@ -922,14 +913,31 @@ h6 {
     display: block;
     border-radius: 20px;
   }
+  .about-me {
+    margin-bottom: 100px;
+  }
   .about-me__image {
     display: flex;
     justify-content: center;
+    margin-bottom: 20px;
+  }
+  .about-me__body-title {
+    text-align: center;
+  }
+  .certificates__title {
+    margin-left: 0px;
+    text-align: center;
+  }
+  .catalogue__title {
+    margin-left: 0px;
+    text-align: center;
   }
   .advantages {
     margin-bottom: 100px;
     &__title {
       margin-bottom: 40px;
+      margin-left: 0;
+      text-align: center;
     }
     &__item {
       min-height: 137px;
@@ -939,6 +947,8 @@ h6 {
     margin-bottom: 100px;
     &__title {
       margin-bottom: 40px;
+      margin-left: 0;
+      text-align: center;
     }
   }
 
@@ -967,13 +977,16 @@ h6 {
     margin-top: 90px;
   }
 
+  .reviews__title {
+    margin-left: 0;
+    text-align: center;
+  }
+
   .delivery {
     margin-bottom: 100px;
-    padding: 40px 0;
 
     &__title {
-      font-size: 32px;
-      margin-left: 20px;
+      margin-left: 0px;
       text-align: center;
     }
 
@@ -1033,24 +1046,17 @@ h6 {
       }
     }
   }
-
-  .reviews-slider {
-    .owl-prev {
-      margin-left: -40px;
-      margin-right: -40px;
-    }
-  }
 }
 
 @media (max-width: 600px) {
-  .reviews-slider {
-    .owl-prev {
-      margin-left: -40px;
-    }
-    .owl-next {
-      margin-right: -40px;
-    }
-  }
+  // .reviews-slider {
+  //   .owl-prev {
+  //     margin-left: -40px;
+  //   }
+  //   .owl-next {
+  //     margin-right: -40px;
+  //   }
+  // }
 
   .footer-bottom__wrapper {
     flex-wrap: wrap;
@@ -1090,15 +1096,7 @@ h6 {
     display: block;
     border-radius: 20px;
   }
-  .advantages {
-    &__title {
-      margin-left: 60px;
-    }
-  }
   .gallery {
-    &__title {
-      margin-left: 60px;
-    }
     &__wrapper {
       grid-template-areas:
         "img_1"
@@ -1240,71 +1238,4 @@ h6 {
     padding: 0px 30px;
   }
   //Конец секции Контакты//
-}
-
-/* Экраны 768px - 991px (sm) */
-@media (max-width: 991px) {
-  .delivery {
-    margin-bottom: 150px;
-    padding: 50px 0;
-
-    &__title {
-      font-size: 36px;
-      margin-left: 60px;
-    }
-
-    .col-md-12 {
-      width: 100%; /* На экранах меньше 991px колонки занимают всю ширину */
-    }
-
-    &__wrapper {
-      display: flex;
-      flex-direction: column; /* Элементы будут располагаться друг под другом */
-      align-items: center; /* Центрируем элементы */
-    }
-
-    &__option {
-      padding: 20px;
-      font-size: 16px;
-      margin-bottom: 20px;
-
-      img {
-        max-width: 90px;
-      }
-    }
-  }
-}
-
-/* Экраны до 767px (xs) */
-@media (max-width: 767px) {
-  .delivery {
-    margin-bottom: 100px;
-    padding: 40px 0;
-
-    &__title {
-      font-size: 32px;
-      margin-left: 20px;
-      text-align: center;
-    }
-
-    .col-md-12 {
-      width: 100%; /* Полная ширина на маленьких экранах */
-    }
-
-    &__wrapper {
-      display: flex;
-      flex-direction: column; /* Элементы в колонку */
-      align-items: center;
-    }
-
-    &__option {
-      padding: 15px;
-      font-size: 16px;
-      margin-bottom: 20px;
-
-      img {
-        max-width: 80px;
-      }
-    }
-  }
 }
