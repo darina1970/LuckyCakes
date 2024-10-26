@@ -789,7 +789,6 @@ h6 {
 
   .delivery {
     margin-bottom: 150px;
-    padding: 50px 0;
 
     &__title {
       margin-left: 112px;
@@ -797,7 +796,7 @@ h6 {
 
     &__wrapper {
       display: flex;
-      flex-direction: column; /* Элементы будут располагаться друг под другом */
+      justify-content: start;
       align-items: center; /* Центрируем элементы */
     }
 
@@ -985,7 +984,6 @@ h6 {
 
   .delivery {
     margin-bottom: 100px;
-    padding: 40px 0;
 
     &__title {
       margin-left: 0px;
@@ -1241,58 +1239,3 @@ h6 {
   }
   //Конец секции Контакты//
 }
-
-// /* Экраны 768px - 991px (sm) */
-// @media (max-width: 991px) {
-//   .delivery {
-//     margin-bottom: 150px;
-//     padding: 50px 0;
-
-//     &__title {
-//       font-size: 36px;
-//     }
-//     &__wrapper {
-//       display: flex;
-//       flex-direction: column; /* Элементы будут располагаться друг под другом */
-//       align-items: center; /* Центрируем элементы */
-//     }
-
-//     &__option {
-//       padding: 20px;
-//       font-size: 16px;
-//       margin-bottom: 20px;
-
-//       img {
-//         max-width: 90px;
-//       }
-//     }
-//   }
-// }
-
-// /* Экраны до 767px (xs) */
-// @media (max-width: 767px) {
-//   .delivery {
-//     margin-bottom: 100px;
-//     padding: 40px 0;
-
-//     &__title {
-//       text-align: center;
-//     }
-
-//     &__wrapper {
-//       display: flex;
-//       flex-direction: column; /* Элементы в колонку */
-//       align-items: center;
-//     }
-
-//     &__option {
-//       padding: 15px;
-//       font-size: 16px;
-//       margin-bottom: 20px;
-
-//       img {
-//         max-width: 80px;
-//       }
-//     }
-//   }
-// }
