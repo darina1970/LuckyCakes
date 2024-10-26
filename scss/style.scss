@@ -160,7 +160,22 @@ h6 {
   column-gap: 10px;
   padding-top: 20px;
 }
-
+// сертификаты 
+.certificates {
+  padding: 0 30px;
+}
+.container-fluid {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.certificates__title {
+  margin-bottom: 60px;
+  margin-left: 112px;
+}
+.certificates-slider__item {
+  margin-left: 30px;
+  margin-right: 30px;
+}
 // Бургер-меню
 .burger-menu {
   display: none;
