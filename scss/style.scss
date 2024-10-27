@@ -62,9 +62,10 @@ h6 {
 
 // HEADER
 .header {
-  min-height: 100px;
   display: flex;
   align-items: center;
+  padding-top: 19px;
+  padding-bottom: 19px;
   &__wrapper {
     height: 100%;
     display: flex;
