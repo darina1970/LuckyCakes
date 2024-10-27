@@ -31,9 +31,9 @@ $(document).ready(function () {
       },
     },
   });
-});
 
-$(document).ready(function () {
+
+
   $(".catalogue__slider-alone-item.owl-carousel").owlCarousel({
     loop: true,
     margin: 10,
@@ -52,23 +52,24 @@ $(document).ready(function () {
     ],
     items: 1,
   });
-});
 
-$(window).scroll(function (event) {
-  var top = $(window).scrollTop();
-  var height = $(document).height();
-  if (top >= height * 0.4) {
-    $(".icon-arrow-top").css("display", "block");
-  } else {
-    $(".icon-arrow-top").css("display", "none");
-  }
-});
 
-$(document).ready(function () {
+  $(window).scroll(function (event) {
+    var top = $(window).scrollTop();
+    var height = $(document).height();
+    if (top >= height * 0.4) {
+      $(".icon-arrow-top").css("display", "block");
+    } else {
+      $(".icon-arrow-top").css("display", "none");
+    }
+  });
+
+
   $(".reviews-slider.owl-carousel").owlCarousel({
     loop: true,
     margin: 20,
     nav: true,
+    dots: false,
     navText: [
       `<svg width="35" height="31" viewBox="0 0 35 31" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M0.725006 15.5219L33.2242 2.23654C33.7417 2.0284 34.3592 2.1524 34.7192 2.54653C34.8953 2.73744 34.994 2.9752 34.9995 3.22171C35.0049 3.46822 34.9168 3.70921 34.7492 3.90607L24.0619 16.5272L34.7492 29.1483C35.0942 29.5535 35.0817 30.1159 34.7217 30.5078C34.4792 30.7758 34.1167 30.9197 33.7492 30.9197C33.5717 30.9197 33.3942 30.8865 33.2267 30.8178L0.727505 17.5324C0.282516 17.3509 2.28882e-05 16.959 2.28882e-05 16.5272C2.28882e-05 16.0954 0.282516 15.7035 0.725006 15.5219Z" fill="#F0D3D3"/>
@@ -91,13 +92,14 @@ $(document).ready(function () {
       },
     },
   });
-});
 
-$(document).ready(function () {
+
+
   $(".certificates-slider.owl-carousel").owlCarousel({
     loop: true,
     margin: 20,
     nav: true,
+    dots: false,
     navText: [
       `<svg width="35" height="31" viewBox="0 0 35 31" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M0.725006 15.5219L33.2242 2.23654C33.7417 2.0284 34.3592 2.1524 34.7192 2.54653C34.8953 2.73744 34.994 2.9752 34.9995 3.22171C35.0049 3.46822 34.9168 3.70921 34.7492 3.90607L24.0619 16.5272L34.7492 29.1483C35.0942 29.5535 35.0817 30.1159 34.7217 30.5078C34.4792 30.7758 34.1167 30.9197 33.7492 30.9197C33.5717 30.9197 33.3942 30.8865 33.2267 30.8178L0.727505 17.5324C0.282516 17.3509 2.28882e-05 16.959 2.28882e-05 16.5272C2.28882e-05 16.0954 0.282516 15.7035 0.725006 15.5219Z" fill="#F0D3D3"/>
@@ -119,5 +121,18 @@ $(document).ready(function () {
         items: 3,
       },
     },
+  });
+
+  $(document).click(function (event) {
+    event.stopPropagation();
+
+    if ($(event.target).closest(".burger-menu").length) return;
+    $("#menu__toggle").prop("checked", false);
+  });
+
+  $(".menu__item").click(function (event) {
+    event.stopPropagation();
+
+    $("#menu__toggle").prop("checked", false);
   });
 });
