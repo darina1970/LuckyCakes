@@ -332,6 +332,7 @@ h6 {
   font-family: "Lato", sans-serif;
   font-size: 20px;
   font-weight: 600;
+  cursor: pointer;
 }
 
 .catalogue__tab-content {
@@ -394,8 +395,6 @@ h6 {
 
 .catalogue__slider-card {
   display: grid;
-  flex-direction: column;
-  flex-wrap: wrap;
   width: 300px;
   min-height: 550px;
   background-color: #f0d3d3;
@@ -460,8 +459,8 @@ h6 {
   z-index: 2;
   cursor: pointer;
   top: auto;
-  bottom: 1rem;
-  right: 0.5rem;
+  bottom: 20px;
+  right: 3px;
   left: auto;
   scroll-behavior: smooth;
   display: none;
