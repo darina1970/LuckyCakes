@@ -352,14 +352,14 @@ h6 {
 }
 
 .catalogue__slider-card {
-  display: flex;
+  display: grid;
   flex-direction: column;
   flex-wrap: wrap;
   width: 300px;
   min-height: 550px;
   background-color: #f0d3d3;
   border-radius: 20px;
-  justify-content: flex-end;
+  justify-content: flex-start;
   padding: 18px 20px;
   margin: 0px 0px;
 }
@@ -399,6 +399,7 @@ h6 {
   font-size: 16px;
   font-weight: 400;
   margin-bottom: 22px;
+  justify-self: flex-end;
 }
 
 .catalogue__product-price {
