@@ -2,8 +2,14 @@
 @import "vars";
 @import "fonts";
 
+html,
+body {
+  height: 100%;
+}
 // Задаём базовые стили текста и фона для всего сайта
 body {
+  display: flex;
+  flex-direction: column;
   font-family: $font-family-base;
   font-weight: 400;
   font-size: 20px;
@@ -11,6 +17,15 @@ body {
   background-color: $bg-white;
   min-width: 320px;
 }
+
+main {
+  flex: 1 0 auto;
+}
+
+footer {
+  flex: 0 0 auto;
+}
+
 // Задаём максимальный размер контейнера и центрируем его
 .container {
   max-width: 1400px;
@@ -653,6 +668,10 @@ h6 {
 
   &__text {
     font-size: 18px;
+  }
+
+  &__link {
+    text-decoration: underline;
   }
 
   &__link:hover {
