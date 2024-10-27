@@ -139,6 +139,9 @@ h6 {
   padding-top: 15px;
   margin-bottom: 200px;
 }
+.about-me-img {
+  max-width: 515px;
+}
 .about-me__body-title {
   margin-bottom: 64px;
 }
@@ -327,8 +330,8 @@ h6 {
 
 .owl-nav {
   position: absolute;
+  max-height: 40px;
   top: 50%;
-  bottom: -45px;
   bottom: -60px;
   transform: translateY(-50%);
   width: 100%;
@@ -352,8 +355,8 @@ h6 {
 
 .catalogue__slider-card {
   display: grid;
-  width: 300px;
-  min-height: 550px;
+  width: 310px;
+  min-height: 580px;
   background-color: #f0d3d3;
   border-radius: 20px;
   justify-content: flex-start;
