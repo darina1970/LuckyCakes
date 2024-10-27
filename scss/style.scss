@@ -57,7 +57,7 @@ h6 {
 }
 // Средние заголовки для разделов сайта
 .title-medium {
-  font-size: clamp(28px, 3.4vw, 48px);
+  font-size: clamp(30px, 3.4vw, 48px);
   line-height: 1.2;
 }
 
@@ -142,6 +142,12 @@ h6 {
   padding-top: 15px;
   margin-bottom: 200px;
 }
+.about-me__body-title {
+  margin-bottom: 64px;
+}
+.about-me__body-text {
+  margin-bottom: 51px;
+}
 .about-me__body-facts {
   display: flex;
   flex-direction: column;
@@ -154,7 +160,19 @@ h6 {
   column-gap: 10px;
   padding-top: 20px;
 }
+// сертификаты
+.certificates {
+  margin-bottom: 200px;
+}
 
+.certificates__title {
+  margin-bottom: 60px;
+  margin-left: 112px;
+}
+.certificates-slider__item {
+  margin-left: 30px;
+  margin-right: 30px;
+}
 // Бургер-меню
 .burger-menu {
   display: none;
@@ -181,12 +199,13 @@ h6 {
 .menu__btn {
   display: flex;
   align-items: center;
-  position: absolute;
+  position: fixed;
   top: 0;
+  right: 12px;
   width: 30px;
   height: 30px;
   cursor: pointer;
-  z-index: 1;
+  z-index: 3;
 }
 .menu__btn > span,
 .menu__btn > span::before,
@@ -209,6 +228,7 @@ h6 {
   display: block;
   position: fixed;
   visibility: hidden;
+  z-index: 2;
   top: 0;
   right: 0;
   width: 300px;
@@ -238,7 +258,6 @@ h6 {
 }
 
 .catalogue__title {
-  font-size: 48px;
   margin-left: 112px;
   margin-bottom: 60px;
 }
@@ -472,10 +491,21 @@ h6 {
     grid-area: img_6;
   }
 }
+// Секция отзывы
+.reviews {
+  margin-bottom: 100px;
+}
+.reviews__title {
+  margin-bottom: 60px;
+  margin-left: 112px;
+}
+.reviews-slider__item {
+  margin-left: 30px;
+  margin-right: 30px;
+}
 
 .delivery {
   margin-bottom: 200px;
-  padding: 60px 0;
 
   &__title {
     font-size: 48px;
@@ -511,6 +541,7 @@ h6 {
 .delivery__wrapper {
   display: flex;
   justify-content: space-between;
+  gap: 30px;
 }
 
 //Секция Контакты//
@@ -545,7 +576,6 @@ h6 {
 .contacts__title-for-basic,
 .contacts__title-for-responsive {
   font-family: $font-family-accent;
-  font-size: 48px;
   font-weight: 700;
   margin-bottom: 42px;
 }
@@ -592,9 +622,34 @@ h6 {
 }
 //Конец секции Контакты//
 
+// Footer
+.footer-bottom {
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  background-color: $pink;
+  border-radius: 20px 20px 0px 0px;
+
+  &__wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-family: $font-family-base;
+    font-weight: 600;
+  }
+
+  &__copyright {
+    font-size: 20px;
+  }
+
+  &__text {
+    font-size: 18px;
+  }
+}
+
 // Медиазапросы: от большего к меньшему, базовый вариант 1400-1920px, далее в соответствии с сеткой bootstrap //
 @media screen and (max-width: 1440px) {
-  //Каталог//
+  Каталог//
   .owl-nav {
     padding: 0px 20px;
 
@@ -644,18 +699,6 @@ h6 {
       padding-right: 14px;
     }
   }
-
-  .advantages {
-    &__item {
-      padding: 20px;
-      min-height: 160px;
-      margin-bottom: 20px;
-      font-size: 16px;
-    }
-    &__icon {
-      padding-right: 14px;
-    }
-  }
 }
 
 // lg
@@ -692,6 +735,12 @@ h6 {
   .banner__body {
     justify-content: center;
     padding-top: 0;
+  }
+  .about-me__body-title {
+    margin-bottom: 32px;
+  }
+  .about-me__body-text {
+    margin-bottom: 20px;
   }
 
   //Каталог//
@@ -736,6 +785,30 @@ h6 {
 
   #catalogue__tab-content-novelties {
     margin-top: 20px;
+  }
+
+  .delivery {
+    margin-bottom: 150px;
+
+    &__title {
+      margin-left: 112px;
+    }
+
+    &__wrapper {
+      display: flex;
+      justify-content: start;
+      align-items: center; /* Центрируем элементы */
+    }
+
+    &__option {
+      padding: 20px;
+      font-size: 16px;
+      margin-bottom: 20px;
+
+      img {
+        max-width: 90px;
+      }
+    }
   }
 }
 
@@ -785,7 +858,6 @@ h6 {
   }
 
   .contacts__title-for-responsive {
-    font-size: 40px;
     margin-bottom: 30px;
     display: block;
     text-align: center;
@@ -807,8 +879,14 @@ h6 {
 
 // md
 @media (max-width: 767px) {
+  body {
+    font-size: 18px;
+  }
   .header {
     margin-bottom: 15px;
+  }
+  .banner {
+    margin-bottom: 100px;
   }
   .banner__body-description {
     margin-bottom: 30px;
@@ -835,14 +913,34 @@ h6 {
     display: block;
     border-radius: 20px;
   }
+  .about-me {
+    margin-bottom: 100px;
+  }
   .about-me__image {
     display: flex;
     justify-content: center;
+    margin-bottom: 20px;
+  }
+  .about-me__body-title {
+    text-align: center;
+  }
+  .certificates {
+    margin-bottom: 100px;
+  }
+  .certificates__title {
+    margin-left: 0px;
+    text-align: center;
+  }
+  .catalogue__title {
+    margin-left: 0px;
+    text-align: center;
   }
   .advantages {
     margin-bottom: 100px;
     &__title {
       margin-bottom: 40px;
+      margin-left: 0;
+      text-align: center;
     }
     &__item {
       min-height: 137px;
@@ -852,6 +950,8 @@ h6 {
     margin-bottom: 100px;
     &__title {
       margin-bottom: 40px;
+      margin-left: 0;
+      text-align: center;
     }
   }
 
@@ -878,6 +978,36 @@ h6 {
 
   #catalogue__tab-content-bento-cakes {
     margin-top: 90px;
+  }
+
+  .reviews__title {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .delivery {
+    margin-bottom: 100px;
+
+    &__title {
+      margin-left: 0px;
+      text-align: center;
+    }
+
+    &__wrapper {
+      display: flex;
+      flex-direction: column; /* Элементы в колонку */
+      align-items: center;
+    }
+
+    &__option {
+      padding: 15px;
+      font-size: 16px;
+      margin-bottom: 20px;
+
+      img {
+        max-width: 80px;
+      }
+    }
   }
 }
 
@@ -906,21 +1036,41 @@ h6 {
     margin-top: 10px;
   }
 
-  .owl-nav {
-    padding: 0px 2rem;
+  .catalogue__slider {
+    .owl-nav {
+      padding: 0px 2rem;
 
-    .owl-prev {
-      margin-left: -12px;
-    }
+      .owl-prev {
+        margin-left: -12px;
+      }
 
-    .owl-next {
-      margin-right: -12px;
+      .owl-next {
+        margin-right: -12px;
+      }
     }
+  }
+}
+
+@media (max-width: 600px) {
+  // .reviews-slider {
+  //   .owl-prev {
+  //     margin-left: -40px;
+  //   }
+  //   .owl-next {
+  //     margin-right: -40px;
+  //   }
+  // }
+
+  .footer-bottom__wrapper {
+    flex-wrap: wrap;
   }
 }
 
 // sm
 @media (max-width: 575px) {
+  body {
+    font-size: 16px;
+  }
   .header__wrapper {
     justify-content: space-between;
   }
@@ -949,15 +1099,7 @@ h6 {
     display: block;
     border-radius: 20px;
   }
-  .advantages {
-    &__title {
-      margin-left: 60px;
-    }
-  }
   .gallery {
-    &__title {
-      margin-left: 60px;
-    }
     &__wrapper {
       grid-template-areas:
         "img_1"
@@ -974,98 +1116,101 @@ h6 {
       max-height: 460px;
     }
   }
-  @media screen and (max-width: 501px) {
-    //Каталог//
-    .catalogue__tabs {
-      min-height: 702px;
-    }
+}
 
-    .catalogue {
-      margin-bottom: 100px;
-    }
-
-    .catalogue__title {
-      font-size: 30px;
-      margin-left: 0px;
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-    .catalogue__tab-title {
-      width: 130px;
-      font-size: 18px;
-      padding: 8px;
-      margin-right: 8px;
-      margin-bottom: 10px;
-    }
-
-    #catalogue__tab-content-cakes {
-      margin-top: 70px;
-    }
-
-    #catalogue__tab-content-moti {
-      margin-top: 70px;
-    }
-
-    #catalogue__tab-content-cupcakes {
-      margin-top: 70px;
-    }
-
-    #catalogue__tab-content-bento-cakes {
-      margin-top: 20px;
-    }
-
-    #catalogue__tab-content-pastry {
-      margin-top: 20px;
-    }
-
-    #catalogue__tab-content-novelties {
-      margin-top: 20px;
-    }
-
-    .catalogue__slider-card {
-      max-width: 300px;
-    }
+@media screen and (max-width: 501px) {
+  //Каталог//
+  .catalogue__tabs {
+    min-height: 702px;
   }
 
-  @media screen and (max-width: 446px) {
-    //Каталог//
-    .catalogue__tabs {
-      min-height: 802px;
-    }
+  .catalogue {
+    margin-bottom: 100px;
+  }
 
-    .catalogue__title {
-      margin-bottom: 40px;
-    }
+  .catalogue__title {
+    font-size: 30px;
+    margin-left: 0px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
 
-    #catalogue__tab-content-cakes {
-      margin-top: 120px;
-    }
+  .catalogue__tab-title {
+    width: 130px;
+    font-size: 18px;
+    padding: 8px;
+    margin-right: 8px;
+    margin-bottom: 10px;
+  }
 
-    #catalogue__tab-content-moti {
-      margin-top: 120px;
-    }
+  #catalogue__tab-content-cakes {
+    margin-top: 70px;
+  }
 
-    #catalogue__tab-content-cupcakes {
-      margin-top: 70px;
-    }
+  #catalogue__tab-content-moti {
+    margin-top: 70px;
+  }
 
-    #catalogue__tab-content-bento-cakes {
-      margin-top: 70px;
-    }
+  #catalogue__tab-content-cupcakes {
+    margin-top: 70px;
+  }
 
-    #catalogue__tab-content-pastry {
-      margin-top: 20px;
-    }
+  #catalogue__tab-content-bento-cakes {
+    margin-top: 20px;
+  }
 
-    #catalogue__tab-content-novelties {
-      margin-top: 20px;
-    }
+  #catalogue__tab-content-pastry {
+    margin-top: 20px;
+  }
 
-    .catalogue__slider-card {
-      max-width: 280px;
-    }
+  #catalogue__tab-content-novelties {
+    margin-top: 20px;
+  }
 
+  .catalogue__slider-card {
+    max-width: 300px;
+  }
+}
+
+@media screen and (max-width: 446px) {
+  //Каталог//
+  .catalogue__tabs {
+    min-height: 802px;
+  }
+
+  .catalogue__title {
+    margin-bottom: 40px;
+  }
+
+  #catalogue__tab-content-cakes {
+    margin-top: 120px;
+  }
+
+  #catalogue__tab-content-moti {
+    margin-top: 120px;
+  }
+
+  #catalogue__tab-content-cupcakes {
+    margin-top: 70px;
+  }
+
+  #catalogue__tab-content-bento-cakes {
+    margin-top: 70px;
+  }
+
+  #catalogue__tab-content-pastry {
+    margin-top: 20px;
+  }
+
+  #catalogue__tab-content-novelties {
+    margin-top: 20px;
+  }
+
+  .catalogue__slider-card {
+    max-width: 280px;
+  }
+
+  .catalogue__slider {
     .owl-nav {
       position: absolute;
       top: auto;
@@ -1075,17 +1220,14 @@ h6 {
       align-items: center;
       justify-content: space-between;
       padding: 0 1rem;
-
       .owl-prev {
         margin-left: 10px;
       }
-
       .owl-next {
         margin-right: 10px;
       }
     }
   }
-
   //Секция Контакты//
   .contacts {
     margin-bottom: 100px;
@@ -1099,71 +1241,4 @@ h6 {
     padding: 0px 30px;
   }
   //Конец секции Контакты//
-}
-
-/* Экраны 768px - 991px (sm) */
-@media (max-width: 991px) {
-  .delivery {
-    margin-bottom: 150px;
-    padding: 50px 0;
-
-    &__title {
-      font-size: 36px;
-      margin-left: 60px;
-    }
-
-    .col-md-12 {
-      width: 100%; /* На экранах меньше 991px колонки занимают всю ширину */
-    }
-
-    &__wrapper {
-      display: flex;
-      flex-direction: column; /* Элементы будут располагаться друг под другом */
-      align-items: center; /* Центрируем элементы */
-    }
-
-    &__option {
-      padding: 20px;
-      font-size: 16px;
-      margin-bottom: 20px;
-
-      img {
-        max-width: 90px;
-      }
-    }
-  }
-}
-
-/* Экраны до 767px (xs) */
-@media (max-width: 767px) {
-  .delivery {
-    margin-bottom: 100px;
-    padding: 40px 0;
-
-    &__title {
-      font-size: 32px;
-      margin-left: 20px;
-      text-align: center;
-    }
-
-    .col-md-12 {
-      width: 100%; /* Полная ширина на маленьких экранах */
-    }
-
-    &__wrapper {
-      display: flex;
-      flex-direction: column; /* Элементы в колонку */
-      align-items: center;
-    }
-
-    &__option {
-      padding: 15px;
-      font-size: 16px;
-      margin-bottom: 20px;
-
-      img {
-        max-width: 80px;
-      }
-    }
-  }
 }
