@@ -654,11 +654,15 @@ h6 {
   &__text {
     font-size: 18px;
   }
+
+  &__link:hover {
+    color: $green;
+  }
 }
 
 // Медиазапросы: от большего к меньшему, базовый вариант 1400-1920px, далее в соответствии с сеткой bootstrap //
 @media screen and (max-width: 1440px) {
-  Каталог//
+  // Каталог
   .owl-nav {
     padding: 0px 20px;
 

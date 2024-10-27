@@ -688,15 +688,18 @@ h6 {
 .footer-bottom__text {
   font-size: 18px;
 }
+.footer-bottom__link:hover {
+  color: #e0f0d4;
+}
 
 @media screen and (max-width: 1440px) {
-  Каталог .owl-nav {
+  .owl-nav {
     padding: 0px 20px;
   }
-  Каталог .owl-nav .owl-prev {
+  .owl-nav .owl-prev {
     margin-left: -40px;
   }
-  Каталог .owl-nav .owl-next {
+  .owl-nav .owl-next {
     margin-right: -40px;
   }
 }
