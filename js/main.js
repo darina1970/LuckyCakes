@@ -32,10 +32,8 @@ $(document).ready(function () {
     },
   });
 
-
-
   $(".catalogue__slider-alone-item.owl-carousel").owlCarousel({
-    loop: true,
+    loop: false,
     margin: 10,
     nav: true,
     dots: false,
@@ -53,7 +51,6 @@ $(document).ready(function () {
     items: 1,
   });
 
-
   $(window).scroll(function (event) {
     var top = $(window).scrollTop();
     var height = $(document).height();
@@ -63,7 +60,6 @@ $(document).ready(function () {
       $(".icon-arrow-top").css("display", "none");
     }
   });
-
 
   $(".reviews-slider.owl-carousel").owlCarousel({
     loop: true,
@@ -92,8 +88,6 @@ $(document).ready(function () {
       },
     },
   });
-
-
 
   $(".certificates-slider.owl-carousel").owlCarousel({
     loop: true,
