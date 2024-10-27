@@ -2,8 +2,14 @@
 @import "vars";
 @import "fonts";
 
+html,
+body {
+  height: 100%;
+}
 // Задаём базовые стили текста и фона для всего сайта
 body {
+  display: flex;
+  flex-direction: column;
   font-family: $font-family-base;
   font-weight: 400;
   font-size: 20px;
@@ -11,6 +17,15 @@ body {
   background-color: $bg-white;
   min-width: 320px;
 }
+
+main {
+  flex: 1 0 auto;
+}
+
+footer {
+  flex: 0 0 auto;
+}
+
 // Задаём максимальный размер контейнера и центрируем его
 .container {
   max-width: 1400px;
@@ -138,6 +153,9 @@ h6 {
   padding-bottom: 50px;
   padding-top: 15px;
   margin-bottom: 200px;
+}
+.about-me-img {
+  max-width: 515px;
 }
 .about-me__body-title {
   margin-bottom: 64px;
@@ -327,8 +345,8 @@ h6 {
 
 .owl-nav {
   position: absolute;
+  max-height: 40px;
   top: 50%;
-  bottom: -45px;
   bottom: -60px;
   transform: translateY(-50%);
   width: 100%;
@@ -352,8 +370,8 @@ h6 {
 
 .catalogue__slider-card {
   display: grid;
-  width: 300px;
-  min-height: 550px;
+  width: 310px;
+  min-height: 580px;
   background-color: #f0d3d3;
   border-radius: 20px;
   justify-content: flex-start;
@@ -650,6 +668,10 @@ h6 {
 
   &__text {
     font-size: 18px;
+  }
+
+  &__link {
+    text-decoration: underline;
   }
 
   &__link:hover {

@@ -42,13 +42,28 @@ p {
   font-style: normal;
   font-display: swap;
 }
+html,
 body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
   font-family: "Lato", sans-serif;
   font-weight: 400;
   font-size: 20px;
   color: #443939;
   background-color: rgb(255, 255, 255);
   min-width: 320px;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+footer {
+  flex: 0 0 auto;
 }
 
 .container {
@@ -171,6 +186,10 @@ h6 {
   padding-bottom: 50px;
   padding-top: 15px;
   margin-bottom: 200px;
+}
+
+.about-me-img {
+  max-width: 515px;
 }
 
 .about-me__body-title {
@@ -377,8 +396,8 @@ h6 {
 
 .owl-nav {
   position: absolute;
+  max-height: 40px;
   top: 50%;
-  bottom: -45px;
   bottom: -60px;
   transform: translateY(-50%);
   width: 100%;
@@ -399,8 +418,8 @@ h6 {
 
 .catalogue__slider-card {
   display: grid;
-  width: 300px;
-  min-height: 550px;
+  width: 310px;
+  min-height: 580px;
   background-color: #f0d3d3;
   border-radius: 20px;
   justify-content: flex-start;
@@ -690,6 +709,9 @@ h6 {
 }
 .footer-bottom__text {
   font-size: 18px;
+}
+.footer-bottom__link {
+  text-decoration: underline;
 }
 .footer-bottom__link:hover {
   color: #e0f0d4;
