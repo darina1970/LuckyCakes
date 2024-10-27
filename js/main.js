@@ -1,4 +1,5 @@
 $(document).ready(function () {
+  Fancybox.bind('[data-fancybox="gallery"]', {});
   $(".catalogue__slider.owl-carousel").owlCarousel({
     loop: true,
     margin: 10,
