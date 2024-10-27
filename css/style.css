@@ -400,7 +400,7 @@ h6 {
 }
 
 .catalogue__slider-card {
-  display: flex;
+  display: grid;
   flex-direction: column;
   flex-wrap: wrap;
   width: 300px;
@@ -453,7 +453,7 @@ h6 {
   font-size: 18px;
   font-weight: 400;
   margin-bottom: 9px;
-  justify-self: flex-end;
+  justify-self: flex-start;
 }
 
 .catalogue__product-price-bold {
