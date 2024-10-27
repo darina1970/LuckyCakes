@@ -14,7 +14,6 @@ body {
 // Задаём максимальный размер контейнера и центрируем его
 .container {
   max-width: 1400px;
-  margin: 0 auto;
 }
 
 // Задаём стили для ссылок и кнопок
@@ -33,17 +32,17 @@ a:hover {
 
 // Задаём респонсивную картинку, остающуюся в границах родительского элемента
 .image-fluid {
-  max-width: 100%;
+  width: 100%;
+  height: auto;
 }
 
-// Типографика заголовков
+// Типографика заголовков и убираем марджины
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  margin: 0;
   font-family: $font-family-accent;
   font-weight: 700;
   color: $text-brown;
@@ -103,16 +102,12 @@ h6 {
   border-radius: 20px;
 }
 .header-link {
-  height: 47px;
   font-size: 20px;
   padding-top: 11px;
   padding-bottom: 11px;
 }
 .banner-link {
-  height: 67px;
-  width: 245px;
-  padding-top: 19px;
-  padding-bottom: 19px;
+  padding: 19px 32px;
 }
 
 // Баннер
@@ -123,6 +118,7 @@ h6 {
   height: 100%;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   padding-top: 154px;
   &-title {
     margin-bottom: 21px;
@@ -654,11 +650,15 @@ h6 {
   &__text {
     font-size: 18px;
   }
+
+  &__link:hover {
+    color: $green;
+  }
 }
 
 // Медиазапросы: от большего к меньшему, базовый вариант 1400-1920px, далее в соответствии с сеткой bootstrap //
 @media screen and (max-width: 1440px) {
-  Каталог//
+  // Каталог
   .owl-nav {
     padding: 0px 20px;
 
