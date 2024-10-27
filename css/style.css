@@ -94,9 +94,10 @@ h6 {
 }
 
 .header {
-  min-height: 100px;
   display: flex;
   align-items: center;
+  padding-top: 19px;
+  padding-bottom: 19px;
 }
 .header__wrapper {
   height: 100%;
