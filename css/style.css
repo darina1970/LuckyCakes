@@ -17,21 +17,28 @@ p {
 
 @font-face {
   font-family: "Lato";
-  src: url("../assets/fonts/Lato-Regular.eot") format("embedded-opentype"), url("../assets/fonts/Lato-Regular.woff2") format("woff2"), url("../assets/fonts/Lato-Regular.woff") format("woff"), url("../assets/fonts/Lato-Regular.ttf") format("truetype");
+  src: url("../assets/fonts/Lato-Regular.eot") format("embedded-opentype"),
+    url("../assets/fonts/Lato-Regular.woff2") format("woff2"), url("../assets/fonts/Lato-Regular.woff") format("woff"),
+    url("../assets/fonts/Lato-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Lato";
-  src: url("../assets/fonts/Lato-Semibold.eot") format("embedded-opentype"), url("../assets/fonts/Lato-SemiBold.woff2") format("woff2"), url("../assets/fonts/Lato-Semibold.woff") format("woff"), url("../assets/fonts/Lato-Semibold.ttf") format("truetype");
+  src: url("../assets/fonts/Lato-Semibold.eot") format("embedded-opentype"),
+    url("../assets/fonts/Lato-SemiBold.woff2") format("woff2"), url("../assets/fonts/Lato-Semibold.woff") format("woff"),
+    url("../assets/fonts/Lato-Semibold.ttf") format("truetype");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Cormorant Garamond";
-  src: url("../assets/fonts/CormorantGaramond-Bold.eot") format("embedded-opentype"), url("../assets/fonts/Cormorant-Garamond-Bold.woff2") format("woff2"), url("../assets/fonts/CormorantGaramond-Bold.woff") format("woff"), url("../assets/fonts/CormorantGaramond-Bold.ttf") format("truetype");
+  src: url("../assets/fonts/CormorantGaramond-Bold.eot") format("embedded-opentype"),
+    url("../assets/fonts/Cormorant-Garamond-Bold.woff2") format("woff2"),
+    url("../assets/fonts/CormorantGaramond-Bold.woff") format("woff"),
+    url("../assets/fonts/CormorantGaramond-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -189,7 +196,7 @@ h6 {
   flex-direction: row;
   align-items: center;
   -moz-column-gap: 10px;
-       column-gap: 10px;
+  column-gap: 10px;
   padding-top: 20px;
 }
 
@@ -316,7 +323,7 @@ h6 {
   display: inline-block;
 }
 
-.catalogue__tabs input[type=radio] {
+.catalogue__tabs input[type="radio"] {
   display: none;
 }
 
@@ -342,7 +349,7 @@ h6 {
   display: none;
 }
 
-.catalogue__tabs [id^=catalogue__tab]:checked + .catalogue__tab-title {
+.catalogue__tabs [id^="catalogue__tab"]:checked + .catalogue__tab-title {
   position: relative;
   background: #f0d3d3;
   top: 1px;
@@ -400,7 +407,7 @@ h6 {
   min-height: 550px;
   background-color: #f0d3d3;
   border-radius: 20px;
-  justify-content: flex-end;
+  justify-content: flex-start;
   padding: 18px 20px;
   margin: 0px 0px;
 }
@@ -416,8 +423,7 @@ h6 {
 }
 
 .catalogue__slider-picture {
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   width: 100%;
   min-height: 100%;
   border-radius: 20px;
@@ -447,6 +453,7 @@ h6 {
   font-size: 18px;
   font-weight: 400;
   margin-bottom: 9px;
+  justify-self: flex-end;
 }
 
 .catalogue__product-price-bold {
@@ -509,9 +516,9 @@ h6 {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   -o-object-position: center;
-     object-position: center;
+  object-position: center;
 }
 .gallery__image:hover {
   filter: brightness(90%);
@@ -607,7 +614,7 @@ h6 {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .contacts__phone-socmedia {
@@ -739,7 +746,7 @@ h6 {
   }
   .header__wrapper {
     -moz-column-gap: 20px;
-         column-gap: 20px;
+    column-gap: 20px;
     row-gap: 15px;
     flex-wrap: wrap;
   }
