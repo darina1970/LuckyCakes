@@ -288,6 +288,7 @@ h6 {
   font-family: $font-family-base;
   font-size: 20px;
   font-weight: 600;
+  cursor: pointer;
 }
 
 .catalogue__tab-content {
@@ -329,6 +330,8 @@ h6 {
 .owl-nav {
   position: absolute;
   top: 50%;
+  bottom: -45px;
+  bottom: -60px;
   transform: translateY(-50%);
   width: 100%;
   display: flex !important;
@@ -350,19 +353,20 @@ h6 {
 }
 
 .catalogue__slider-card {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+  display: grid;
   width: 300px;
+  min-height: 550px;
   background-color: #f0d3d3;
   border-radius: 20px;
-  justify-content: left;
-  align-content: flex-start;
+  justify-content: flex-start;
   padding: 18px 20px;
   margin: 0px 0px;
 }
 
 .catalogue__slider-picture-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   width: 100%;
   height: 282px;
   border-radius: 20px;
@@ -372,14 +376,13 @@ h6 {
 .catalogue__slider-picture {
   object-fit: cover;
   width: 100%;
-  height: 100%;
+  min-height: 100%;
   border-radius: 20px;
 }
 
 .catalogue__product-title,
 .catalogue__product-description,
 .catalogue__product-price {
-  display: block;
   max-width: 266px;
   font-size: 20px;
   font-weight: 600;
@@ -388,14 +391,14 @@ h6 {
 }
 
 .catalogue__product-title {
-  min-height: 50px;
+  margin-bottom: 12px;
 }
 
 .catalogue__product-description {
   font-size: 16px;
   font-weight: 400;
   margin-bottom: 22px;
-  min-height: 100px;
+  justify-self: flex-end;
 }
 
 .catalogue__product-price {
@@ -404,13 +407,18 @@ h6 {
   margin-bottom: 9px;
 }
 
+.catalogue__product-price-bold {
+  font-size: 18px;
+  font-weight: 700;
+}
+
 .icon-arrow-top {
   position: fixed;
   z-index: 2;
   cursor: pointer;
   top: auto;
-  bottom: 1rem;
-  right: 0.5rem;
+  bottom: 20px;
+  right: 3px;
   left: auto;
   scroll-behavior: smooth;
   display: none;
@@ -1210,11 +1218,12 @@ h6 {
     max-width: 280px;
   }
 
-  .catalogue__slider {
+  .catalogue__slider,
+  .catalogue__slider-alone-item {
     .owl-nav {
       position: absolute;
       top: auto;
-      bottom: -45px;
+      bottom: -60px;
       width: 100%;
       display: flex !important;
       align-items: center;
