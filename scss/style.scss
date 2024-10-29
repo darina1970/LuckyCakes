@@ -376,8 +376,7 @@ h6 {
   flex-direction: column;
   flex-wrap: wrap;
   width: 310px;
-  // min-height: 580px;
-  height: 600px;
+  min-height: 600px;
   background-color: #f0d3d3;
   border-radius: 20px;
   justify-items: flex-start;
@@ -429,6 +428,7 @@ h6 {
   justify-content: flex-start;
   width: 100%;
   position: relative;
+  padding-bottom: 12px;
 }
 
 .catalogue__attention-mark-text {
