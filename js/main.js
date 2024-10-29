@@ -23,7 +23,7 @@ $(document).ready(function () {
       700: {
         items: 2,
       },
-      1000: {
+      1100: {
         items: 3,
       },
       1500: {
@@ -33,7 +33,7 @@ $(document).ready(function () {
   });
 
   $(".catalogue__slider-alone-item.owl-carousel").owlCarousel({
-    loop: false,
+    loop: true,
     margin: 10,
     nav: true,
     dots: false,
@@ -48,7 +48,20 @@ $(document).ready(function () {
 </svg>
 `,
     ],
-    items: 1,
+    responsive: {
+      0: {
+        items: 1,
+      },
+      700: {
+        items: 2,
+      },
+      1100: {
+        items: 2,
+      },
+      1500: {
+        items: 2,
+      },
+    },
   });
 
   $(window).scroll(function (event) {
