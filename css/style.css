@@ -608,6 +608,7 @@ h6 {
   grid-area: img_6;
 }
 
+<<<<<<< Updated upstream
 .reviews {
   margin-bottom: 100px;
 }
@@ -658,6 +659,8 @@ h6 {
   gap: 30px;
 }
 
+=======
+>>>>>>> Stashed changes
 .contacts {
   display: flex;
   flex-direction: row;
@@ -687,17 +690,26 @@ h6 {
   margin: 0px;
 }
 
+<<<<<<< Updated upstream
 .contacts__title-for-basic,
 .contacts__title-for-responsive {
   font-family: "Cormorant Garamond", serif;
+=======
+.contacts__title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 48px;
+>>>>>>> Stashed changes
   font-weight: 700;
   margin-bottom: 42px;
 }
 
+<<<<<<< Updated upstream
 .contacts__title-for-responsive {
   display: none;
 }
 
+=======
+>>>>>>> Stashed changes
 .contacts__paragraph,
 .contacts__phone,
 .contacts__subtitle {
@@ -735,6 +747,7 @@ h6 {
   margin-right: 20px;
 }
 
+<<<<<<< Updated upstream
 .footer-bottom {
   min-height: 100px;
   display: flex;
@@ -762,6 +775,8 @@ h6 {
   color: #e0f0d4;
 }
 
+=======
+>>>>>>> Stashed changes
 @media screen and (max-width: 1440px) {
   .catalogue__slider .owl-nav,
   .catalogue__slider-alone-item .owl-nav {
@@ -936,7 +951,10 @@ h6 {
   .contacts__map {
     width: 100%;
     height: 400px;
+<<<<<<< Updated upstream
     margin-bottom: 30px;
+=======
+>>>>>>> Stashed changes
   }
   .contacts__phone-socmedia {
     flex-direction: column;
@@ -944,6 +962,7 @@ h6 {
     padding: 0px 100px;
     text-align: center;
   }
+<<<<<<< Updated upstream
   .contacts__title-for-responsive {
     margin-bottom: 30px;
     display: block;
@@ -951,6 +970,12 @@ h6 {
   }
   .contacts__title-for-basic {
     display: none;
+=======
+  .contacts__title {
+    font-size: 40px;
+    margin-bottom: 30px;
+    margin-top: 40px;
+>>>>>>> Stashed changes
   }
   .contacts__phone-wrapper {
     margin-bottom: 20px;
@@ -1254,6 +1279,7 @@ h6 {
   .catalogue__slider-alone-item .owl-nav .owl-next {
     margin-right: 10px;
   }
+<<<<<<< Updated upstream
   .catalogue__product-title,
   .catalogue__product-description,
   .catalogue__product-price {
@@ -1263,6 +1289,10 @@ h6 {
     width: 244px;
     margin-top: -199px;
   }
+=======
+}
+@media (max-width: 575px) {
+>>>>>>> Stashed changes
   .contacts {
     margin-bottom: 100px;
   }
