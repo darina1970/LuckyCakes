@@ -395,7 +395,9 @@ h6 {
 }
 
 .catalogue__slider .owl-nav,
-.catalogue__slider-alone-item .owl-nav {
+.catalogue__slider-alone-item .owl-nav,
+.reviews-slider .owl-nav,
+.certificates-slider .owl-nav {
   position: absolute;
   max-height: 40px;
   top: 50%;
@@ -408,15 +410,21 @@ h6 {
   padding: 0px 2rem;
 }
 .catalogue__slider button,
-.catalogue__slider-alone-item button {
+.catalogue__slider-alone-item button,
+.reviews-slider button,
+.certificates-slider button {
   outline: none;
 }
 .catalogue__slider .owl-prev,
-.catalogue__slider-alone-item .owl-prev {
+.catalogue__slider-alone-item .owl-prev,
+.reviews-slider .owl-prev,
+.certificates-slider .owl-prev {
   margin-left: -60px;
 }
 .catalogue__slider .owl-next,
-.catalogue__slider-alone-item .owl-next {
+.catalogue__slider-alone-item .owl-next,
+.reviews-slider .owl-next,
+.certificates-slider .owl-next {
   margin-right: -60px;
 }
 

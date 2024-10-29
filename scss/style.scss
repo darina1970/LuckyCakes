@@ -344,7 +344,9 @@ h6 {
 }
 
 .catalogue__slider,
-.catalogue__slider-alone-item {
+.catalogue__slider-alone-item,
+.reviews-slider,
+.certificates-slider {
   .owl-nav {
     position: absolute;
     max-height: 40px;
