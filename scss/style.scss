@@ -343,17 +343,22 @@ h6 {
   align-items: center;
 }
 
-.owl-nav {
-  position: absolute;
-  max-height: 40px;
-  top: 50%;
-  bottom: -60px;
-  transform: translateY(-50%);
-  width: 100%;
-  display: flex !important;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0px 2rem;
+.catalogue__slider,
+.catalogue__slider-alone-item,
+.reviews-slider,
+.certificates-slider {
+  .owl-nav {
+    position: absolute;
+    max-height: 40px;
+    top: 50%;
+    bottom: -60px;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 2rem;
+  }
 
   button {
     outline: none;
@@ -369,12 +374,15 @@ h6 {
 }
 
 .catalogue__slider-card {
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   width: 310px;
-  min-height: 580px;
+  min-height: 600px;
   background-color: #f0d3d3;
   border-radius: 20px;
-  justify-content: flex-start;
+  justify-items: flex-start;
+  align-content: flex-start;
   padding: 18px 18px;
   margin: 0px 0px;
 }
@@ -414,14 +422,52 @@ h6 {
   font-size: 16px;
   font-weight: 400;
   margin-bottom: 22px;
-  justify-self: flex-start;
+}
+
+.catalogue__attention-mark-text-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 100%;
+  position: relative;
+  padding-bottom: 12px;
+}
+
+.catalogue__attention-mark-text {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.catalogue__icon-exclamation-mark-wrapper {
+  width: 20px;
+  height: 20px;
+}
+
+.tooltip {
+  position: absolute;
+  z-index: 1;
+  margin-top: -175px;
+  margin-left: 0px;
+  width: 274px;
+  font-family: $font-family-base, serif;
+  background-color: $bg-white;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 18px;
+  border-radius: 10px;
+  display: none;
+}
+
+.catalogue__attention-mark-text-wrapper:hover .tooltip,
+.catalogue__attention-mark-text-wrapper:focus .tooltip {
+  display: block;
 }
 
 .catalogue__product-price {
   font-size: 18px;
   font-weight: 400;
   margin-bottom: 9px;
-  align-self: flex-end;
+  margin-top: auto;
 }
 
 .catalogue__product-price-bold {
@@ -680,18 +726,95 @@ h6 {
   }
 }
 
+//Секция Контакты//
+.contacts {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 134px;
+}
+
+.contacts__map {
+  width: 50%;
+  margin: 0px;
+}
+
+.contacts__yandex-map {
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.contacts__phone-socmedia {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 50%;
+  padding-left: 138px;
+  margin: 0px;
+}
+
+.contacts__title {
+  font-family: $font-family-accent;
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 42px;
+}
+
+.contacts__paragraph,
+.contacts__phone,
+.contacts__subtitle {
+  font-family: $font-family-base;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.contacts__phone-wrapper {
+  margin-bottom: 40px;
+}
+
+.contacts__icon-phone {
+  margin-right: 12px;
+}
+
+.contacts__phone {
+  display: inline-flex;
+}
+
+.contacts__wtsp-tg {
+  margin-bottom: 51px;
+}
+
+.contacts__icon-wtsp {
+  margin-right: 17px;
+}
+
+.contacts__vk-ok {
+  margin-bottom: 49px;
+}
+
+.contacts__icon-vk {
+  margin-right: 20px;
+}
+//Конец секции Контакты//
+
 // Медиазапросы: от большего к меньшему, базовый вариант 1400-1920px, далее в соответствии с сеткой bootstrap //
 @media screen and (max-width: 1440px) {
   // Каталог
-  .owl-nav {
-    padding: 0px 20px;
+  .catalogue__slider,
+  .catalogue__slider-alone-item {
+    .owl-nav {
+      padding: 0px 20px;
 
-    .owl-prev {
-      margin-left: -40px;
-    }
+      .owl-prev {
+        margin-left: -40px;
+      }
 
-    .owl-next {
-      margin-right: -40px;
+      .owl-next {
+        margin-right: -40px;
+      }
     }
   }
 }
@@ -706,15 +829,18 @@ h6 {
     font-size: 18px;
   }
 
-  .owl-nav {
-    padding: 0px 30px;
+  .catalogue__slider,
+  .catalogue__slider-alone-item {
+    .owl-nav {
+      padding: 0px 30px;
 
-    .owl-prev {
-      margin-left: -40px;
-    }
+      .owl-prev {
+        margin-left: -40px;
+      }
 
-    .owl-next {
-      margin-right: -40px;
+      .owl-next {
+        margin-right: -40px;
+      }
     }
   }
 }
@@ -730,6 +856,21 @@ h6 {
     }
     &__icon {
       padding-right: 14px;
+    }
+  }
+
+  .catalogue__slider,
+  .catalogue__slider-alone-item {
+    .owl-nav {
+      padding: 0px 26px;
+
+      .owl-prev {
+        margin-left: -40px;
+      }
+
+      .owl-next {
+        margin-right: -40px;
+      }
     }
   }
 }
@@ -784,15 +925,18 @@ h6 {
     font-size: 18px;
   }
 
-  .owl-nav {
-    padding: 0px 5px;
+  .catalogue__slider,
+  .catalogue__slider-alone-item {
+    .owl-nav {
+      padding: 0px 5px;
 
-    .owl-prev {
-      margin-left: -10px;
-    }
+      .owl-prev {
+        margin-left: -10px;
+      }
 
-    .owl-next {
-      margin-right: -10px;
+      .owl-next {
+        margin-right: -10px;
+      }
     }
   }
 
@@ -898,381 +1042,409 @@ h6 {
 
   .contacts__title-for-basic {
     display: none;
+    .contacts__title {
+      font-size: 40px;
+      margin-bottom: 30px;
+      margin-top: 40px;
+    }
+
+    .contacts__phone-wrapper {
+      margin-bottom: 20px;
+    }
+
+    .contacts__phone {
+      font-size: 20px;
+    }
+    //Конец секции Контакты//
   }
 
-  .contacts__phone-wrapper {
-    margin-bottom: 20px;
-  }
-
-  .contacts__phone {
-    font-size: 20px;
-  }
-  //Конец секции Контакты//
-}
-
-// md
-@media (max-width: 767px) {
-  body {
-    font-size: 18px;
-  }
-  .header {
-    margin-bottom: 15px;
-  }
-  .banner {
-    margin-bottom: 100px;
-  }
-  .banner__body-description {
-    margin-bottom: 30px;
-  }
-  .banner-img-sm {
-    order: -1;
-  }
-  .banner-img {
-    display: none;
-  }
-  .banner__body {
-    align-items: center;
-  }
-  .banner__body-title {
-    text-align: center;
-  }
-  .banner__body-description {
-    text-align: center;
-  }
-  .banner-link {
-    margin-bottom: 10px;
-  }
-  .banner-extraimg {
-    display: block;
-    border-radius: 20px;
-  }
-  .about-me {
-    margin-bottom: 100px;
-  }
-  .about-me__image {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-  }
-  .about-me__body-title {
-    text-align: center;
-  }
-  .certificates {
-    margin-bottom: 100px;
-  }
-  .certificates__title {
-    margin-left: 0px;
-    text-align: center;
-  }
-  .catalogue__title {
-    margin-left: 0px;
-    text-align: center;
-  }
-  .advantages {
-    margin-bottom: 100px;
-    &__title {
-      margin-bottom: 40px;
-      margin-left: 0;
+  // md
+  @media (max-width: 767px) {
+    body {
+      font-size: 18px;
+    }
+    .header {
+      margin-bottom: 15px;
+    }
+    .banner {
+      margin-bottom: 100px;
+    }
+    .banner__body-description {
+      margin-bottom: 30px;
+    }
+    .banner-img-sm {
+      order: -1;
+    }
+    .banner-img {
+      display: none;
+    }
+    .banner__body {
+      align-items: center;
+    }
+    .banner__body-title {
       text-align: center;
     }
-    &__item {
-      min-height: 137px;
-    }
-  }
-  .gallery {
-    margin-bottom: 100px;
-    &__title {
-      margin-bottom: 40px;
-      margin-left: 0;
+    .banner__body-description {
       text-align: center;
     }
-  }
-
-  //Каталог//
-  #catalogue__tab-content-bento-cakes {
-    margin-top: 10px;
-  }
-
-  #catalogue__tab-content-pastry {
-    margin-top: 10px;
-  }
-
-  .owl-nav {
-    padding: 0px 10px;
-
-    .owl-prev {
-      margin-left: -23px;
+    .banner-link {
+      margin-bottom: 10px;
     }
-
-    .owl-next {
-      margin-right: -23px;
+    .banner-extraimg {
+      display: block;
+      border-radius: 20px;
     }
-  }
-
-  #catalogue__tab-content-bento-cakes {
-    margin-top: 90px;
-  }
-
-  .reviews__title {
-    margin-left: 0;
-    text-align: center;
-  }
-
-  .delivery {
-    margin-bottom: 100px;
-
-    &__title {
+    .about-me {
+      margin-bottom: 100px;
+    }
+    .about-me__image {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    .about-me__body-title {
+      text-align: center;
+    }
+    .certificates {
+      margin-bottom: 100px;
+    }
+    .certificates__title {
       margin-left: 0px;
       text-align: center;
     }
-
-    &__wrapper {
-      display: flex;
-      flex-direction: column; /* Элементы в колонку */
-      align-items: center;
+    .catalogue__title {
+      margin-left: 0px;
+      text-align: center;
+    }
+    .advantages {
+      margin-bottom: 100px;
+      &__title {
+        margin-bottom: 40px;
+        margin-left: 0;
+        text-align: center;
+      }
+      &__item {
+        min-height: 137px;
+      }
+    }
+    .gallery {
+      margin-bottom: 100px;
+      &__title {
+        margin-bottom: 40px;
+        margin-left: 0;
+        text-align: center;
+      }
     }
 
-    &__option {
-      padding: 15px;
+    //Каталог//
+    #catalogue__tab-content-bento-cakes {
+      margin-top: 10px;
+    }
+
+    #catalogue__tab-content-pastry {
+      margin-top: 10px;
+    }
+
+    .catalogue__slider,
+    .catalogue__slider-alone-item {
+      .owl-nav {
+        padding: 0px 10px;
+
+        .owl-prev {
+          margin-left: -23px;
+        }
+
+        .owl-next {
+          margin-right: -23px;
+        }
+      }
+    }
+
+    #catalogue__tab-content-bento-cakes {
+      margin-top: 90px;
+    }
+
+    .reviews__title {
+      margin-left: 0;
+      text-align: center;
+    }
+
+    .delivery {
+      margin-bottom: 100px;
+
+      &__title {
+        margin-left: 0px;
+        text-align: center;
+      }
+
+      &__wrapper {
+        display: flex;
+        flex-direction: column; /* Элементы в колонку */
+        align-items: center;
+      }
+
+      &__option {
+        padding: 15px;
+        font-size: 16px;
+        margin-bottom: 20px;
+
+        img {
+          max-width: 80px;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 722px) {
+    //Каталог//
+    .catalogue__slider,
+    .catalogue__slider-alone-item {
+      .owl-nav {
+        padding: 0px 0px;
+
+        .owl-prev {
+          margin-left: -12px;
+        }
+
+        .owl-next {
+          margin-right: -12px;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 659px) {
+    //Каталог//
+    #catalogue__tab-content-bento-cakes {
+      margin-top: 10px;
+    }
+
+    #catalogue__tab-content-pastry {
+      margin-top: 10px;
+    }
+
+    .catalogue__slider,
+    .catalogue__slider-alone-item {
+      .owl-nav {
+        padding: 0px 2rem;
+
+        .owl-prev {
+          margin-left: -12px;
+        }
+
+        .owl-next {
+          margin-right: -12px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 600px) {
+    // .reviews-slider {
+    //   .owl-prev {
+    //     margin-left: -40px;
+    //   }
+    //   .owl-next {
+    //     margin-right: -40px;
+    //   }
+    // }
+
+    .footer-bottom__wrapper {
+      flex-wrap: wrap;
+    }
+  }
+
+  // sm
+  @media (max-width: 575px) {
+    body {
       font-size: 16px;
-      margin-bottom: 20px;
-
-      img {
-        max-width: 80px;
-      }
     }
-  }
-}
-
-@media screen and (max-width: 722px) {
-  //Каталог//
-  .owl-nav {
-    padding: 0px 0px;
-
-    .owl-prev {
-      margin-left: -12px;
-    }
-
-    .owl-next {
-      margin-right: -12px;
-    }
-  }
-}
-
-@media screen and (max-width: 659px) {
-  //Каталог//
-  #catalogue__tab-content-bento-cakes {
-    margin-top: 10px;
-  }
-
-  #catalogue__tab-content-pastry {
-    margin-top: 10px;
-  }
-
-  .catalogue__slider {
-    .owl-nav {
-      padding: 0px 2rem;
-
-      .owl-prev {
-        margin-left: -12px;
-      }
-
-      .owl-next {
-        margin-right: -12px;
-      }
-    }
-  }
-}
-
-@media (max-width: 600px) {
-  // .reviews-slider {
-  //   .owl-prev {
-  //     margin-left: -40px;
-  //   }
-  //   .owl-next {
-  //     margin-right: -40px;
-  //   }
-  // }
-
-  .footer-bottom__wrapper {
-    flex-wrap: wrap;
-  }
-}
-
-// sm
-@media (max-width: 575px) {
-  body {
-    font-size: 16px;
-  }
-  .header__wrapper {
-    justify-content: space-between;
-  }
-  .menu__box {
-    right: -100%;
-  }
-  .banner-img-sm {
-    order: -1;
-  }
-  .banner__body {
-    align-items: center;
-  }
-  .banner__body-title {
-    text-align: center;
-  }
-  .banner__body-description {
-    text-align: center;
-  }
-  .banner-link {
-    margin-bottom: 10px;
-  }
-  .banner-img {
-    display: none;
-  }
-  .banner-extraimg {
-    display: block;
-    border-radius: 20px;
-  }
-  .gallery {
-    &__wrapper {
-      grid-template-areas:
-        "img_1"
-        "img_2"
-        "img_3"
-        "img_4"
-        "img_5"
-        "img_6";
-      grid-template-columns: 1fr;
-      grid-template-rows: repeat(6, 1fr);
-      gap: 1rem;
-    }
-    &__image {
-      max-height: 460px;
-    }
-  }
-}
-
-@media screen and (max-width: 501px) {
-  //Каталог//
-  .catalogue__tabs {
-    min-height: 702px;
-  }
-
-  .catalogue {
-    margin-bottom: 100px;
-  }
-
-  .catalogue__title {
-    font-size: 30px;
-    margin-left: 0px;
-    text-align: center;
-    margin-bottom: 20px;
-  }
-
-  .catalogue__tab-title {
-    width: 130px;
-    font-size: 18px;
-    padding: 8px;
-    margin-right: 8px;
-    margin-bottom: 10px;
-  }
-
-  #catalogue__tab-content-cakes {
-    margin-top: 70px;
-  }
-
-  #catalogue__tab-content-moti {
-    margin-top: 70px;
-  }
-
-  #catalogue__tab-content-cupcakes {
-    margin-top: 70px;
-  }
-
-  #catalogue__tab-content-bento-cakes {
-    margin-top: 20px;
-  }
-
-  #catalogue__tab-content-pastry {
-    margin-top: 20px;
-  }
-
-  #catalogue__tab-content-novelties {
-    margin-top: 20px;
-  }
-
-  .catalogue__slider-card {
-    max-width: 300px;
-  }
-}
-
-@media screen and (max-width: 446px) {
-  //Каталог//
-  .catalogue__tabs {
-    min-height: 802px;
-  }
-
-  .catalogue__title {
-    margin-bottom: 40px;
-  }
-
-  #catalogue__tab-content-cakes {
-    margin-top: 120px;
-  }
-
-  #catalogue__tab-content-moti {
-    margin-top: 120px;
-  }
-
-  #catalogue__tab-content-cupcakes {
-    margin-top: 70px;
-  }
-
-  #catalogue__tab-content-bento-cakes {
-    margin-top: 70px;
-  }
-
-  #catalogue__tab-content-pastry {
-    margin-top: 20px;
-  }
-
-  #catalogue__tab-content-novelties {
-    margin-top: 20px;
-  }
-
-  .catalogue__slider-card {
-    max-width: 280px;
-  }
-
-  .catalogue__slider,
-  .catalogue__slider-alone-item {
-    .owl-nav {
-      position: absolute;
-      top: auto;
-      bottom: -60px;
-      width: 100%;
-      display: flex !important;
-      align-items: center;
+    .header__wrapper {
       justify-content: space-between;
-      padding: 0 1rem;
-      .owl-prev {
-        margin-left: 10px;
+    }
+    .menu__box {
+      right: -100%;
+    }
+    .banner-img-sm {
+      order: -1;
+    }
+    .banner__body {
+      align-items: center;
+    }
+    .banner__body-title {
+      text-align: center;
+    }
+    .banner__body-description {
+      text-align: center;
+    }
+    .banner-link {
+      margin-bottom: 10px;
+    }
+    .banner-img {
+      display: none;
+    }
+    .banner-extraimg {
+      display: block;
+      border-radius: 20px;
+    }
+    .gallery {
+      &__wrapper {
+        grid-template-areas:
+          "img_1"
+          "img_2"
+          "img_3"
+          "img_4"
+          "img_5"
+          "img_6";
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 1fr);
+        gap: 1rem;
       }
-      .owl-next {
-        margin-right: 10px;
+      &__image {
+        max-height: 460px;
       }
     }
   }
-  //Секция Контакты//
-  .contacts {
-    margin-bottom: 100px;
+
+  @media screen and (max-width: 501px) {
+    //Каталог//
+    .catalogue__tabs {
+      min-height: 702px;
+    }
+
+    .catalogue {
+      margin-bottom: 100px;
+    }
+
+    .catalogue__title {
+      font-size: 30px;
+      margin-left: 0px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .catalogue__tab-title {
+      width: 130px;
+      font-size: 18px;
+      padding: 8px;
+      margin-right: 8px;
+      margin-bottom: 10px;
+    }
+
+    #catalogue__tab-content-cakes {
+      margin-top: 70px;
+    }
+
+    #catalogue__tab-content-moti {
+      margin-top: 70px;
+    }
+
+    #catalogue__tab-content-cupcakes {
+      margin-top: 70px;
+    }
+
+    #catalogue__tab-content-bento-cakes {
+      margin-top: 20px;
+    }
+
+    #catalogue__tab-content-pastry {
+      margin-top: 20px;
+    }
+
+    #catalogue__tab-content-novelties {
+      margin-top: 20px;
+    }
+
+    .catalogue__slider-card {
+      max-width: 300px;
+    }
+
+    .tooltip {
+      width: 264px;
+    }
   }
 
-  .contacts__map {
-    width: 100%;
-  }
+  @media screen and (max-width: 446px) {
+    //Каталог//
+    .catalogue__tabs {
+      min-height: 802px;
+    }
 
-  .contacts__phone-socmedia {
-    padding: 0px 30px;
+    .catalogue__title {
+      margin-bottom: 40px;
+    }
+
+    #catalogue__tab-content-cakes {
+      margin-top: 120px;
+    }
+
+    #catalogue__tab-content-moti {
+      margin-top: 120px;
+    }
+
+    #catalogue__tab-content-cupcakes {
+      margin-top: 70px;
+    }
+
+    #catalogue__tab-content-bento-cakes {
+      margin-top: 70px;
+    }
+
+    #catalogue__tab-content-pastry {
+      margin-top: 20px;
+    }
+
+    #catalogue__tab-content-novelties {
+      margin-top: 20px;
+    }
+
+    .catalogue__slider-card {
+      max-width: 280px;
+    }
+
+    .catalogue__slider,
+    .catalogue__slider-alone-item {
+      .owl-nav {
+        position: absolute;
+        top: auto;
+        bottom: -60px;
+        width: 100%;
+        display: flex !important;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 1rem;
+        .owl-prev {
+          margin-left: 10px;
+        }
+        .owl-next {
+          margin-right: 10px;
+        }
+      }
+    }
+
+    .catalogue__product-title,
+    .catalogue__product-description,
+    .catalogue__product-price {
+      max-width: 244px;
+    }
+
+    .tooltip {
+      width: 244px;
+      margin-top: -199px;
+    }
+
+    //Секция Контакты//
+    .contacts {
+      margin-bottom: 100px;
+    }
+
+    .contacts__map {
+      width: 100%;
+    }
+
+    .contacts__phone-socmedia {
+      padding: 0px 30px;
+    }
+    //Конец секции Контакты//
   }
-  //Конец секции Контакты//
 }
