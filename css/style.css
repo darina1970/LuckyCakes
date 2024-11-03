@@ -409,7 +409,7 @@ h6 {
 .catalogue__slider .owl-nav,
 .catalogue__slider-alone-item .owl-nav {
   position: absolute;
-  max-height: 40px;
+  height: 0;
   top: 50%;
   bottom: -60px;
   transform: translateY(-50%);
@@ -1137,6 +1137,12 @@ h6 {
     margin-bottom: 40px;
     margin-left: 0;
     text-align: center;
+  }
+  .catalogue__tabs {
+    text-align: center;
+  }
+  .catalogue__attention-mark-text-wrapper {
+    justify-content: center;
   }
   #catalogue__tab-content-bento-cakes {
     margin-top: 10px;
