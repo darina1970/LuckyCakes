@@ -927,12 +927,6 @@ h6 {
   .gallery__image {
     max-height: 560px;
   }
-  .header__wrapper {
-    -moz-column-gap: 20px;
-         column-gap: 20px;
-    row-gap: 15px;
-    flex-wrap: wrap;
-  }
   .burger-menu {
     display: block;
   }
